@@ -1,10 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
 
+<p><font size="3" color="red">This is some text!</font></p>
 
-# IoT Beacon
-IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure project -course. End product will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database. The data will then be used to build a html based application which alerts when the beacons leave a designated area.
+<p><font size="2" color="blue">This is some text!</font></p>
 
-# Project team:
-Rasmus Ekman
-Pekka Hämäläinen
-Niko Kulmanen
-Joni Mattson
+<p><font face="verdana" color="green">This is some text!</font></p>
+
+<p><strong>Note:</strong> The font element is not supported in HTML5. Use CSS instead.</p>
+
+</body>
+</html>

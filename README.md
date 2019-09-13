@@ -8,4 +8,4 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 Rasmus Ekman
 Pekka Hämäläinen
 Niko Kulmanen
-Joni Mattson
+Joni Mattsson

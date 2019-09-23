@@ -14,6 +14,12 @@ Joni Mattsson - Project worker
 # Installing Ubuntu server
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3.
 
+- Remove LAN-cable before installation
+- Open legacy boot menu with F9
+- Choose USB-stick
+- "Cannot boot system due to start job running for hold error"
+- 
+
 Installation:
 - Install Xubuntu English language
 - Continue
@@ -22,6 +28,24 @@ Installation:
 - Helsinki
 - Kyeboard layout Finnish and Finnish
 - Your name: Iot Beacon
-- computer name: iotbeacon-HP-Compq-820
+- computer name: iotbeacon-HP
 - username: iotbeacon
 - Require password to login
+
+Open terminal
+
+- setxkbmap fi
+- sudo apt-get update
+- sudo apt-get upgrade
+- sudoedit /etc/hostname
+
+edit hostname iotbeacon-HP
+
+- sudo reboot
+
+Apache installation
+
+- sudo ufw allow 22/tcp
+- sudo ufw allow 80/tcp
+- sudo ufw enable
+- 

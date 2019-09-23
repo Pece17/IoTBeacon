@@ -10,3 +10,18 @@ Rasmus Ekman - Project worker
 Pekka Hämäläinen - Project worker
 
 Joni Mattsson - Project worker
+
+# Installing Ubuntu server
+We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3.
+
+Installation:
+- Install Xubuntu English language
+- Continue
+- Continue
+- Erase disk and install Xubuntu
+- Helsinki
+- Kyeboard layout Finnish and Finnish
+- Your name: Iot Beacon
+- computer name: iotbeacon-HP-Compq-820
+- username: iotbeacon
+- Require password to login

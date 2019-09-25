@@ -95,7 +95,7 @@ ServerAlias iotbeacon.com
 
 127.0.0.1 iotbeacon.com
 
-# Installing static IP adress on server
+# Installing static IP adress on server (ei toimi)
 
 - cat /etc/os-release
 

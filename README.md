@@ -121,10 +121,13 @@ iface eno1 inet static
  dns-nameservers x.x.x.x x.x.x.x
 
 - sudo ip addr flush eno1
+- systemctl restart networking.service
 
 https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
 
 https://askubuntu.com/questions/766131/how-do-i-set-a-static-ip-in-ubuntu
 
 https://support.us.ovhcloud.com/hc/en-us/articles/360000092264-How-to-Configure-Networking-for-a-VM-Running-Ubuntu-16-04
+
+https://www.configserverfirewall.com/ubuntu-linux/ubuntu-restart-network-interface/
 

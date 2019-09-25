@@ -104,8 +104,19 @@ Graafisesti ei onnistu, miten terminaalista?
 https://www.howtoforge.com/tutorial/howto-set-a-static-ip-on-ubuntu/
 
 https://www.snel.com/support/static-ip-configuration-ubuntu-16-04/
+
 - clear && echo $(ip -o -4 route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
+- sudo nano /etc/network/interfaces
+
+auto eno1
+iface eno1 inet static
+ address x.x.x.x
+ netmask x.x.x.x
+ gateway x.x.x.x
+ dns-nameservers x.x.x.x x.x.x.x
+
 - sudo ip addr flush eno1
+
 https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
 
 https://askubuntu.com/questions/766131/how-do-i-set-a-static-ip-in-ubuntu

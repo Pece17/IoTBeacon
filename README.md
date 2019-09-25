@@ -108,12 +108,17 @@ https://www.snel.com/support/static-ip-configuration-ubuntu-16-04/
 - clear && echo $(ip -o -4 route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
 - sudo nano /etc/network/interfaces
 
-[auto eno1
+auto eno1
+
 iface eno1 inet static
+
  address x.x.x.x
+ 
  netmask x.x.x.x
+ 
  gateway x.x.x.x
- dns-nameservers x.x.x.x x.x.x.x]
+ 
+ dns-nameservers x.x.x.x x.x.x.x
 
 - sudo ip addr flush eno1
 

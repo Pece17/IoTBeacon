@@ -95,5 +95,21 @@ ServerAlias iotbeacon.com
 
 127.0.0.1 iotbeacon.com
 
-# Installing static IP adresses
+# Installing static IP adress on server
+
+- cat /etc/os-release
+
+Graafisesti ei onnistu, miten terminaalista?
+
+https://www.howtoforge.com/tutorial/howto-set-a-static-ip-on-ubuntu/
+
+https://www.snel.com/support/static-ip-configuration-ubuntu-16-04/
+- clear && echo $(ip -o -4 route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
+- sudo ip addr flush eno1
+
+https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
+
+https://askubuntu.com/questions/766131/how-do-i-set-a-static-ip-in-ubuntu
+
+https://support.us.ovhcloud.com/hc/en-us/articles/360000092264-How-to-Configure-Networking-for-a-VM-Running-Ubuntu-16-04
 

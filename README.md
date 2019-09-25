@@ -2,14 +2,10 @@
 IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure Project -course. End product will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database. The data will then be used to build a HTML based application which either alerts when the beacons leave a designated area or alerts when they enter a forbidden area.
 
 # Project team
-
-Niko Kulmanen - Project manager
-
-Rasmus Ekman - Project worker
-
-Pekka Hämäläinen - Project worker
-
-Joni Mattsson - Project worker
+- Niko Kulmanen - Project manager
+- Rasmus Ekman - Project worker
+- Pekka Hämäläinen - Project worker
+- Joni Mattsson - Project worker
 
 # Installing Ubuntu server
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3.
@@ -18,7 +14,7 @@ We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8
 - Open legacy boot menu with F9
 - Choose USB-stick
 - "Cannot boot system due to start job running for hold error"
-- 
+- Try opening again
 
 Installation:
 - English
@@ -98,4 +94,6 @@ ServerAlias iotbeacon.com
 127.0.0.1 www.iotbeacon.com
 
 127.0.0.1 iotbeacon.com
+
+# Installing static IP adresses
 

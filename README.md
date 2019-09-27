@@ -47,6 +47,7 @@ Apache installation
 
 - sudo ufw allow 22/tcp
 - sudo ufw allow 80/tcp
+- (sudo ufw allow 443/tcp)
 - sudo ufw enable
 - sudo apt-get update
 - sudo apt-get install apache2
@@ -95,7 +96,7 @@ ServerAlias iotbeacon.com
 
 127.0.0.1 iotbeacon.com
 
-# Installing static IP adress on server (ei toimi)
+# Installing static IP adress on server (works with Google's DNS)
 
 - cat /etc/os-release
 
@@ -138,3 +139,14 @@ https://www.youtube.com/watch?v=YkbShiPaE_0
 
 https://www.youtube.com/watch?v=EpbtaLigCoY
 
+I changed DNS to 8.8.8.8 and 8.8.4.4 and now it's working, but I couldn't get assigned DNS addresses working.
+
+# Installing SSH on server
+
+- sudo apt-get install -y openssh-server openssh-client
+
+After installing SSH, I try to connect with other Linux-computer from the lab enviroment to the server.
+
+- ssh iotbeacon@x.x.x.x
+
+Connection is succesful

@@ -98,6 +98,7 @@ Edit 000-default.conf virtual host file to get a temporary domain name working
 - sudo nano 000-default.conf
 
 ServerName www.iotbeacon.com
+
 ServerAlias iotbeacon.com
 
 Restart Apache service and edit hosts files inside etc folder to complete the temporary domain name configuration

@@ -148,7 +148,4 @@ I changed DNS to 8.8.8.8 and 8.8.4.4 and now it's working, but I couldn't get as
 After installing SSH, I try to connect with other Linux-computer from the lab enviroment to the server.
 
 - ssh iotbeacon@x.x.x.x
-
-
-
 Connection is succesful

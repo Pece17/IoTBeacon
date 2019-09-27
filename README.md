@@ -1,13 +1,16 @@
 # IoT Beacon
+
 IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure Project -course. End product will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database. The data will then be used to build a HTML based application which either alerts when the beacons leave a designated area or alerts when they enter a forbidden area.
 
 # Project team
+
 - Niko Kulmanen - Project manager
 - Rasmus Ekman - Project worker
 - Pekka Hämäläinen - Project worker
 - Joni Mattsson - Project worker
 
 # Installing Ubuntu server
+
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3.
 
 - Remove LAN-cable before installation
@@ -48,7 +51,7 @@ Apache installation
 
 - sudo ufw allow 22/tcp
 - sudo ufw allow 80/tcp
-- (sudo ufw allow 443/tcp)
+- sudo ufw allow 443/tcp
 - sudo ufw enable
 - sudo apt-get update
 - sudo apt-get install apache2
@@ -72,15 +75,15 @@ Authenticate
 - cd public_html
 - nano index.html
 
-kopioi html https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document
+Copy basic HTML from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document.
 
-- ctrl x
-- yes
-- enter
+- Ctrl x
+- Yes
+- Enter
 
-Siirry localhost/~iotbeacon tai 172.28.171.211/~iotbeacon
+Go to localhost/~iotbeacon or 172.28.171.211/~iotbeacon in web browser.
 
-Toimii labraverkossa
+Both addresses work in lab environment.
 
 - cd /etc/apache2/sites-available
 - ls
@@ -140,7 +143,7 @@ https://www.youtube.com/watch?v=YkbShiPaE_0
 
 https://www.youtube.com/watch?v=EpbtaLigCoY
 
-I changed DNS to 8.8.8.8 and 8.8.4.4 and now it's working, but I couldn't get assigned DNS addresses working.
+I changed static IP settings graphically using Network application, but I couldn't get it working initially. Only after I changed the DNS addresses to Google's 8.8.8.8 and 8.8.4.4, I got it working, but I couldn't get the assigned DNS addresses working.
 
 # Installing SSH on server
 
@@ -150,4 +153,4 @@ After installing SSH, I try to connect with other Linux-computer from the lab en
 
 - ssh iotbeacon@x.x.x.x
 
-Connection is succesful
+Connection is succesful.

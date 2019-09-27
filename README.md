@@ -16,7 +16,8 @@ We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8
 - "Cannot boot system due to start job running for hold error"
 - Try opening again
 
-Installation:
+Installation
+
 - English
 - Install Xubuntu/Erase disk and install Xubuntu
 - Continue
@@ -52,11 +53,11 @@ Apache installation
 - sudo apt-get update
 - sudo apt-get install apache2
 
-localhost selaimeen
+Try localhost address on browser
 
 - hostname -I
 
-172.28.171.211 selaimeen
+Try 172.28.171.211 address on browser
 
 - sudo a2enmod userdir
 - service apache2 restart
@@ -102,7 +103,7 @@ ServerAlias iotbeacon.com
 
 Graafisesti ei onnistu, miten terminaalista? 255.255.0.0 vai 255.255.255.0?!
 
-https://www.howtoforge.com/tutorial/howto-set-a-static-ip-on-ubuntu/ <<<<<kokeile?
+https://www.howtoforge.com/tutorial/howto-set-a-static-ip-on-ubuntu/
 
 https://www.snel.com/support/static-ip-configuration-ubuntu-16-04/
 
@@ -148,4 +149,5 @@ I changed DNS to 8.8.8.8 and 8.8.4.4 and now it's working, but I couldn't get as
 After installing SSH, I try to connect with other Linux-computer from the lab enviroment to the server.
 
 - ssh iotbeacon@x.x.x.x
+
 Connection is succesful

@@ -149,4 +149,5 @@ After installing SSH, I try to connect with other Linux-computer from the lab en
 
 - ssh iotbeacon@x.x.x.x
 
+
 Connection is succesful

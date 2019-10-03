@@ -6,7 +6,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 - Niko Kulmanen - Project manager
 - Rasmus Ekman - Project worker
-- Pekka Hämäläinen - Project worker
+- Pekka Hämäläinen - Project worker and secretary
 - Joni Mattsson - Project worker
 
 # Installing Ubuntu server

@@ -198,3 +198,7 @@ GitHub is now supported by Firefox and writing GitHub README.md report can be do
 # Updating server from version 16.04.3 to 16.04.6
 
 Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt
+
+Shut down the server before leaving school
+
+- sudo poweroff

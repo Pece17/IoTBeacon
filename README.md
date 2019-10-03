@@ -193,4 +193,4 @@ Install Firefox browser because default browser on the server does not support f
 
 - sudo apt-get install firefox
 
-https://user-images.githubusercontent.com/31437201/66143123-536c1180-e60f-11e9-964e-bc89f88342dd.png
+![alt text](https://user-images.githubusercontent.com/31437201/66143123-536c1180-e60f-11e9-964e-bc89f88342dd.png)

@@ -190,4 +190,5 @@ Update package lists for upgrades and new packages from repositories
 - sudo apt-get update
 
 Install Firefox browser because default browser on the server does not support for example GitHub
+
 - sudo apt-get install firefox

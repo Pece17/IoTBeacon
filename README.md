@@ -167,7 +167,7 @@ I changed static IP settings graphically using Network application, but I couldn
 
 # Installing SSH on server
 
-Install SSH client and server
+Install SSH (Secure Shell) client and server
 
 - sudo apt-get install -y openssh-server openssh-client
 
@@ -193,3 +193,6 @@ Install Firefox browser because default browser on the server does not support f
 
 - sudo apt-get install firefox
 
+# Updating server from version 16.04.3 to 16.04.6
+
+Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt

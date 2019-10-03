@@ -177,7 +177,7 @@ After installing SSH, I try to connect with an other Linux computer from the lab
 
 Connection is succesful
 
-Other project member tries to connect to the server from his house using Linux-terminal and SSH, connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
+Other project member tries to connect to the server from his house using Linux terminal and SSH, connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
 
 # Installing Firefox on server
 
@@ -189,9 +189,11 @@ Update package lists for upgrades and new packages from repositories
 
 - sudo apt-get update
 
-Install Firefox browser because default browser on the server does not support for example GitHub
+Update Firefox browser because default browser on the server does not support for example GitHub
 
 - sudo apt-get install firefox
+
+GitHub is now supported by Firefox and writing GitHub README.md report can be done simultaneously with the server while configuring it
 
 # Updating server from version 16.04.3 to 16.04.6
 

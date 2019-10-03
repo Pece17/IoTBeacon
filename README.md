@@ -113,7 +113,7 @@ Restart Apache service and edit hosts files inside etc folder to complete the te
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
 
-# Installing static IP adress on server (works with Google's DNS)
+# Configuring static IP address on server (currently works with Google Public DNS)
 
 Find out the operating system version
 
@@ -171,10 +171,24 @@ Install SSH client and server
 
 - sudo apt-get install -y openssh-server openssh-client
 
-After installing SSH, I try to connect with an other Linux-computer from the lab enviroment to the server
+After installing SSH, I try to connect with an other Linux computer from the lab enviroment to the server
 
 - ssh iotbeacon@x.x.x.x
 
 Connection is succesful
 
 Other project member tries to connect to the server from his house using Linux-terminal and SSH, connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
+
+# Installing Firefox on server
+
+Establish an SSH connection in terminal using a Linux computer withing lab environment
+
+- ssh iotbeacon@x.x.x.x
+
+Update package lists for upgrades and new packages from repositories
+
+- sudo apt-get update
+
+Install Firefox browser because default browser on the server does not support for example GitHub
+
+

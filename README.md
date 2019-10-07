@@ -245,3 +245,10 @@ Specifications:
 
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Raspbian version 10 (buster)
+
+### Create a new sudo user
+
+Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
+'''
+sudo adduser xxx
+'''

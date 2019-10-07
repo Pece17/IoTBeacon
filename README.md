@@ -272,3 +272,7 @@ Log in as xxx &
 sudo deluser -remove-home pi
 sudo rm -vf /etc/sudoers.d/010_pi-nopasswd
 ```
+Changed user password & enabled ssh using Raspberry Pi Software Configuration Tool
+```
+sudo raspi-config
+```

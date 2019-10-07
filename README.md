@@ -240,3 +240,8 @@ Specifications:
 - 5.1 V / 2.5 A USB power supply
 - HDMI cable
 - Display
+
+### Operating system
+
+- installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
+- Raspbian version 10 (buster)

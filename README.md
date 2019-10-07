@@ -258,3 +258,17 @@ Add new user to same groups as "pi"
 for GROUP in $(groups pi | sed -e 's/^pi //'); do
 sudo adduser xxx $GROUP; done
 ```
+Add nopasswd rule for new user and change "pi" to "xxx"
+```
+sudo cp /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_xxx-nopasswd
+sudo chmod u+w /etc/sudoers.d/010_xxx-nopasswd
+sudo sed -i 's/pi/xxx/g' /etc/sudoers.d/010_xxx-nopasswd
+sudo chmod u-w /etc/sudoers.d/010_xxx-nopasswd
+sudo reboot
+```
+Remove user "pi"
+Log in as xxx &
+```
+sudo deluser -remove-home pi
+sudo rm -vf /etc/sudoers.d/010_pi-nopasswd
+```

@@ -202,3 +202,5 @@ Server operating system is updated to a newer version of 16.04 LTS (Long Term Su
 Shut down the server before leaving school
 
 - sudo poweroff
+
+# Bluetooth beacons

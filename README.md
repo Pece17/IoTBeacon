@@ -229,3 +229,14 @@ Specifications:
 - RJ45
 - 4x USB
 - MicroSD card reader
+
+### Rasbperry Pi installation
+
+- Heat sinks
+- Case
+- MicroSD card with Raspberry Pi NOOBS
+- keyboard
+- Mouse
+- 5.1 V / 2.5 A USB power supply
+- HDMI cable
+- Display

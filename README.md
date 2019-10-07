@@ -213,3 +213,19 @@ Shut down the server before leaving school
 
 - Includes Device (beacon) informations, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot.
 - We upgraded the firmware and changed passwords to the beacons
+
+# Raspberry Pi 
+
+- 3 x Raspberry Pi 3 model B
+
+Specifications:
+
+- 1 Gt RAM
+- 1,2 GHz Broadcom BCM2837 64-bit ARMv8 Quad-core CPU
+- BLE
+- BCM43143 Wi-FI IEEE 802.11 b/g/n
+- HDMI/RCA
+- 3.5 mm 
+- RJ45
+- 4x USB
+- MicroSD card reader

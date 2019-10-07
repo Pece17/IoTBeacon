@@ -209,4 +209,7 @@ Shut down the server before leaving school
 - Beacons broadcast their identifier to nearby devices (in this project Raspberry Pi)
 - Beacons are configured using BlueBeacon Manager App
 
-## BlueBeacon Manager App
+### BlueBeacon Manager App
+
+- Includes Device (beacon) informations, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot.
+- We upgraded the firmware and changed passwords to the beacons

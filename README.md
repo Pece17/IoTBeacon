@@ -251,4 +251,10 @@ Specifications:
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 ```
 sudo adduser xxx
+sudo adduser xxx sudo
+```
+Add new user to same groups as "pi"
+```
+for GROUP in $(groups pi | sed -e 's/^pi //'); do
+sudo adduser xxx $GROUP; done
 ```

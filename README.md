@@ -204,3 +204,7 @@ Shut down the server before leaving school
 - sudo poweroff
 
 # Bluetooth beacons
+
+- 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp
+- Beacons broadcast their identifier to nearby devices (in this project Raspberry Pi)
+- Beacons are configured using BlueBeacon Manager App

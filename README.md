@@ -9,7 +9,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Pekka Hämäläinen - Project worker and secretary
 - Joni Mattsson - Project worker
 
-# Installing Ubuntu server
+# Ubuntu server
 
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3
 

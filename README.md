@@ -113,7 +113,7 @@ Restart Apache service and edit hosts files inside etc folder to complete the te
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
 
-# Configuring static IP address on server (currently works with Google Public DNS)
+## Configuring static IP address on server (currently works with Google Public DNS)
 
 Find out the operating system version
 
@@ -165,7 +165,7 @@ iface eno1 inet static
 
 I changed static IP settings graphically using Network application, but I couldn't get it working initially. Only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, I got internet working, but I couldn't get the assigned lab environment DNS addresses working
 
-# Installing SSH on server
+### Installing SSH on server
 
 Install SSH (Secure Shell) client and server
 

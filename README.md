@@ -9,7 +9,11 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Pekka Hämäläinen - Project worker and secretary
 - Joni Mattsson - Project worker
 
-# Ubuntu server initialization (work in progress, make a one big heading? add under headings for more steps?)
+# Ubuntu server
+
+(add text, specifications etc?)
+
+## Ubuntu server initialization (work in progress, make a one big heading? add under headings for more steps?)
 
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3
 
@@ -223,7 +227,7 @@ Internet is now working and pinging from other lab environment computers is succ
 
 Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, I got the internet working, but now finally the lab environment DNS addresses are working apparently due to a fix from higher-ups so I configure them again on the server and keep Google Public DNS as a backup option
 
-### Installing SSH on server
+## Installing SSH on server
 
 Install SSH (Secure Shell) client and server
 
@@ -241,7 +245,7 @@ Connection is succesful
 
 Other project member tries to connect to the server from his house using Linux terminal and SSH - connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
 
-### Installing Firefox on server
+## Installing Firefox on server
 
 Establish an SSH connection in terminal using another Linux computer withing lab environment
 
@@ -263,7 +267,7 @@ sudo apt-get install firefox
 
 GitHub is now supported by Firefox and writing GitHub README.md report can be done simultaneously with the server while configuring it
 
-### Updating server from version 16.04.3 to 16.04.6
+## Updating server from version 16.04.3 to 16.04.6
 
 Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt
 
@@ -279,7 +283,7 @@ sudo poweroff
 - Beacons broadcast their identifier to nearby devices (in this project Raspberry Pi)
 - Beacons are configured using BlueBeacon Manager App
 
-### BlueBeacon Manager App
+## BlueBeacon Manager App
 
 - Includes Device (beacon) informations, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot.
 - We upgraded the firmware and changed passwords to the beacons

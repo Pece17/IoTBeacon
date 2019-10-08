@@ -122,7 +122,7 @@ Yes
 Enter
 ```
 
-Go to address localhost/~iotbeacon or 172.28.171.211/~iotbeacon using web browser
+Go to address localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web browser
 
 Both addresses work in lab environment
 
@@ -187,7 +187,7 @@ clear && echo $(ip -o -4 route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
 ifconfig
 ```
 
-Edit interfaces-file and add the required parameters for static IP address
+Edit interfaces-file and add the required parameters for static IP address, but don't remove any old text from inside the file
 
 ```
 sudo nano /etc/network/interfaces
@@ -201,6 +201,7 @@ netmask x.x.x.x
 gateway x.x.x.x
 dns-nameservers x.x.x.x x.x.x.x
 ```
+Flush DNS, restart networking service, and reboot the server
 
 ```
 sudo ip addr flush eno1
@@ -218,7 +219,7 @@ Install SSH (Secure Shell) client and server
 sudo apt-get install -y openssh-server openssh-client
 ```
 
-After installing SSH, I try to connect with an other Linux computer from the lab enviroment to the server
+After installing SSH, I try to connect with another Linux computer from the lab enviroment to the server
 
 ```
 ssh iotbeacon@x.x.x.x
@@ -226,11 +227,11 @@ ssh iotbeacon@x.x.x.x
 
 Connection is succesful
 
-Other project member tries to connect to the server from his house using Linux terminal and SSH, connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
+Other project member tries to connect to the server from his house using Linux terminal and SSH - connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
 
 ### Installing Firefox on server
 
-Establish an SSH connection in terminal using a Linux computer withing lab environment
+Establish an SSH connection in terminal using another Linux computer withing lab environment
 
 ```
 - ssh iotbeacon@x.x.x.x
@@ -242,7 +243,7 @@ Update package lists for upgrades and new packages from repositories
 sudo apt-get update
 ```
 
-Update Firefox browser because default browser on the server does not support for example GitHub
+Update Firefox browser because default browser on the server does not support all sites, specifically GitHub
 
 ```
 sudo apt-get install firefox
@@ -254,7 +255,7 @@ GitHub is now supported by Firefox and writing GitHub README.md report can be do
 
 Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt
 
-Shut down the server before leaving school
+Shut down the server before leaving the server room
 
 ```
 sudo poweroff
@@ -308,18 +309,18 @@ Specifications:
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 
 ```
-sudo adduser xxx
-sudo adduser xxx sudo
+sudo adduser xxxx
+sudo adduser xxxx sudo
 ```
 
 Add new user to same groups as "pi"
 
 ```
 for GROUP in $(groups pi | sed -e 's/^pi //'); do
-sudo adduser xxx $GROUP; done
+sudo adduser xxxx $GROUP; done
 ```
 
-Add nopasswd rule for new user and change "pi" to "xxx"
+Add nopasswd rule for new user and change "pi" to "xxxx"
 
 ```
 sudo cp /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_xxx-nopasswd
@@ -330,7 +331,7 @@ sudo reboot
 ```
 
 Remove user "pi"
-Log in as xxx &
+Log in as xxxx &
 
 ```
 sudo deluser -remove-home pi

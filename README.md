@@ -113,7 +113,7 @@ Restart Apache service and edit hosts files inside etc folder to complete the te
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
 
-## Configuring static IP address on server (currently works with Google Public DNS)
+### Configuring static IP address on server (currently works with Google Public DNS)
 
 Find out the operating system version
 
@@ -179,7 +179,7 @@ Connection is succesful
 
 Other project member tries to connect to the server from his house using Linux terminal and SSH, connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
 
-# Installing Firefox on server
+### Installing Firefox on server
 
 Establish an SSH connection in terminal using a Linux computer withing lab environment
 
@@ -195,13 +195,15 @@ Update Firefox browser because default browser on the server does not support fo
 
 GitHub is now supported by Firefox and writing GitHub README.md report can be done simultaneously with the server while configuring it
 
-# Updating server from version 16.04.3 to 16.04.6
+### Updating server from version 16.04.3 to 16.04.6
 
 Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt
 
 Shut down the server before leaving school
 
-- sudo poweroff
+```
+sudo poweroff
+```
 
 # Bluetooth beacons
 
@@ -246,33 +248,42 @@ Specifications:
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Raspbian version 10 (buster)
 
-### Create a new sudo user
+## Create a new sudo user
 
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
+
 ```
 sudo adduser xxx
 sudo adduser xxx sudo
 ```
+
 Add new user to same groups as "pi"
+
 ```
 for GROUP in $(groups pi | sed -e 's/^pi //'); do
 sudo adduser xxx $GROUP; done
 ```
+
 Add nopasswd rule for new user and change "pi" to "xxx"
+
 ```
 sudo cp /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_xxx-nopasswd
 sudo chmod u+w /etc/sudoers.d/010_xxx-nopasswd
 sudo sed -i 's/pi/xxx/g' /etc/sudoers.d/010_xxx-nopasswd
 sudo chmod u-w /etc/sudoers.d/010_xxx-nopasswd
 sudo reboot
+
 ```
 Remove user "pi"
 Log in as xxx &
+
 ```
 sudo deluser -remove-home pi
 sudo rm -vf /etc/sudoers.d/010_pi-nopasswd
 ```
+
 Changed user password & enabled ssh using Raspberry Pi Software Configuration Tool
+
 ```
 sudo raspi-config
 ```

@@ -76,7 +76,7 @@ Find out the current IP address
 hostname -I
 ```
 
-Try 172.28.171.211 IP-address on browser, this also works and opens the Apache2 default page
+Try 172.28.171.211 IP address on browser, this also works and opens the Apache2 default page
 
 Enable userdir Apache module and restart the service
 

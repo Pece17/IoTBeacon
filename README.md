@@ -1,6 +1,6 @@
 # IoT Beacon
 
-IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure Project -course. End product will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database. The data will then be used to build a HTML based application which either alerts when the beacons leave a designated area or alerts when they enter a forbidden area.
+IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure Project -course. End product will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database i.e. a server. The data will then be used to build a HTML based application which either alerts when the beacons leave a designated area or alerts when they enter a forbidden area.
 
 # Project team
 
@@ -38,6 +38,10 @@ Installation steps
 
 Open terminal
 
+```
+Ctrl + Alt + T
+```
+
 Change keyboard layout to Finnish keyboard
 
 ```
@@ -52,7 +56,7 @@ sudo apt-get upgrade
 ssudo reboot
 ```
 
-Firewall configuration and Apache2 web server installation
+Firewall configuration and Apache2 Web Server installation
 
 ```
 sudo ufw allow 22/tcp
@@ -64,15 +68,15 @@ sudo apt-get install apache2
 sudo reboot
 ```
 
-Try localhost address on browser, it works and opens the Apache2 default page
+Try localhost address on web browser, it works and opens the Apache2 default page
 
-Find out current IP address
+Find out the current IP address
 
 ```
 hostname -I
 ```
 
-Try 172.28.171.211 address on browser, this also works and opens the Apache2 default page
+Try 172.28.171.211 IP-address on browser, this also works and opens the Apache2 default page
 
 Enable userdir Apache module and restart the service
 
@@ -81,7 +85,7 @@ sudo a2enmod userdir
 service apache2 restart
 ```
 
-Go to the home directory and make the public_html folder, list the contents of the home directory to check that the public_html folder was succesfully created, and create the index.html file inside the public_html folder
+Go to the home directory and make the public_html folder, list the contents of the home directory to check that the public_html folder was succesfully created, and then create the index.html file inside the public_html folder
 
 ```
 cd
@@ -93,10 +97,27 @@ cd public_html
 nano index.html
 ```
 
-Copy basic HTML from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document and save the file
+Copy basic HTML from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document and add some text
 
 ```
-Ctrl x
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>IoT Beacon</h1>
+
+<p>Monialaprojekti</p>
+
+<p>Web application will be added here<p>
+
+</body>
+</html>
+```
+
+Save the file
+
+```
+Ctrl X
 Yes
 Enter
 ```
@@ -113,18 +134,23 @@ ls
 sudo nano 000-default.conf
 ```
 
+```
 ServerName www.iotbeacon.com
 ServerAlias iotbeacon.com
+```
 
 Restart Apache service and edit hosts files inside etc folder to complete the temporary domain name configuration
 
-- service apache2 restart
-- cd /etc
-- sudoedit hosts
+```
+service apache2 restart
+cd /etc
+sudoedit hosts
+```
 
+```
 127.0.0.1 www.iotbeacon.com
-
 127.0.0.1 iotbeacon.com
+```
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
 
@@ -132,7 +158,9 @@ www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and sh
 
 Find out the operating system version
 
-- cat /etc/os-release
+```
+cat /etc/os-release
+```
 
 Look up different instructions for installing static IP address with Xubuntu 16.04 version
 
@@ -154,41 +182,47 @@ https://www.snel.com/support/static-ip-configuration-ubuntu-16-04/
 
 Find out the name of the used LAN interface
 
-- clear && echo $(ip -o -4 route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
-- ifconfig
+```
+clear && echo $(ip -o -4 route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
+ifconfig
+```
 
-Edit interfaces-file and change the required parameters for static IP address
+Edit interfaces-file and add the required parameters for static IP address
 
-- sudo nano /etc/network/interfaces
+```
+sudo nano /etc/network/interfaces
+```
 
+```
 auto eno1
-
 iface eno1 inet static
+address x.x.x.x
+netmask x.x.x.x
+gateway x.x.x.x
+dns-nameservers x.x.x.x x.x.x.x
+```
 
- address x.x.x.x
- 
- netmask x.x.x.x
- 
- gateway x.x.x.x
- 
- dns-nameservers x.x.x.x x.x.x.x
+```
+sudo ip addr flush eno1
+systemctl restart networking.service
+sudo reboot
+```
 
-- sudo reboot
-
-- sudo ip addr flush eno1
-- systemctl restart networking.service
-
-I changed static IP settings graphically using Network application, but I couldn't get it working initially. Only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, I got internet working, but I couldn't get the assigned lab environment DNS addresses working
+Ultimately, I ended up changing the static IP settings graphically using Network application since it was recommended, but I couldn't get it working initially. Only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, I got the internet working, so I didn't get the assigned lab environment DNS addresses working.
 
 ### Installing SSH on server
 
 Install SSH (Secure Shell) client and server
 
-- sudo apt-get install -y openssh-server openssh-client
+```
+sudo apt-get install -y openssh-server openssh-client
+```
 
 After installing SSH, I try to connect with an other Linux computer from the lab enviroment to the server
 
-- ssh iotbeacon@x.x.x.x
+```
+ssh iotbeacon@x.x.x.x
+```
 
 Connection is succesful
 

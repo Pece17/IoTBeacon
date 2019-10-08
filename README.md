@@ -2,14 +2,14 @@
 
 IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure Project -course. End product will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database i.e. a server. The data will then be used to build a HTML based application which either alerts when the beacons leave a designated area or alerts when they enter a forbidden area.
 
-### Project team
+## Project team
 
 - Niko Kulmanen - Project manager
 - Rasmus Ekman - Project worker
 - Pekka Hämäläinen - Project worker and secretary
 - Joni Mattsson - Project worker
 
-# Ubuntu server
+# Ubuntu server initialization
 
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3
 
@@ -129,11 +129,11 @@ Yes
 Enter
 ```
 
-Go to address localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web browser
+Go to addresses localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web browser
 
 Both addresses work in lab environment
 
-Navigate to 000-default.conf virtual host file and configure temporary domain names using the specified parameters, they only used for testing purposes
+Navigate to 000-default.conf virtual host file and configure temporary domain names using the specified parameters, they are only used for testing purposes
 
 ```
 cd /etc/apache2/sites-available
@@ -161,7 +161,7 @@ sudoedit hosts
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
 
-### Configuring static IP address on server using CLI and GUI
+## Configuring a static IP address on server using CLI and GUI
 
 I initially tried to configure the assigned static IP address using only CLI (command line interface)
 

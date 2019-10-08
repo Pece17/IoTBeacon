@@ -183,15 +183,21 @@ Other project member tries to connect to the server from his house using Linux t
 
 Establish an SSH connection in terminal using a Linux computer withing lab environment
 
+```
 - ssh iotbeacon@x.x.x.x
+```
 
 Update package lists for upgrades and new packages from repositories
 
-- sudo apt-get update
+```
+sudo apt-get update
+```
 
 Update Firefox browser because default browser on the server does not support for example GitHub
 
-- sudo apt-get install firefox
+```
+sudo apt-get install firefox
+```
 
 GitHub is now supported by Firefox and writing GitHub README.md report can be done simultaneously with the server while configuring it
 
@@ -248,7 +254,7 @@ Specifications:
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Raspbian version 10 (buster)
 
-## Create a new sudo user
+### Create a new sudo user
 
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 
@@ -272,8 +278,8 @@ sudo chmod u+w /etc/sudoers.d/010_xxx-nopasswd
 sudo sed -i 's/pi/xxx/g' /etc/sudoers.d/010_xxx-nopasswd
 sudo chmod u-w /etc/sudoers.d/010_xxx-nopasswd
 sudo reboot
-
 ```
+
 Remove user "pi"
 Log in as xxx &
 

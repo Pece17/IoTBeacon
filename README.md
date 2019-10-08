@@ -133,7 +133,7 @@ Go to address localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web brows
 
 Both addresses work in lab environment
 
-Edit 000-default.conf virtual host file to get a temporary domain name working
+Navigate to 000-default.conf virtual host file and configure temporary domain names using the specified parameters, they only used for testing purposes
 
 ```
 cd /etc/apache2/sites-available
@@ -161,31 +161,15 @@ sudoedit hosts
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
 
-### Configuring static IP address on server (currently works with Google Public DNS)
+### Configuring static IP address on server using CLI and GUI
+
+I initially tried to configure the assigned static IP address using only CLI (command line interface)
 
 Find out the operating system version
 
 ```
 cat /etc/os-release
 ```
-
-Look up different instructions for installing static IP address with Xubuntu 16.04 version
-
-https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
-
-https://askubuntu.com/questions/766131/how-do-i-set-a-static-ip-in-ubuntu
-
-https://support.us.ovhcloud.com/hc/en-us/articles/360000092264-How-to-Configure-Networking-for-a-VM-Running-Ubuntu-16-04
-
-https://www.configserverfirewall.com/ubuntu-linux/ubuntu-restart-network-interface/
-
-https://www.youtube.com/watch?v=YkbShiPaE_0
-
-https://www.youtube.com/watch?v=EpbtaLigCoY
-
-https://www.howtoforge.com/tutorial/howto-set-a-static-ip-on-ubuntu/
-
-https://www.snel.com/support/static-ip-configuration-ubuntu-16-04/
 
 Find out the name of the used LAN interface
 
@@ -194,7 +178,7 @@ clear && echo $(ip -o -4 route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
 ifconfig
 ```
 
-Edit interfaces-file and add the required parameters for static IP address, but don't remove any old text from inside the file
+Edit interfaces file and add the required parameters for the static IP address - don't remove any old text from inside the file
 
 ```
 sudo nano /etc/network/interfaces
@@ -208,7 +192,8 @@ netmask x.x.x.x
 gateway x.x.x.x
 dns-nameservers x.x.x.x x.x.x.x
 ```
-Flush DNS, restart networking service, and reboot the server
+
+Flush IP, restart networking service, and reboot the server
 
 ```
 sudo ip addr flush eno1
@@ -216,7 +201,27 @@ systemctl restart networking.service
 sudo reboot
 ```
 
-Ultimately, I ended up changing the static IP settings graphically using Network application since it was recommended, but I couldn't get it working initially. Only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, I got the internet working, so I didn't get the assigned lab environment DNS addresses working.
+Configuration does seem to work using command line but I still remove any changes I did in terminal just to be safe - I read many tutorials stating that it is highly recommended to configure IP addresses with GUI (graphical user interface) using Network Connections application in current versions of Ubuntu because the application might override any command line changes nevertheless
+
+- Navigate to desktop and open Edit Connections tab from upper right corner under a symbol depicting two arrows
+- Choose Ethernet and Wired connection 1 and press Edit
+- Go to IPv4 Settings
+- Change Method to Manual
+- Add a new address and enter the parameters
+- Add DNS servers
+- Save
+- Open Connection Information from upper right corner under the same symbol depicting two arrows
+- Check that the IPv4 settings are correct
+
+Reboot the server to apply changes
+
+```
+sudo reboot
+```
+
+Internet is now working and pinging from other lab environment computers is successfull
+
+Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, I got the internet working, but now finally the lab environment DNS addresses are working apparently due to a fix from higher-ups so I configure them again on the server and keep Google Public DNS as a backup option
 
 ### Installing SSH on server
 
@@ -241,7 +246,7 @@ Other project member tries to connect to the server from his house using Linux t
 Establish an SSH connection in terminal using another Linux computer withing lab environment
 
 ```
-- ssh iotbeacon@x.x.x.x
+ssh iotbeacon@x.x.x.x
 ```
 
 Update package lists for upgrades and new packages from repositories

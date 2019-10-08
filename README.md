@@ -300,7 +300,7 @@ Specifications:
 - 4x USB
 - MicroSD card reader
 
-### Rasbperry Pi installation
+## Rasbperry Pi installation
 
 - Heat sinks
 - Case
@@ -311,12 +311,12 @@ Specifications:
 - HDMI cable
 - Display
 
-### Operating system
+## Operating system
 
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Raspbian version 10 (buster)
 
-### Create a new sudo user
+## Create a new sudo user
 
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 

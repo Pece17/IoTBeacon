@@ -40,52 +40,66 @@ Open terminal
 
 Change keyboard layout to Finnish keyboard
 
-- setxkbmap fi
+```
+setxkbmap fi
+```
 
 Update and reboot the system
 
-- sudo apt-get update
-- sudo apt-get upgrade
-- sudo reboot
+```
+sudo apt-get update
+sudo apt-get upgrade
+ssudo reboot
+```
 
 Firewall configuration and Apache2 web server installation
 
-- sudo ufw allow 22/tcp
-- sudo ufw allow 80/tcp
-- sudo ufw allow 443/tcp
-- sudo ufw enable
-- sudo apt-get update
-- sudo apt-get install apache2
-- sudo reboot
+```
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+sudo apt-get update
+sudo apt-get install apache2
+sudo reboot
+```
 
 Try localhost address on browser, it works and opens the Apache2 default page
 
 Find out current IP address
 
-- hostname -I
+```
+hostname -I
+```
 
 Try 172.28.171.211 address on browser, this also works and opens the Apache2 default page
 
 Enable userdir Apache module and restart the service
 
-- sudo a2enmod userdir
-- service apache2 restart
+```
+sudo a2enmod userdir
+service apache2 restart
+```
 
 Go to the home directory and make the public_html folder, list the contents of the home directory to check that the public_html folder was succesfully created, and create the index.html file inside the public_html folder
 
-- cd
-- whoami
-- ls
-- mkdir public_html
-- ls
-- cd public_html
-- nano index.html
+```
+cd
+whoami
+ls
+mkdir public_html
+ls
+cd public_html
+nano index.html
+```
 
 Copy basic HTML from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document and save the file
 
-- Ctrl x
-- Yes
-- Enter
+```
+Ctrl x
+Yes
+Enter
+```
 
 Go to address localhost/~iotbeacon or 172.28.171.211/~iotbeacon using web browser
 
@@ -93,12 +107,13 @@ Both addresses work in lab environment
 
 Edit 000-default.conf virtual host file to get a temporary domain name working
 
-- cd /etc/apache2/sites-available
-- ls
-- sudo nano 000-default.conf
+```
+cd /etc/apache2/sites-available
+ls
+sudo nano 000-default.conf
+```
 
 ServerName www.iotbeacon.com
-
 ServerAlias iotbeacon.com
 
 Restart Apache service and edit hosts files inside etc folder to complete the temporary domain name configuration

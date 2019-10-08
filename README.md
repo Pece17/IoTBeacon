@@ -97,7 +97,14 @@ cd public_html
 nano index.html
 ```
 
-Copy basic HTML from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document and add some text
+I forgot to create the index.html file with sudo or "superuser do" permission so I delete the previous file recursively and create a new, secure infex.html file
+
+```
+rm -r index.html
+sudo nano index.html
+```
+
+Copy basic HTML from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some headings
 
 ```
 <!DOCTYPE html>

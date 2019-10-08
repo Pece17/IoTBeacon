@@ -161,7 +161,7 @@ sudoedit hosts
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
 
-## Configuring a static IP address on server using CLI and GUI
+## Configuring static IP addresses on server using CLI and GUI
 
 I initially tried to configure the assigned static IP address using only CLI (command line interface)
 

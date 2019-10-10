@@ -9,11 +9,11 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Pekka Hämäläinen - Project worker and secretary
 - Joni Mattsson - Project worker
 
-# Ubuntu server
+# Ubuntu server (Work in progress)
 
 (add text, specifications etc?)
 
-## Ubuntu server initialization (work in progress, make a one big heading? add under headings for more steps?)
+## Ubuntu server initialization (Work in progress > make a one big heading? > add subheadings for more specific steps?)
 
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3
 
@@ -277,7 +277,7 @@ Shut down the server before leaving the server room
 sudo poweroff
 ```
 
-## Installing MariaDB database on server
+## Installing MariaDB database on server (Work in progress)
 
 Update package lists for upgrades and new packages from repositories
 
@@ -291,9 +291,9 @@ Install MariaDB relational database
 sudo apt-get install mariadb-server
 ```
 
-## Installing PHP on server
+## Installing PHP on server (Work in progress)
 
-Install PHP (Hypertext Preprocessor)
+Install PHP (Hypertext Preprocessor) and PHP module for Apache2 web server, one of many modules available for PHP
 
 ```
 sudo apt-get install php libapache2-mod-php
@@ -339,6 +339,68 @@ cd
 cd public_html
 ls
 ```
+
+Open the index.html file, copy the contents from inside, and exit
+
+```
+sudo nano index.html
+```
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>IoT Beacon</h1>
+
+<p>Monialaprojekti</p>
+
+<p>Web application will be added here<p>
+
+</body>
+</html>
+```
+
+Delete the index.html file and check that it is removed
+
+```
+sudo rm -r index.html
+ls
+```
+
+Create a new file called index.php, paste the previously copied HTML inside it, and add a simple calculation of 1+3 to test the function of PHP
+
+```
+sudo nano index.php
+```
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>IoT Beacon</h1>
+
+<p>Monialaprojekti</p>
+
+<p>Web application will be added here<p>
+
+<?php
+
+print(1+3);
+
+?>
+
+</body>
+</html>
+```
+
+Exit and save the file, and open localhost/~iotbeacon to test if PHP is working correctly
+
+The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
+
+## Installing Salt on server (Work in progress)
+
 
 
 # Bluetooth beacons

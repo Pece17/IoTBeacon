@@ -277,6 +277,70 @@ Shut down the server before leaving the server room
 sudo poweroff
 ```
 
+## Installing MariaDB database on server
+
+Update package lists for upgrades and new packages from repositories
+
+```
+sudo apt-get update
+```
+
+Install MariaDB relational database
+
+```
+sudo apt-get install mariadb-server
+```
+
+## Installing PHP on server
+
+Install PHP (Hypertext Preprocessor)
+
+```
+sudo apt-get install php libapache2-mod-php
+```
+
+Navigate to mods-available folder and list the contents
+
+```
+cd /etc/apache2/mods-available
+ls
+```
+
+Edit php7.0.conf file, add hashtags to following lines, and save while exiting
+
+```
+sudoedit php7.0.conf
+```
+
+```
+#<IfModule mod_userdir.c>
+#    <Directory /home/*/public_html>
+#        php_admin_flag engine Off
+#    </Directory>
+#</IfModule>
+```
+
+```
+Ctrl + X
+Y
+Enter
+```
+
+Restart Apache2
+
+```
+sudo service apache2 restart
+```
+
+Navigate to public_html folder and list the contents
+
+```
+cd
+cd public_html
+ls
+```
+
+
 # Bluetooth beacons
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp

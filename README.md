@@ -271,7 +271,13 @@ GitHub is now supported by Firefox and writing GitHub README.md report can be do
 
 Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt
 
-Shut down the server before leaving the server room
+Check if the operating system version changed
+
+```
+cat /etc/os-release
+```
+
+OS version is now 16.04.6, shut down the server before leaving the server room
 
 ```
 sudo poweroff
@@ -292,6 +298,18 @@ sudo apt-get install mariadb-server
 ```
 
 ## Installing PHP on server (Work in progress)
+
+Check command history to see what commands other project workers have given to the server - PHP does not seem to be installed yet based on the command history
+
+```
+history
+```
+
+Update package lists for upgrades and new packages from repositories
+
+```
+sudo apt-get update
+```
 
 Install PHP (Hypertext Preprocessor) and PHP module for Apache2 web server, one of many modules available for PHP
 
@@ -401,7 +419,32 @@ The web page now shows the previously written headings and number 4, indicating 
 
 ## Installing Salt on server (Work in progress)
 
-
+ssh projektimies@172.28.175.44
+ssh projektimies@172.28.175.42
+ping rauta.local
+sudo apt-get -y install salt-master
+sudo ufw allow 4505/tcp
+sudo ufw allow 4506/tcp
+sudo salt-key
+hostname -i
+sudo salt-key -A
+sudo salt-key
+sudoedit /etc/salt/master
+sudo systemctl restart salt-master.service 
+sudo salt-key
+sudo systemctl restart salt-master.service 
+sudoedit /etc/salt/master
+sudo systemctl restart salt-master.service 
+sudo salt-key
+sudo salt-key -A
+sudo salt-key
+sudo salt-key -A
+sudo salt projektimies2 'hostname -i'
+sudo salt 'projektimies2' cmd.run 'hostname -I'
+sudo salt-key -A
+sudo salt-key
+sudo salt-key -A
+sudo salt-key
 
 # Bluetooth beacons
 

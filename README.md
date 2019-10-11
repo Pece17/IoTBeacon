@@ -54,7 +54,13 @@ Change keyboard layout to Finnish keyboard
 setxkbmap fi
 ```
 
-Update and reboot the system
+Check the name of the current user, in this case the user is iotbeacon because that is the only user on this server
+
+```
+whoami
+```
+
+Update, upgrade, and reboot the system
 
 ```
 sudo apt-get update
@@ -64,21 +70,24 @@ sudo reboot
 
 ## Configuring firewall and installing Apache2 Web Server on the server
 
-Start firewall configuring by allowing port 22, a crucial step if you are configuring a virtual server because this port is responsible for allowing SSH - if you don't allow this on a virtual server before enabling firewall, you are essentially blocking your access to it 
+Start configuring firewall by allowing port 22, a crucial step especially if you are configuring a virtual server because this port is responsible for allowing SSH - if you don't allow this port on a virtual server before enabling firewall, you are essentially blocking your access to it 
 
 ```
 sudo ufw allow 22/tcp
 ```
+
 Allow port 80 that is responsible for HTTP (Hypertext Transfer Protocol)
 
 ```
 sudo ufw allow 80/tcp
 ```
+
 Finally, allow port 443 that is responsible for HTTP over TLS/SSL (Transport Layer Security/Secure Sockets Layer)
 
 ```
 sudo ufw allow 443/tcp
 ```
+
 Enable firewall after allowing the desired ports
 
 ```
@@ -103,43 +112,41 @@ Reboot the system
 sudo reboot
 ```
 
-Try localhost address on web browser, it works and opens the Apache2 default page
+Try typing localhost on web browser address bar, it works and opens the Apache2 default page
 
-Find out the current IP address
+Find out the current dynamic IP address of the server
 
 ```
 hostname -I
 ```
 
-Try 172.28.171.211 IP address on browser, this also works and opens the Apache2 default page
+Try the dynamic IP address on browser address bar, this also works and opens the Apache2 default page
 
-Enable userdir Apache module and restart the service
+Enable userdir Apache2 module and restart the Apache2 service
 
 ```
 sudo a2enmod userdir
 service apache2 restart
 ```
 
-Go to the home directory and make the public_html folder, list the contents of the home directory to check that the public_html folder was succesfully created, and then create the index.html file inside the public_html folder
+Go to the home directory and make the public_html folder, list the contents of the home directory to check that the public_html folder was succesfully created, after which navigate inside the public_html folder and create the index.html file
 
 ```
 cd
-whoami
-ls
 mkdir public_html
 ls
 cd public_html
 nano index.html
 ```
 
-I forgot to create the index.html file with sudo or "superuser do" permission so I delete the previous file recursively and create a new, secure infex.html file
+I forgot to create the index.html file with sudo or "superuser do" permission so I delete the previous file recursively and create a new, secure index.html file
 
 ```
 rm -r index.html
 sudo nano index.html
 ```
 
-Copy basic HTML (Hypertext Markup Language) from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some headings
+Copy basic HTML (Hypertext Markup Language) from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some text in headings
 
 ```
 <!DOCTYPE html>
@@ -164,9 +171,15 @@ Yes
 Enter
 ```
 
-Go to addresses localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web browser
+Check the name of the current Xubuntu user - it is needed to open the the index page that we previously made by creating and editing the index.html file
 
-Both addresses work in lab environment
+```
+whoami
+```
+
+Open addresses localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web browser
+
+Both addresses work successfully in lab environment
 
 Navigate to 000-default.conf virtual host file and configure temporary domain names using the specified parameters, they are only used for testing purposes
 
@@ -452,13 +465,21 @@ The web page now shows the previously written headings and number 4, indicating 
 
 Establish SSH connections to two Raspberry Pi computers
 
+```
 ssh projektimies@x.x.x.x
 ssh projektimies@x.x.x.x
+```
 
 ping rauta.local
 sudo apt-get -y install salt-master
+
+Allow ports 4505 and 4506 that are responsible for Salt master
+
+```
 sudo ufw allow 4505/tcp
 sudo ufw allow 4506/tcp
+```
+
 sudo salt-key
 hostname -i
 sudo salt-key -A

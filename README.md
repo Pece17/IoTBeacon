@@ -2,6 +2,7 @@
 
 IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure Project -course. End product will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database i.e. a server. The data will then be used to build a HTML based application which either alerts when the beacons leave a designated area or alerts when they enter a forbidden area.
 
+
 ## Project team
 
 - Niko Kulmanen - Project manager
@@ -9,9 +10,11 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Pekka Hämäläinen - Project worker and secretary
 - Joni Mattsson - Project worker
 
+
 # Ubuntu server (Work in progress)
 
 (add text, specifications etc?)
+
 
 ## Initializing the server (Work in progress) > make a one big heading? > add subheadings for more specific steps?
 
@@ -189,7 +192,7 @@ ls
 sudo nano 000-default.conf
 ```
 
-Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and iotbeacon.com in front of them - they are only used for testing purposes
+Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and iotbeacon.com respectively in front of them - they are only used for testing purposes
 
 ```
 <VirtualHost *:80>
@@ -257,6 +260,7 @@ ff02::2 ip6-allrouters
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the contents of the previously created index.html file - addresses www.iotbeacon.com and iotbeacon.com open the Apache2 default page
 
+
 ## Configuring static IP addresses on the server using CLI and GUI
 
 I initially tried to configure the assigned static IP address using only CLI (command line interface)
@@ -319,6 +323,7 @@ Internet is now working, and pinging from other lab environment computers is suc
 
 Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, did I get the internet working, but now finally the lab environment DNS addresses are working, apparently due to a fix from higher-ups, so I configure them again on the server and keep Google Public DNS as a backup option
 
+
 ## Installing SSH on the server
 
 Install SSH (Secure Shell) client and server
@@ -336,6 +341,7 @@ ssh iotbeacon@x.x.x.x
 Connection is succesful
 
 Other project member tries to connect to the server from his house using Linux terminal and SSH - connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
+
 
 ## Installing Firefox on the server
 
@@ -359,6 +365,7 @@ sudo apt-get install firefox
 
 GitHub is now supported by Firefox and writing GitHub README.md report can be done simultaneously with the server while configuring it
 
+
 ## Updating the server from version 16.04.3 to 16.04.6
 
 Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt
@@ -375,6 +382,7 @@ OS version is now 16.04.6, shut down the server before leaving the server room
 sudo poweroff
 ```
 
+
 ## Installing MariaDB database on the server (Work in progress)
 
 Update package lists for upgrades and new packages from repositories
@@ -388,6 +396,7 @@ Install MariaDB relational database
 ```
 sudo apt-get install mariadb-server
 ```
+
 
 ## Installing PHP on the server (Work in progress)
 
@@ -509,6 +518,7 @@ Exit and save the file, and open localhost/~iotbeacon to test if PHP is working 
 
 The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
 
+
 ## Installing Salt on the server (Work in progress)
 
 Establish SSH connections to two Raspberry Pi computers
@@ -549,16 +559,19 @@ sudo salt-key
 sudo salt-key -A
 sudo salt-key
 
+
 # Bluetooth beacons
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp
 - Beacons broadcast their identifier to nearby devices (in this project Raspberry Pi)
 - Beacons are configured using BlueBeacon Manager App
 
+
 ## BlueBeacon Manager App
 
 - Includes Device (beacon) informations, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot.
 - We upgraded the firmware and changed passwords to the beacons
+
 
 # Raspberry Pi
 
@@ -576,6 +589,7 @@ Specifications
 - 4x USB
 - MicroSD card reader
 
+
 ## Installing Rasbperry Pi
 
 - Heat sinks
@@ -587,10 +601,12 @@ Specifications
 - HDMI cable
 - Display
 
+
 ## Operating system
 
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Raspbian version 10 (buster)
+
 
 ## Create a new sudo user
 

@@ -120,7 +120,7 @@ Find out the current dynamic IP address of the server
 hostname -I
 ```
 
-Try the dynamic IP address on browser address bar, this also works and opens the Apache2 default page
+Try the dynamic IP address on web browser address bar, this also works and opens the Apache2 default page
 
 Enable userdir Apache2 module and restart the Apache2 service
 

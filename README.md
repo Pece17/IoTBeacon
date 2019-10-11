@@ -324,7 +324,7 @@ cd /etc/apache2/mods-available
 ls
 ```
 
-Edit php7.0.conf file, add hashtags to following lines, and save while exiting
+Edit php7.0.conf file, add hashtags to following lines, and save
 
 ```
 sudoedit php7.0.conf

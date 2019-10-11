@@ -225,7 +225,7 @@ sudo reboot
 
 Internet is now working, and pinging from other lab environment computers is successful
 
-Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, I got the internet working, but now finally the lab environment DNS addresses are working apparently due to a fix from higher-ups so I configure them again on the server and keep Google Public DNS as a backup option
+Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, did I get internet working, but now finally the lab environment DNS addresses are working apparently due to a fix from higher-ups so I configure them again on the server and keep Google Public DNS as a backup option
 
 ## Installing SSH on server
 

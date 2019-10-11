@@ -13,7 +13,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 (add text, specifications etc?)
 
-## Ubuntu server Initialization (Work in progress) > make a one big heading? > add subheadings for more specific steps?
+## Initializing the server (Work in progress) > make a one big heading? > add subheadings for more specific steps?
 
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3 - we initially tried using UNetboot based Linux USB stick but it wasn't recognized by the server computer we chose to use on this project
 
@@ -62,7 +62,7 @@ sudo apt-get upgrade
 sudo reboot
 ```
 
-## Configuring firewall and installing Apache2 Web Server on server
+## Configuring firewall and installing Apache2 Web Server on the server
 
 Start firewall configuring by allowing port 22, a crucial step if you are configuring a virtual server because this port is responsible for allowing SSH - if you don't allow this on a virtual server before enabling firewall, you are essentially blocking your access to it 
 
@@ -196,7 +196,7 @@ sudoedit hosts
 
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
 
-## Configuring static IP addresses on server using CLI and GUI
+## Configuring static IP addresses on the server using CLI and GUI
 
 I initially tried to configure the assigned static IP address using only CLI (command line interface)
 
@@ -258,7 +258,7 @@ Internet is now working, and pinging from other lab environment computers is suc
 
 Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, did I get the internet working, but now finally the lab environment DNS addresses are working, apparently due to a fix from higher-ups, so I configure them again on the server and keep Google Public DNS as a backup option
 
-## Installing SSH on server
+## Installing SSH on the server
 
 Install SSH (Secure Shell) client and server
 
@@ -276,7 +276,7 @@ Connection is succesful
 
 Other project member tries to connect to the server from his house using Linux terminal and SSH - connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
 
-## Installing Firefox on server
+## Installing Firefox on the server
 
 Establish an SSH connection in terminal using another Linux computer withing lab environment
 
@@ -298,7 +298,7 @@ sudo apt-get install firefox
 
 GitHub is now supported by Firefox and writing GitHub README.md report can be done simultaneously with the server while configuring it
 
-## Updating server from version 16.04.3 to 16.04.6
+## Updating the server from version 16.04.3 to 16.04.6
 
 Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt
 
@@ -314,7 +314,7 @@ OS version is now 16.04.6, shut down the server before leaving the server room
 sudo poweroff
 ```
 
-## Installing MariaDB database on server (Work in progress)
+## Installing MariaDB database on the server (Work in progress)
 
 Update package lists for upgrades and new packages from repositories
 
@@ -328,7 +328,7 @@ Install MariaDB relational database
 sudo apt-get install mariadb-server
 ```
 
-## Installing PHP on server (Work in progress)
+## Installing PHP on the server (Work in progress)
 
 Check command history to see what commands other project workers have given to the server - PHP does not seem to be installed yet based on the command history
 
@@ -448,7 +448,7 @@ Exit and save the file, and open localhost/~iotbeacon to test if PHP is working 
 
 The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
 
-## Installing Salt on server (Work in progress)
+## Installing Salt on the server (Work in progress)
 
 Establish SSH connections to two Raspberry Pi computers
 
@@ -507,7 +507,7 @@ Specifications
 - 4x USB
 - MicroSD card reader
 
-## Rasbperry Pi installation
+## Installing Rasbperry Pi
 
 - Heat sinks
 - Case

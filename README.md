@@ -189,7 +189,7 @@ ls
 sudo nano 000-default.conf
 ```
 
-Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and iotbeacon.com in front of them - they are only used for testing purposes
+Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and [iotbeacon.com] in front of them - they are only used for testing purposes
 
 ```
 <VirtualHost *:80>

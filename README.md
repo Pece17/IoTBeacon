@@ -10,6 +10,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Pekka Hämäläinen - Project worker and secretary
 - Joni Mattsson - Project worker
 
+
 # Ubuntu server (Work in progress)
 
 (add text, specifications etc?)

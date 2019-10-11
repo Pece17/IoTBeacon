@@ -181,7 +181,7 @@ Open addresses localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web brow
 
 Both addresses work successfully inside the lab environment
 
-Navigate to sites-available directory and open 000-default.conf file
+Navigate to sites-available directory and open the 000-default.conf file
 
 ```
 cd /etc/apache2/sites-available
@@ -226,24 +226,36 @@ Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlia
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
-Restart Apache service and edit hosts files inside etc folder to complete the temporary domain name configuration
+Restart Apache2
 
 ```
 service apache2 restart
 ```
-Navigate to etc directory and open hosts file
+
+Navigate to etc directory and open the hosts file
 
 ```
-cd /etc
-sudoedit hosts
+cd /etc/
+sudo nano hosts
 ```
 
+Edit the hosts file by creating two lines starting with 127.0.0.1 loopback addresses and adding www.iotbeacon.com and iotbeacon.com respectively in front of them - temporary domain name configuration is now complete and should be working inside the lab environment
+
 ```
-127.0.0.1 www.iotbeacon.com
-127.0.0.1 iotbeacon.com
+127.0.0.1       localhost
+127.0.1.1       rauta
+127.0.0.1       www.iotbeacon.com
+127.0.0.1       iotbeacon.com
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
 ```
 
-www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the desired HTML text
+www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the contents of the previously created index.html file - addresses www.iotbeacon.com and iotbeacon.com open the Apache2 default page
 
 ## Configuring static IP addresses on the server using CLI and GUI
 

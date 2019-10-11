@@ -13,17 +13,19 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 (add text, specifications etc?)
 
-## Ubuntu server initialization (Work in progress > make a one big heading? > add subheadings for more specific steps?)
+## Ubuntu server Initialization (Work in progress) > make a one big heading? > add subheadings for more specific steps?
 
-We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3
+We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3 - we initially tried using UNetboot based Linux USB stick but it wasn't recognized by the server computer we chose to use on this project
 
-- Remove LAN-cable before installation
-- Open legacy boot menu with F9
-- Choose USB-stick
-- "Cannot boot system due to start job running for hold error"
-- Try restarting again until the system starts properly
+We had trouble getting Xubuntu to boot from the Linux USB stick but with these steps we got it eventually to start
 
-Installation steps
+- Remove LAN-cable before turning on the server computer
+- Open Legacy Boot Menu with F9 or other key that works with a particular version
+- Choose USB stick in Legacy Boot Menu
+
+The terminal gave a prompt "A start job is running for Hold until boot process finishes up" and booting didn't seem to advance
+
+We restarted the server computer multiple times until the system booted properly and did the following steps during installation
 
 - English
 - Install Xubuntu/Erase disk and install Xubuntu
@@ -32,7 +34,7 @@ Installation steps
 - Erase disk and install Xubuntu
 - Continue
 - Helsinki
-- Kyeboard layout Finnish and Finnish
+- Keyboard layout Finnish and Finnish
 - Your name: iotbeacon
 - Computer name: rauta
 - Username: iotbeacon
@@ -40,7 +42,7 @@ Installation steps
 - Continue
 - Restart
 
-Open terminal
+When the Xubuntu system starts and shows the desktop screen, open the Linux terminal
 
 ```
 Ctrl + Alt + T
@@ -57,18 +59,47 @@ Update and reboot the system
 ```
 sudo apt-get update
 sudo apt-get upgrade
-ssudo reboot
+sudo reboot
 ```
 
-Firewall configuration and Apache2 Web Server installation
+## Configuring firewall and installing Apache2 Web Server on server
+
+Start firewall configuring by allowing port 22, a crucial step if you are configuring a virtual server because this port is responsible for allowing SSH - if you don't allow this on a virtual server before enabling firewall, you are essentially blocking your access to it 
 
 ```
 sudo ufw allow 22/tcp
+```
+Allow port 80 that is responsible for HTTP (Hypertext Transfer Protocol)
+
+```
 sudo ufw allow 80/tcp
+```
+Finally, allow port 443 that is responsible for HTTP over TLS/SSL (Transport Layer Security/Secure Sockets Layer)
+
+```
 sudo ufw allow 443/tcp
+```
+Enable firewall after allowing the desired ports
+
+```
 sudo ufw enable
+```
+
+Update package lists for upgrades and new packages from repositories
+
+```
 sudo apt-get update
+```
+
+Install Apache2 Web Server
+
+```
 sudo apt-get install apache2
+```
+
+Reboot the system
+
+```
 sudo reboot
 ```
 
@@ -108,7 +139,7 @@ rm -r index.html
 sudo nano index.html
 ```
 
-Copy basic HTML from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some headings
+Copy basic HTML (Hypertext Markup Language) from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some headings
 
 ```
 <!DOCTYPE html>
@@ -419,8 +450,11 @@ The web page now shows the previously written headings and number 4, indicating 
 
 ## Installing Salt on server (Work in progress)
 
-ssh projektimies@172.28.175.44
-ssh projektimies@172.28.175.42
+Establish SSH connections to two Raspberry Pi computers
+
+ssh projektimies@x.x.x.x
+ssh projektimies@x.x.x.x
+
 ping rauta.local
 sudo apt-get -y install salt-master
 sudo ufw allow 4505/tcp
@@ -457,11 +491,11 @@ sudo salt-key
 - Includes Device (beacon) informations, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot.
 - We upgraded the firmware and changed passwords to the beacons
 
-# Raspberry Pi 
+# Raspberry Pi
 
 - 3 x Raspberry Pi 3 model B
 
-Specifications:
+Specifications
 
 - 1 Gt RAM
 - 1,2 GHz Broadcom BCM2837 64-bit ARMv8 Quad-core CPU

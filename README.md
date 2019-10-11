@@ -179,9 +179,9 @@ whoami
 
 Open addresses localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web browser
 
-Both addresses work successfully in lab environment
+Both addresses work successfully inside the lab environment
 
-Navigate to 000-default.conf virtual host file and configure temporary domain names using the specified parameters, they are only used for testing purposes
+Navigate to sites-available directory and open 000-default.conf file
 
 ```
 cd /etc/apache2/sites-available
@@ -189,15 +189,51 @@ ls
 sudo nano 000-default.conf
 ```
 
+Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and iotbeacon.com in front of them - they are only used for testing purposes
+
 ```
-ServerName www.iotbeacon.com
-ServerAlias iotbeacon.com
+<VirtualHost *:80>
+        # The ServerName directive sets the request scheme, hostname and port that
+        # the server uses to identify itself. This is used when creating
+        # redirection URLs. In the context of virtual hosts, the ServerName
+        # specifies what hostname must appear in the request's Host: header to
+        # match this virtual host. For the default virtual host (this file) this
+        # value is not decisive as it is used as a last resort host regardless.
+        # However, you must set it for any further virtual host explicitly.
+        ServerName www.iotbeacon.com
+        ServerAlias iotbeacon.com
+
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+
+        # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+        # error, crit, alert, emerg.
+        # It is also possible to configure the loglevel for particular
+        # modules, e.g.
+        #LogLevel info ssl:warn
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        # For most configuration files from conf-available/, which are
+        # enabled or disabled at a global level, it is possible to
+        # include a line for only one particular virtual host. For example the
+        # following line enables the CGI configuration for this host only
+        # after it has been globally disabled with "a2disconf".
+        #Include conf-available/serve-cgi-bin.conf
+</VirtualHost>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
 Restart Apache service and edit hosts files inside etc folder to complete the temporary domain name configuration
 
 ```
 service apache2 restart
+```
+Navigate to etc directory and open hosts file
+
+```
 cd /etc
 sudoedit hosts
 ```
@@ -361,7 +397,7 @@ Install PHP (Hypertext Preprocessor) and PHP module for Apache2 web server, one 
 sudo apt-get install php libapache2-mod-php
 ```
 
-Navigate to mods-available folder and list the contents
+Navigate to mods-available directory and list the contents
 
 ```
 cd /etc/apache2/mods-available

@@ -146,7 +146,7 @@ rm -r index.html
 sudo nano index.html
 ```
 
-Copy basic HTML (Hypertext Markup Language) from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some text in headings
+Copy basic HTML (Hypertext Markup Language) template from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some text to headings
 
 ```
 <!DOCTYPE html>

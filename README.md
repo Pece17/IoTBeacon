@@ -638,7 +638,16 @@ sudo raspi-config
 ```
 sudo nano /etc/dhcpcd.conf 
   -> uncomment and edit under Example static IP configuration section
+  
+sudo reboot  
 ```
+
+Tested:
+```
+Ping raspberrypi.local
+```
+Reached the new static ip address with a ping
+The ssh connection was also successfully established
 
 ## Programs Installed (on Raspberry Pi)
 

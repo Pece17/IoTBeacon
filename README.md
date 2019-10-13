@@ -633,6 +633,12 @@ Changed user password & enabled ssh using Raspberry Pi Software Configuration To
 ```
 sudo raspi-config
 ```
+## Configuring static IP address
+
+```
+sudo nano /etc/dhcpcd.conf 
+  -> uncomment and edit under Example static IP configuration section
+```
 
 ## Programs Installed (on Raspberry Pi)
 

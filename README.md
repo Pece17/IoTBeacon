@@ -647,6 +647,7 @@ Tested:
 Ping raspberrypi.local
 ```
 Reached the new static ip address with a ping
+
 The ssh connection was also successfully established
 
 ## Programs Installed (on Raspberry Pi)

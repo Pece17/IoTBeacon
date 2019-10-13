@@ -665,3 +665,13 @@ sudo apt-get -y install bluez bluez-hcidump
 ```
 sudo pip install paho-mqtt
 ```
+
+- SALT
+
+  Configuration management and orchestration tool
+  
+```
+sudo apt-get -y install salt-minion
+sudoedit /etc/salt/minion → master: (master ip address & id: (the name on the minion)
+sudo systemctl restart salt-minion.sercive
+```

@@ -519,47 +519,33 @@ Exit and save the file, and open localhost/~iotbeacon to test if PHP is working 
 The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
 
 
-## Installing Salt on the server (Work in progress)
-
-Establish SSH connections to two Raspberry Pi computers
+## Installing Salt on the server
 
 ```
-ssh projektimies@x.x.x.x
-ssh projektimies@x.x.x.x
-```
-
-ping rauta.local
 sudo apt-get -y install salt-master
-
-Allow ports 4505 and 4506 that are responsible for Salt master
+```
+Salt Master communicates with the minions over TCP ports 4505 and 4506
 
 ```
 sudo ufw allow 4505/tcp
 sudo ufw allow 4506/tcp
 ```
+Accept Minion Key on Master (after installing and configuring the Salt-Minions)
 
-sudo salt-key
-hostname -i
+```
 sudo salt-key -A
-sudo salt-key
-sudoedit /etc/salt/master
-sudo systemctl restart salt-master.service 
-sudo salt-key
-sudo systemctl restart salt-master.service 
-sudoedit /etc/salt/master
-sudo systemctl restart salt-master.service 
-sudo salt-key
-sudo salt-key -A
-sudo salt-key
-sudo salt-key -A
-sudo salt projektimies2 'hostname -i'
-sudo salt 'projektimies2' cmd.run 'hostname -I'
-sudo salt-key -A
-sudo salt-key
-sudo salt-key -A
-sudo salt-key
+Unaccepted Keys:
+xxx
+Proceed? [n/Y]
+Key for minion xxx accepted.
+```
+Testing:
 
-
+``` 
+sudo salt 'xxx' cmd.run 'hostname -I' 
+xxx: 172.28.xxx.xx
+``` 
+ 
 # Bluetooth beacons
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp

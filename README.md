@@ -620,8 +620,8 @@ sudo chmod u-w /etc/sudoers.d/010_xxx-nopasswd
 sudo reboot
 ```
 
-Remove user "pi"
-Log in as xxxx &
+Remove user "pi" &
+Log in as xxxx 
 
 ```
 sudo deluser -remove-home pi

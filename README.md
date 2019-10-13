@@ -657,3 +657,11 @@ sudo raspi-config
 ```
 sudo apt-get -y install bluez bluez-hcidump
 ```
+
+- MQTT
+  
+  Network protocol that transports messages between devices
+  
+```
+sudo pip install paho-mqtt
+```

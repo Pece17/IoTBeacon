@@ -651,7 +651,8 @@ sudo raspi-config
 ## Programs Installed (on Raspberry Pi)
 
 - BlueZ 
-Bluetooth stack for Linux kernel-based family of operating systems
+
+  Bluetooth stack for Linux kernel-based family of operating systems
 
 ```
 sudo apt-get -y install bluez bluez-hcidump

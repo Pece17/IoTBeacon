@@ -550,7 +550,7 @@ Proceed? [n/Y]
 Key for minion xxx accepted.
 ```
 
-Testing:
+Testing
 
 ``` 
 sudo salt 'xxx' cmd.run 'hostname -I' 
@@ -567,8 +567,8 @@ xxx: 172.28.xxx.xx
 
 ## BlueBeacon Manager App
 
-- Includes Device (beacon) informations, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot.
-- We upgraded the firmware and changed passwords to the beacons
+- Includes Device (beacon) information, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot
+- We upgraded the firmware and changed the passwords for the beacons
 
 
 # Raspberry Pi
@@ -588,7 +588,7 @@ Specifications
 - MicroSD card reader
 
 
-## Installing Rasbperry Pis
+## Installing Raspberry Pis
 
 - Heat sinks
 - Case
@@ -600,13 +600,13 @@ Specifications
 - Display
 
 
-## Operating system on Rasperry Pis
+## Operating system on Raspberry Pis
 
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Raspbian version 10 (buster)
 
 
-## Creating a new sudo user on Rasperry Pis
+## Creating new sudo users on Raspberry Pis
 
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 
@@ -647,7 +647,7 @@ sudo raspi-config
 ```
 
 
-## Configuring static IP addresses on Rasperry Pis
+## Configuring static IP addresses on Raspberry Pis
 
 ```
 sudo nano /etc/dhcpcd.conf 

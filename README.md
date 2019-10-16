@@ -11,7 +11,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Joni Mattsson - Project worker
 
 
-# Xubuntu server (Work in progress) > Add text, specifications etc - what commands to use to find them?
+# Xubuntu server (Work in progress)
 
 Check the shortened specifications and hardware information of the server from Linux terminal
 
@@ -19,7 +19,7 @@ Check the shortened specifications and hardware information of the server from L
 sudo lshw -short -sanitize
 ```
 
-Here are the specifications the server computer we chose to use
+Here are the specifications of the server computer we chose to use
 
 
 

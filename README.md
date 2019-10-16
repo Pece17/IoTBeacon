@@ -15,10 +15,16 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 (add text, specifications etc - what commands to find?)
 
+https://serverfault.com/questions/112542/how-can-i-get-processor-ram-disk-specs-from-the-linux-command-line
+
+
+## Linux USB stick (Work in progress)
+
+We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO image (International Standards Organization) with Xubuntu 16.04.3 - we initially tried using UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
+
 
 ## Initializing the server (Work in progress)
 
-We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3 - we initially tried using UNetboot based Linux USB stick but it wasn't recognized by the server computer we chose to use on this project
 
 We had trouble getting Xubuntu to boot from the Linux USB stick but with these steps we got it eventually to start
 
@@ -558,10 +564,10 @@ xxx: 172.28.xxx.xx
 ``` 
  
  
-# Bluetooth beacons
+# Bluetooth beacon
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp
-- Beacons broadcast their identifier to nearby devices (in this project Raspberry Pi)
+- Beacons broadcast their identifier to nearby devices - in this project to Raspberry Pis
 - Beacons are configured using BlueBeacon Manager App
 
 
@@ -606,7 +612,7 @@ Specifications
 - Raspbian version 10 (buster)
 
 
-## Creating new sudo users on Raspberry Pis
+## Creating a new sudo user on Raspberry Pis
 
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 

@@ -13,10 +13,10 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 # Ubuntu server (Work in progress)
 
-(add text, specifications etc?)
+(add text, specifications etc - what commands to find?)
 
 
-## Initializing the server (Work in progress) > make a one big heading? > add subheadings for more specific steps?
+## Initializing the server (Work in progress)
 
 We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO-image with Xubuntu 16.04.3 - we initially tried using UNetboot based Linux USB stick but it wasn't recognized by the server computer we chose to use on this project
 
@@ -71,6 +71,7 @@ sudo apt-get upgrade
 sudo reboot
 ```
 
+
 ## Configuring firewall on the server
 
 Start configuring firewall by allowing port 22, a crucial step especially if you are configuring a virtual server because this port is responsible for allowing SSH - if you don't allow this port on a virtual server before enabling firewall, you are essentially blocking your access to it 
@@ -99,7 +100,8 @@ sudo ufw enable
 
 Even though firewall is now enabled, it is possible to allow other ports later on if needed
 
-## Installing Apache2 Web Server on the server (Work in progress)
+
+## Installing Apache2 Web Server on the server
 
 Update package lists for upgrades and new packages from repositories
 
@@ -555,6 +557,7 @@ sudo salt 'xxx' cmd.run 'hostname -I'
 xxx: 172.28.xxx.xx
 ``` 
  
+ 
 # Bluetooth beacons
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp
@@ -585,7 +588,7 @@ Specifications
 - MicroSD card reader
 
 
-## Installing Rasbperry Pi
+## Installing Rasbperry Pis
 
 - Heat sinks
 - Case
@@ -597,13 +600,13 @@ Specifications
 - Display
 
 
-## Operating system
+## Operating system on Rasperry Pis
 
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Raspbian version 10 (buster)
 
 
-## Create a new sudo user
+## Creating a new sudo user on Rasperry Pis
 
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 
@@ -642,7 +645,9 @@ Changed user password & enabled ssh using Raspberry Pi Software Configuration To
 ```
 sudo raspi-config
 ```
-## Configuring static IP address
+
+
+## Configuring static IP addresses on Rasperry Pis
 
 ```
 sudo nano /etc/dhcpcd.conf 
@@ -659,7 +664,8 @@ Reached the new static ip address with a ping
 
 The ssh connection was also successfully established
 
-## Programs Installed (on Raspberry Pi)
+
+## Programs installed on Raspberry Pis
 
 - BlueZ 
 

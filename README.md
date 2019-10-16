@@ -13,7 +13,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 # Xubuntu server
 
-After initialization, show cleaned up list of shortened specifications and hardware information of the server using Linux terminal
+After initialization, show a cleaned up list of shortened specifications and hardware information of the server using Linux terminal
 
 ```
 sudo lshw -short -sanitize

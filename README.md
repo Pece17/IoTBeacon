@@ -23,10 +23,10 @@ Here are the specifications of the server computer we chose to use
 
 - Model ```HP Compaq 8200 Elite CMT (Convertible Minitower) PC```
 - Processor ```Intel Core i5-2400 3.10GHz```
-- Standard memory - 4GiB DIMM DDR3 Synchronous 1333 MHz
-- Graphics card -
-- Operating system - Xubuntu 16.04.6 LTS
-- Flash drive - Kingston DataTraveler 100 8GB USB 2.0 Flash Drive
+- Standard memory ```4GiB DIMM DDR3 Synchronous 1333 MHz```
+- Graphics card 
+- Operating system ```Xubuntu 16.04.6 LTS```
+- Flash drive ```Kingston DataTraveler 100 8GB USB 2.0 Flash Drive```
 
 ## Creating a Linux USB stick
 

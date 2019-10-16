@@ -11,37 +11,34 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Joni Mattsson - Project worker
 
 
-## Making a Linux USB stick (Work in progress)
+# Xubuntu server (Work in progress) > Add text, specifications etc - what commands to use to find them?
 
-We made a bootable Linux USB stick with Kingston DataTraveler 100 8GB USB 2.0 Flash Drive using Rufus 3.8 to create an ISO image (International Standards Organization) with Xubuntu 16.04.3 - we initially tried using UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
+Check the shortened specifications and hardware information of the server from Linux terminal
 
-
-# Ubuntu server (Work in progress)
-
-(add text, specifications etc - what commands to find?)
-
-https://serverfault.com/questions/112542/how-can-i-get-processor-ram-disk-specs-from-the-linux-command-line
-
+```
 sudo lshw -short -sanitize
+```
+
+Here are the specifications the server computer we chose to use
 
 
-## Making a Linux USB stick
 
-We made a bootable Linux USB stick with Kingston DataTraveler 100 8GB USB 2.0 Flash Drive by downloading and using Rufus 3.8 on a Windows computer to create an ISO image (International Standards Organization) with Xubuntu 16.04.3, a lighter derivative of the Ubuntu operating system - we initially tried using UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
+## Creating a Linux USB stick
+
+We made a bootable Linux USB stick from Kingston DataTraveler 100 8GB USB 2.0 Flash Drive by downloading and using Rufus 3.8 application on a Windows computer to create an ISO (International Standards Organization) image with Xubuntu 16.04.3, a lighter derivative of the Ubuntu operating system - we initially tried using an UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
 
 
 ## Initializing the server (Work in progress)
 
+We had trouble getting Xubuntu to boot from the previously created Linux USB stick, but with these steps we got it working eventually
 
-We had trouble getting Xubuntu to boot from the Linux USB stick but with these steps we got it eventually to start
-
-- Remove LAN-cable before turning on the server computer
-- Open Legacy Boot Menu with F9 or other key that works with a particular version
-- Choose USB stick in Legacy Boot Menu
+- Remove LAN (local area network) cable before turning on the server computer
+- Open Legacy Boot Menu with F9 key or other key that works with the particular version
+- Choose Linux USB stick in Legacy Boot Menu
 
 The terminal gave a prompt "A start job is running for Hold until boot process finishes up" and booting didn't seem to advance
 
-We restarted the server computer multiple times until the system booted properly and did the following steps during installation
+We restarted the server computer multiple times until the system finally booted properly, and executed the following steps during installation
 
 - English
 - Install Xubuntu/Erase disk and install Xubuntu
@@ -58,13 +55,13 @@ We restarted the server computer multiple times until the system booted properly
 - Continue
 - Restart
 
-When the Xubuntu system starts and shows the desktop screen, open the Linux terminal
+When Xubuntu operating system restarts and opens the desktop screen, open the Linux terminal - we will be mainly using the terminal to configure the server
 
 ```
 Ctrl + Alt + T
 ```
 
-Change keyboard layout to Finnish keyboard
+Change keyboard layout to Finnish keyboard, so that the keys respond correctly when typing
 
 ```
 setxkbmap fi
@@ -76,11 +73,21 @@ Check the name of the current user, in this case the user is iotbeacon because t
 whoami
 ```
 
-Update, upgrade, and reboot the system
+Update package lists for upgrades and new packages from repositories
 
 ```
 sudo apt-get update
+```
+
+Upgrade to newer versions of the packages the server has installed
+
+```
 sudo apt-get upgrade
+```
+
+Reboot the system
+
+```
 sudo reboot
 ```
 
@@ -586,9 +593,9 @@ xxx: 172.28.xxx.xx
 
 # Raspberry Pi
 
-- 3 x Raspberry Pi 3 model B
+We are using three to five Raspberry Pi 3 model B computers on this project
 
-Specifications
+Here are the specifications of the Raspberry Pi models we are using
 
 - 1 Gt RAM
 - 1,2 GHz Broadcom BCM2837 64-bit ARMv8 Quad-core CPU

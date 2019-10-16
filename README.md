@@ -71,7 +71,7 @@ sudo apt-get upgrade
 sudo reboot
 ```
 
-## Configuring firewall on the server (Work in progress)
+## Configuring firewall on the server
 
 Start configuring firewall by allowing port 22, a crucial step especially if you are configuring a virtual server because this port is responsible for allowing SSH - if you don't allow this port on a virtual server before enabling firewall, you are essentially blocking your access to it 
 
@@ -127,7 +127,7 @@ Find out the current dynamic IP address of the server
 hostname -I
 ```
 
-Try the dynamic IP address on web browser address bar - this also works and opens the Apache2 default page
+Try the dynamic IP address x.x.x.x on web browser address bar - this also works and opens the Apache2 default page
 
 Enable userdir Apache2 module and restart the Apache2 service
 
@@ -184,7 +184,7 @@ Check the name of the current Xubuntu user - it is needed to open the the index 
 whoami
 ```
 
-Open addresses localhost/~iotbeacon and 172.28.171.211/~iotbeacon using web browser
+Open addresses localhost/~iotbeacon and x.x.x.x/~iotbeacon using web browser
 
 Both addresses work successfully inside the lab environment
 
@@ -196,7 +196,7 @@ ls
 sudo nano 000-default.conf
 ```
 
-Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and iotbeacon.com respectively in front of them - they are only used for testing purposes
+Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and iotbeacon.com respectively in front of them - they are used for testing purposes, and will only work when using web browser on the server
 
 ```
 <VirtualHost *:80>
@@ -246,7 +246,7 @@ cd /etc/
 sudo nano hosts
 ```
 
-Edit the hosts file by creating two lines starting with 127.0.0.1 loopback addresses and adding www.iotbeacon.com and iotbeacon.com respectively in front of them - temporary domain name configuration is now complete and should be working inside the lab environment
+Edit the hosts file by creating two lines starting with 127.0.0.1 loopback addresses and adding www.iotbeacon.com and iotbeacon.com respectively in front of them - temporary domain name configuration is now complete and should be working when using web browser on the server
 
 ```
 127.0.0.1       localhost
@@ -262,7 +262,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the contents of the previously created index.html file - addresses www.iotbeacon.com and iotbeacon.com open the Apache2 default page
+www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the contents of the previously created index.html file when using web browser on the server - addresses www.iotbeacon.com and iotbeacon.com open the Apache2 default page as supposed
 
 
 ## Configuring static IP addresses on the server using CLI and GUI

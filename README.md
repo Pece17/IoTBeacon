@@ -383,7 +383,7 @@ After installing SSH, I try to connect with another Linux computer from the lab 
 ssh iotbeacon@x.x.x.x
 ```
 
-Connection is succesful
+Connection is successful
 
 Other project member tries to connect to the server from his house using Linux terminal and SSH - connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
 

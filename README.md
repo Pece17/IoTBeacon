@@ -21,15 +21,11 @@ sudo lshw -short -sanitize
 
 Here are the specifications of the server computer we chose to use
 
-Model ```HP Compaq 8200 Elite CMT (Convertible Minitower) PC```
-
-Processor ```Intel Core i5-2400 3.10GHz```
-
-Standard memory ```4GiB DIMM DDR3 Synchronous 1333 MHz```
-
-```Graphics card``` Integrated Intel HD
-
-```Operating system``` Xubuntu 16.04.6 LTS
+- Model ```HP Compaq 8200 Elite CMT (Convertible Minitower) PC```
+- Processor ```Intel Core i5-2400 3.10GHz```
+- Standard memory ```4GiB DIMM DDR3 Synchronous 1333 MHz```
+- ```Graphics card``` 
+- ```Operating system``` Xubuntu 16.04.6 LTS
 
 
 ## Creating a Linux USB stick

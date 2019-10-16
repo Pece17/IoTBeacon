@@ -21,7 +21,8 @@ sudo lshw -short -sanitize
 
 Here are the specifications of the server computer we chose to use
 
-
+- Model - HP Compaq 8200 Elite CMT (Convertible Minitower) PC
+- Processor - Intel Core i5-2400 CPU @ 3.10GHz
 
 ## Creating a Linux USB stick
 

@@ -33,7 +33,7 @@ We made a bootable Linux USB stick from Kingston DataTraveler 100 8GB USB 2.0 Fl
 We had trouble getting Xubuntu to boot from the previously created Linux USB stick, but with these steps we got it working eventually
 
 - Remove LAN (local area network) cable before turning on the server computer
-- Open Legacy Boot Menu with F9 key or other key that works with the particular version
+- Open Legacy Boot Menu with F9 key or other key that works with a particular version
 - Choose Linux USB stick in Legacy Boot Menu
 
 The terminal gave a prompt "A start job is running for Hold until boot process finishes up" and booting didn't seem to advance

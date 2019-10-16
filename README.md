@@ -11,9 +11,9 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Joni Mattsson - Project worker
 
 
-# Xubuntu server (Work in progress)
+# Xubuntu server
 
-Show list of shortened specifications and hardware information of the server using Linux terminal
+After initialization, show cleaned up list of shortened specifications and hardware information of the server using Linux terminal
 
 ```
 sudo lshw -short -sanitize
@@ -31,7 +31,7 @@ Only show PCI information about the graphics card
 lspci | grep -i --color 'vga\|3d\|2d'
 ```
 
-Here are the specifications of the server computer we use
+Here are the specifications of the server computer we are using
 
 - Model - HP Compaq 8200 Elite CMT (Convertible Minitower) PC
 - Processor - Intel Core i5-2400 3.10GHz

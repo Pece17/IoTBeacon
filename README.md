@@ -15,9 +15,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 Check the shortened specifications and hardware information of the server from Linux terminal
 
-```
-sudo lshw -short -sanitize
-```
+```sudo lshw -short -sanitize```
 
 Here are the specifications of the server computer we chose to use
 

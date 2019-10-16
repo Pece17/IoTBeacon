@@ -13,18 +13,30 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 # Xubuntu server (Work in progress)
 
-Check the shortened specifications and hardware information of the server from Linux terminal
+Show list of shortened specifications and hardware information of the server using Linux terminal
 
 ```
 sudo lshw -short -sanitize
 ```
 
-Here are the specifications of the server computer we chose to use
+To find out more specific information about the graphics card of the server, list all PCI (Peripheral Component Interconnect) devices - simply put, they are devices connected to the motherboard via PCI interface or bus, as it is also called
+
+```
+sudo lspci
+```
+
+Only show PCI information about the graphics card
+
+```
+lspci | grep -i --color 'vga\|3d\|2d'
+```
+
+Here are the specifications of the server computer we use
 
 - Model - HP Compaq 8200 Elite CMT (Convertible Minitower) PC
 - Processor - Intel Core i5-2400 3.10GHz
 - Standard memory - 4GiB DIMM DDR3 Synchronous 1333 MHz
-- Graphics card -
+- Graphics card - Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller
 - Operating system - Xubuntu 16.04.6 LTS
 
 

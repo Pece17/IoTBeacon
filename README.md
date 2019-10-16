@@ -11,16 +11,21 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Joni Mattsson - Project worker
 
 
+# Linux USB stick (Work in progress)
+
+We made a bootable Linux USB stick with Kingston DataTraveler 100 8GB USB 2.0 Flash Drive using Rufus 3.8 to create an ISO image (International Standards Organization) with Xubuntu 16.04.3 - we initially tried using UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
+
+
 # Ubuntu server (Work in progress)
 
 (add text, specifications etc - what commands to find?)
 
 https://serverfault.com/questions/112542/how-can-i-get-processor-ram-disk-specs-from-the-linux-command-line
 
+sudo lshw -short -sanitize
 
-## Linux USB stick (Work in progress)
 
-We made a bootable Linux USB stick with Kingston 8GB flash drive using Rufus 3.8 to create an ISO image (International Standards Organization) with Xubuntu 16.04.3 - we initially tried using UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
+
 
 
 ## Initializing the server (Work in progress)

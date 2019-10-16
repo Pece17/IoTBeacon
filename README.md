@@ -74,7 +74,7 @@ We restarted the server computer multiple times until the system finally booted 
 - Continue
 - Restart
 
-When Xubuntu operating system restarts and opens the desktop screen, open the Linux terminal - we will be mainly using the terminal to configure the server
+When Xubuntu operating system restarts and opens the desktop screen, open the Linux terminal - we will be mainly using terminal to configure the server
 
 ```
 Ctrl + Alt + T

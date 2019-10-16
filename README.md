@@ -42,7 +42,9 @@ Here are the specifications of the server computer we are using
 
 ## Creating a Linux USB stick
 
-We made a bootable Linux USB stick from Kingston DataTraveler 100 8GB USB 2.0 Flash Drive by downloading and using Rufus 3.8 application on a Windows computer to create an ISO (International Standards Organization) image with Xubuntu 16.04.3, a lighter derivative of the Ubuntu operating system - we initially tried using an UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
+We made a bootable Linux USB stick from Kingston DataTraveler 100 8GB USB 2.0 Flash Drive by downloading Rufus 3.8 application from https://rufus.ie/ and using it on a Windows computer to create an ISO (International Standards Organization) image with Xubuntu 16.04.3 that we downloaded from http://cdimage.ubuntu.com/xubuntu/releases/16.04.3/release/ - Xubuntu is a lighter derivative of the Ubuntu operating system
+
+We initially tried using an UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
 
 
 ## Initializing the server (Work in progress)

@@ -71,7 +71,7 @@ sudo apt-get upgrade
 sudo reboot
 ```
 
-## Configuring firewall and installing Apache2 Web Server on the server
+## Configuring firewall on the server (Work in progress)
 
 Start configuring firewall by allowing port 22, a crucial step especially if you are configuring a virtual server because this port is responsible for allowing SSH - if you don't allow this port on a virtual server before enabling firewall, you are essentially blocking your access to it 
 
@@ -96,6 +96,10 @@ Enable firewall after allowing the desired ports
 ```
 sudo ufw enable
 ```
+
+Even though firewall is now enabled, it is possible to allow other ports later on if needed
+
+## Installing Apache2 Web Server on the server (Work in progress)
 
 Update package lists for upgrades and new packages from repositories
 
@@ -521,15 +525,19 @@ The web page now shows the previously written headings and number 4, indicating 
 
 ## Installing Salt on the server
 
+Install Salt (SaltStack)
+
 ```
 sudo apt-get -y install salt-master
 ```
-Salt Master communicates with the minions over TCP ports 4505 and 4506
+
+Salt Master communicates with the minions over TCP ports 4505 and 4506 so we need to allow those for firewall
 
 ```
 sudo ufw allow 4505/tcp
 sudo ufw allow 4506/tcp
 ```
+
 Accept Minion Key on Master (after installing and configuring the Salt-Minions)
 
 ```
@@ -539,6 +547,7 @@ xxx
 Proceed? [n/Y]
 Key for minion xxx accepted.
 ```
+
 Testing:
 
 ``` 

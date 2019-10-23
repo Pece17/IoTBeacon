@@ -749,7 +749,24 @@ cd test
 sudo nano test.sh
 ```
 
-Copy the MAC address F9:CB:56:29:BE:F7 of one of the beacons and paste it inside quotation marks in the Shell script
+Replace the placeholder MAC address and paste the desired MAC address in the Shell script
+
+```
+#!/bin/bash
+
+sudo hcitool cc D0:2B:20:CE:3F:D4 2> /dev/null
+
+while true
+do
+    bt=$(hcitool rssi D0:2B:20:CE:3F:D4 2> /dev/null)
+    if [ "$bt" == "" ]; then
+        sudo hcitool cc D0:2B:20:CE:3F:D4  2> /dev/null
+        bt=$(hcitool rssi D0:2B:20:CE:3F:D4 2> /dev/null)
+    fi
+
+    echo "$bt"
+done
+```
 
 ```
 #!/bin/bash

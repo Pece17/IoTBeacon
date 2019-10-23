@@ -731,3 +731,22 @@ sudo apt-get -y install salt-minion
 sudoedit /etc/salt/minion → master: (master ip address) & id: (the name on the minion)
 sudo systemctl restart salt-minion.sercive
 ```
+
+## 
+
+```
+#!/bin/bash
+
+sudo hcitool cc AA:BB:CC:DD:EE:FF 2> /dev/null
+
+while true
+do
+    bt=$(hcitool rssi AA:BB:CC:DD:EE:FF 2> /dev/null)
+    if [ "$bt" == "F9:CB:56:29:BE:F7" ]; then
+        sudo hcitool cc AA:BB:CC:DD:EE:FF  2> /dev/null
+        bt=$(hcitool rssi AA:BB:CC:DD:EE:FF 2> /dev/null)
+    fi
+
+    echo "$bt"
+done
+```

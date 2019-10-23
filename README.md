@@ -5,9 +5,9 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 ## Project team
 
-- Niko Kulmanen - Project manager
-- Rasmus Ekman - Project worker
+- Rasmus Ekman - Project manager
 - Pekka Hämäläinen - Project worker and secretary
+- Niko Kulmanen - Project worker
 - Joni Mattsson - Project worker
 
 

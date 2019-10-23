@@ -595,8 +595,14 @@ Testing
 sudo salt 'xxx' cmd.run 'hostname -I' 
 xxx: 172.28.xxx.xx
 ``` 
- 
- 
+
+
+## Establishing SSH connection with PuTTY (Work in progress)
+
+
+## Establishing remote desktop connection (Work in progress)
+
+
 # Bluetooth beacon
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp

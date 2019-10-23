@@ -732,7 +732,24 @@ sudoedit /etc/salt/minion → master: (master ip address) & id: (the name on the
 sudo systemctl restart salt-minion.sercive
 ```
 
-## 
+# Bluetooth beacon script
+
+Copy scanner Shell script from https://stackoverflow.com/questions/27401918/detecting-presence-of-particular-bluetooth-device-with-mac-address
+
+Make a bash folder for testing purposes in one of the Rasperry Pis
+
+```
+sudo mkdir test
+```
+
+Navigate inside it and create the Shell file
+
+```
+cd test
+sudo nano test.sh
+```
+
+Copy the MAC address F9:CB:56:29:BE:F of one of the beacons and paste it inside quotation marks in the Shell script
 
 ```
 #!/bin/bash

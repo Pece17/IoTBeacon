@@ -732,7 +732,7 @@ sudoedit /etc/salt/minion → master: (master ip address) & id: (the name on the
 sudo systemctl restart salt-minion.sercive
 ```
 
-# Bluetooth scanner script
+# Bluetooth scanner script (Work in progress)
 
 Copy scanner Shell script from https://stackoverflow.com/questions/27401918/detecting-presence-of-particular-bluetooth-device-with-mac-address
 
@@ -765,5 +765,34 @@ do
     fi
 
     echo "$bt"
+done
+```
+
+```
+#!/bin/bash
+while [ 1 ]
+do
+
+# Set Parameters
+Name='Bluetooth beacon'
+bluetoothmac='F9:CB:56:29:BE:F7'
+
+
+if [ "$?" = 0 ] ; then
+bt1=$(l2ping -c1 -s32 -t1 "$bluetoothmac" > /dev/null && echo "On" || echo "Off")
+if [[ $bt1 == 'On' ]]; then
+device=$(echo "On")
+technology="Bluetooth 1st attempt"
+success="yes"
+fi
+fi
+
+
+# If the device is still offline, declare it for processing
+if [[ $success != 'yes' ]]; then
+device=$(echo "Off")
+fi
+
+
 done
 ```

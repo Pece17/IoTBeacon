@@ -600,8 +600,14 @@ xxx: 172.28.xxx.xx
 ## Establishing SSH connection with PuTTY (Work in progress)
 
 
+
 ## Establishing remote desktop connection (Work in progress)
 
+We first need to install xrdp software to the server before we can connect remotely to it
+
+```
+sudo apt-get install xrdp
+```
 
 # Bluetooth beacon
 

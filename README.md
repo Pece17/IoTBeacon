@@ -612,6 +612,14 @@ We first need to install xrdp software to the server before we can connect remot
 sudo apt-get install xrdp
 ```
 
+sudo apt-get install xfce4
+
+Enable xrdp software
+
+```
+sudo systemctl enable xrdp
+```
+
 # Bluetooth beacon
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp

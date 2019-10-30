@@ -893,40 +893,9 @@ try:
                         print("Nope")
 except KeyboardInterrupt:
     pass
+```
 
-
-
-
-
-
-
-
-
-
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Pece17 
-0
-3 0 singaCapital/BLE-Beacon-Scanner
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights
-BLE-Beacon-Scanner/ScanUtility.py
-@singaCapital singaCapital Add files via upload
-5f51a15 on Mar 26
-114 lines (97 sloc)  4.14 KB
-  
-Code navigation is available!Beta
-Navigate your code with ease. Click on function and method calls to jump to their definitions or references in the same repository. Learn more
-
- Code navigation is still being calculated for this commit. Check back in a bit. Beta
-
-Learn more or give us feedback
+```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
 
 
@@ -1040,16 +1009,4 @@ def parse_events(sock, loop_count=100):
             return resultsArray
 
     return results
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
 ```

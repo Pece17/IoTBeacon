@@ -866,10 +866,7 @@ except KeyboardInterrupt:
     pass
 ```
 
-
-
-
-
+```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
 
 import ScanUtility
@@ -1055,5 +1052,4 @@ API
 Training
 Blog
 About
-
-
+```

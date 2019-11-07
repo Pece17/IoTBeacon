@@ -864,7 +864,9 @@ fi
 done
 ```
 
-https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md
+Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
+
+Original BeaconScanner.py file
 
 ```  
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -892,6 +894,8 @@ try:
 except KeyboardInterrupt:
     pass
 ```
+
+First modification to BeaconScanner.py file - this does not work correctly, and only prints ```Nope``` even though the beacon with the desired MAC address ```e2:e3:23:d1:b0:54``` is on
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -921,6 +925,41 @@ try:
 except KeyboardInterrupt:
     pass
 ```
+
+Second modification to BeaconScanner.py file where ```returnedList``` was changed to ```resultsArray``` and ```macAddress``` was changed to ```packet``` - ```except KeyError:``` was also added because KeyError was stopping the script, and we need to be able to bypass it to run the script in continous loop 
+
+```
+#This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
+
+import ScanUtility
+import bluetooth._bluetooth as bluez
+
+#Set bluetooth device. Default 0.
+dev_id = 0
+try:
+        sock = bluez.hci_open_dev(dev_id)
+        print ("\n *** Looking for BLE Beacons ***\n")
+        print ("\n *** CTRL-C to Cancel ***\n")
+except:
+        print ("Error accessing bluetooth")
+
+ScanUtility.hci_enable_le_scan(sock)
+#Scans for iBeacons
+try:
+        while True:
+                resultsArray = ScanUtility.parse_events(sock, 10)
+                for packet in resultsArray:
+                        if packet ["macAddress"] == "e2:e3:23:d1:b0:54":
+                                print("BEACON FOUND")
+                        else:
+                                print("Not found")
+                        except KeyError:
+                                print("Not found")
+except KeyboardInterrupt:
+    pass
+```
+
+Original ScanUtility.py file
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS

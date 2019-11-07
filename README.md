@@ -926,7 +926,7 @@ except KeyboardInterrupt:
     pass
 ```
 
-Second modification to BeaconScanner.py file where ```returnedList``` was changed to ```resultsArray``` and ```macAddress``` was changed to ```packet``` - ```except KeyError:``` was also added because KeyError was stopping the script, and we need to be able to bypass it to run the script in continous loop 
+Second modification to BeaconScanner.py file where ```returnedList``` was changed to ```resultsArray``` and ```macAddress``` was changed to ```packet``` - ```except KeyError:``` was also added because KeyError was stopping the script, and we need to be able to bypass it to run the script in continous loop, but this particular modification is not currently working
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS

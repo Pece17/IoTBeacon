@@ -1004,7 +1004,7 @@ except KeyError:
         pass
 ```
 
-Fourth modification to BeaconScanner.py file where we added ```elif``` statemets for three other beacons and named the prints of the four beacons to ```BEACON 1```, ```BEACON 2```, ```BEACON 3```, and ```BEACON 4``` respectively when they are found by the scanner, though ```BEACON 3``` is not physically working currently - next step is to get the script to run continuously in an infinite loop and start
+Fourth modification to BeaconScanner.py file where we added ```elif``` statemets for three other beacons and named the prints of the four beacons to ```BEACON 1```, ```BEACON 2```, ```BEACON 3```, and ```BEACON 4``` respectively when they are found by the scanner, though ```BEACON 3``` is not physically working currently - next step is to get the script to run continuously in an infinite loop and start looking ways to recoqnize the beacons based on RSSI (Received Signal Strength Indicator), or basically distance or signal strength
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS

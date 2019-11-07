@@ -866,6 +866,18 @@ done
 
 Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
 
+Run BeaconScanner.py python script with this command
+
+```
+sudo python  BeaconScanner.py
+```
+
+Run BeaconScanner.py python script with this command infinitely
+
+```
+sudo python  BeaconScanner.py &
+```
+
 Original BeaconScanner.py file
 
 ```  

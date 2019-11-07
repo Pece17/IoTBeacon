@@ -869,13 +869,13 @@ Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/mast
 Run BeaconScanner.py python script with this command
 
 ```
-sudo python  BeaconScanner.py
+sudo python BeaconScanner.py
 ```
 
 Run BeaconScanner.py python script with this command infinitely
 
 ```
-sudo python  BeaconScanner.py &
+sudo python BeaconScanner.py &
 ```
 
 Original BeaconScanner.py file

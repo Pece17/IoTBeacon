@@ -786,6 +786,34 @@ To use Remote Desktop Connection application to connect to Raspberry Pis, we fir
 
 Once in VDI desktop, we need to open the Remote Desktop Connection application in Windows, enter the IP address x.x.x.x of the Raspberry Pi, and connect - the application prompts a warning prompt where you need to press yes, after which the Raspberry Pi desktop opens a login screen and unlocks the desktop after entering the correct credentials
 
+## Changing hostname in Raspberry Pis
+
+```
+sudo hostnamectl set-hostname raspberrypi1
+```
+
+```
+hostname
+```
+
+```
+sudo nano /etc/hosts
+```
+
+```
+127.0.0.1       localhost
+::1             localhost ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+
+127.0.1.1       raspberrypi1
+```
+
+```
+sudo reboot
+```
+
+Repeat for all three Raspberry Pis
 
 # Bluetooth scanner script (Work in progress)
 

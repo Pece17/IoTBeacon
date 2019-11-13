@@ -1199,3 +1199,9 @@ chmod +x forever
 ```
 sudo ./forever test.py
 ```
+
+Now we can change the previously created ```BeaconScanner.py``` instead of ```test.py```
+
+```
+sudo ./forever BeaconScanner.py
+```

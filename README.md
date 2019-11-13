@@ -1193,7 +1193,7 @@ while True:
 ```
 
 ```
-chmod +x forever
+sudo chmod +x forever
 ```
 
 ```

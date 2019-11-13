@@ -761,7 +761,12 @@ sudo systemctl restart salt-minion.sercive
 To use PuTTY application to connect to Raspberry Pis, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the Raspberry Pi and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
- 
+
+## Establishing SSH connection with terminal (Work in progress)
+
+```
+ssh username@x.x.x.x
+```
  
 ## Establishing Remote Desktop Connection (Work in progress)
 

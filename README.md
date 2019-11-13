@@ -1160,3 +1160,42 @@ def parse_events(sock, loop_count=100):
 
     return results
 ```
+
+# Restarting Python script after exception and running it forever (Work in progress)
+
+Navigate to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the following script
+
+```
+sudo nano test.py
+```
+
+```
+import time
+
+time.sleep(2)
+raise Exception("Oh oh, this script just died")
+```
+
+```
+sudo nano forever
+```
+
+```
+#!/usr/bin/python
+from subprocess import Popen
+import sys
+
+filename = sys.argv[1]
+while True:
+    print("\nStarting " + filename)
+    p = Popen("python " + filename, shell=True)
+    p.wait()
+```
+
+```
+chmod +x forever
+```
+
+```
+sudo ./forever test.py
+```

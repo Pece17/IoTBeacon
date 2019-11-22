@@ -1081,7 +1081,7 @@ except KeyError:
         pass
 ```
 
-Fifth modification where we replaced ```elif``` with three ```if``` statements
+Fifth modification to ```BeaconScanner.py``` where we replaced ```elif``` with three ```if``` statements and added countering ```else```
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1106,14 +1106,16 @@ try:
                 for packet in resultsArray:
                         if packet ["macAddress"] == "e2:e3:23:d1:b0:54":
                                 print("BEACON 1")
-                        elif  packet ["macAddress"] == "d6:2c:ca:c0:d4:9c":
+			else:
+                                print("Not found 1")
+                        if  packet ["macAddress"] == "d6:2c:ca:c0:d4:9c":
                                 print("BEACON 2")
-                        elif packet ["macAddress"] == "f2:36:00:21:c0:50":
+			else:
+                                print("Not found 2")
+                        if packet ["macAddress"] == "f2:36:00:21:c0:50":
                                 print("BEACON 3")
-                        elif packet ["macAddress"] == "f9:cb:56:29:be:f7":
-                                print("BEACON 4")
                         else:
-                                print("Not found")
+                                print("Not found 3")
 except KeyboardInterrupt:
     pass
 except KeyError:

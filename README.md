@@ -620,6 +620,7 @@ Enable xrdp software
 sudo systemctl enable xrdp
 ```
 
+
 # 2. Bluetooth beacon
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp
@@ -762,11 +763,13 @@ To use PuTTY application to connect to Raspberry Pis, we first need to open the 
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the Raspberry Pi and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
 
+
 ## 3.7. Establishing SSH connection with terminal to Raspberry Pi (Work in progress)
 
 ```
 ssh username@x.x.x.x
 ```
+ 
  
 ## 3.8. Establishing Remote Desktop Connection to Raspberry Pi(Work in progress)
 
@@ -785,6 +788,7 @@ sudo apt-get install xrdp
 To use Remote Desktop Connection application to connect to Raspberry Pis, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the Remote Desktop Connection application in Windows, enter the IP address x.x.x.x of the Raspberry Pi, and connect - the application prompts a warning prompt where you need to press yes, after which the Raspberry Pi desktop opens a login screen and unlocks the desktop after entering the correct credentials
+
 
 ## 3.9. Changing hostname in Raspberry Pi (Work in progress)
 

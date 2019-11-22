@@ -620,20 +620,20 @@ Enable xrdp software
 sudo systemctl enable xrdp
 ```
 
-# Bluetooth beacon
+# 2. Bluetooth beacon
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp
 - Beacons broadcast their identifier to nearby devices - in this project to Raspberry Pis
 - Beacons are configured using BlueBeacon Manager App
 
 
-## BlueBeacon Manager App
+## 2.1. BlueBeacon Manager App
 
 - Includes Device (beacon) information, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot
 - We upgraded the firmware and changed the passwords for the beacons
 
 
-# Raspberry Pi
+# 3. Raspberry Pi
 
 We are using three to five Raspberry Pi 3 model B computers on this project
 
@@ -650,7 +650,7 @@ Here are the specifications of the Raspberry Pi models we are using
 - MicroSD card reader
 
 
-## Installing Raspberry Pis
+## 3.1. Installing Raspberry Pis
 
 - Heat sinks
 - Case
@@ -662,13 +662,13 @@ Here are the specifications of the Raspberry Pi models we are using
 - Display
 
 
-## Operating system on Raspberry Pis
+## 3.2. Operating system on Raspberry Pis
 
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Raspbian version 10 (buster)
 
 
-## Creating a new sudo user on Raspberry Pis
+## 3.3. Creating a new sudo user on Raspberry Pis
 
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 
@@ -709,7 +709,7 @@ sudo raspi-config
 ```
 
 
-## Configuring static IP addresses on Raspberry Pis
+## 3.4. Configuring static IP addresses on Raspberry Pis
 
 ```
 sudo nano /etc/dhcpcd.conf 
@@ -727,7 +727,7 @@ Reached the new static ip address with a ping
 The ssh connection was also successfully established
 
 
-## Programs installed on Raspberry Pis
+## 3.5. Programs installed on Raspberry Pis
 
 - BlueZ 
 
@@ -756,19 +756,19 @@ sudo systemctl restart salt-minion.sercive
 ```
 
 
-## Establishing SSH connection with PuTTY to Raspberry Pi
+## 3.6. Establishing SSH connection with PuTTY to Raspberry Pi
 
 To use PuTTY application to connect to Raspberry Pis, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the Raspberry Pi and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
 
-## Establishing SSH connection with terminal to Raspberry Pi (Work in progress)
+## 3.7. Establishing SSH connection with terminal to Raspberry Pi (Work in progress)
 
 ```
 ssh username@x.x.x.x
 ```
  
-## Establishing Remote Desktop Connection to Raspberry Pi(Work in progress)
+## 3.8. Establishing Remote Desktop Connection to Raspberry Pi(Work in progress)
 
 Update package lists for upgrades and new packages from repositories
 
@@ -786,7 +786,7 @@ To use Remote Desktop Connection application to connect to Raspberry Pis, we fir
 
 Once in VDI desktop, we need to open the Remote Desktop Connection application in Windows, enter the IP address x.x.x.x of the Raspberry Pi, and connect - the application prompts a warning prompt where you need to press yes, after which the Raspberry Pi desktop opens a login screen and unlocks the desktop after entering the correct credentials
 
-## Changing hostname in Raspberry Pi (Work in progress)
+## 3.9. Changing hostname in Raspberry Pi (Work in progress)
 
 ```
 sudo hostnamectl set-hostname raspberrypi1
@@ -815,7 +815,8 @@ sudo reboot
 
 Repeat for all three Raspberry Pis
 
-# Bluetooth scanner script (Work in progress)
+
+# 4. Bluetooth scanner script (Work in progress)
 
 Copy scanner Shell script from https://stackoverflow.com/questions/27401918/detecting-presence-of-particular-bluetooth-device-with-mac-address
 

@@ -1199,7 +1199,8 @@ def parse_events(sock, loop_count=100):
     return results
 ```
 
-# Restarting Python script after exception and running it forever (Work in progress)
+
+# 5. Restarting Python script after exception and running it forever (Work in progress)
 
 Navigate to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the following script
 

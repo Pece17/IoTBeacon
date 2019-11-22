@@ -599,14 +599,14 @@ xxx: 172.28.xxx.xx
 ``` 
 
 
-## 1.12. Establishing SSH connection with PuTTY
+## 1.12. Establishing SSH connection with PuTTY to the server
 
 To use PuTTY application to connect to the server, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the server and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
  
- 
-## 1.13. Establishing remote desktop connection (Work in progress)
+
+## 1.13. Establishing remote desktop connection to the server (Work in progress)
 
 We first need to install xrdp software to the server before we can connect remotely to it
 
@@ -620,6 +620,13 @@ Enable xrdp software
 
 ```
 sudo systemctl enable xrdp
+```
+
+
+# 1.14 Installing phpMyAdmin on the server
+
+```
+sudo apt-get install phpmyadmin
 ```
 
 

@@ -1290,3 +1290,6 @@ sudo ./forever BeaconScanner.py
 
 # 6. Database
 
+```
+DELIMITER $$ CREATE TRIGGER beacon_status_updater AFTER INSERT ON a1_beacon_logs FOR EACH ROW BEGIN IF (SELECT COUNT(*) FROM (SELECT * FROM a1_beacon_logs ORDER BY checkmark DESC LIMIT 20) AS list20 WHERE a1_status = 'detected' AND bname = 'a1') < 1 THEN INSERT INTO room_1_reports (user_first_name, user_last_name, beacon_name, mac_address, beacon_status) VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Missing'); END IF; IF (SELECT COUNT(*) FROM (SELECT * FROM a1_beacon_logs ORDER BY checkmark DESC LIMIT 20) AS list20 WHERE a1_status = 'detected' AND bname = 'a1') >= 1 THEN INSERT INTO room_1_reports (user_first_name, user_last_name, beacon_name, mac_address, beacon_status) VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Detected'); END IF; END$$ DELIMITER ;
+```

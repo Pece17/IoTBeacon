@@ -439,8 +439,10 @@ sudo apt-get update
 Install MariaDB relational database
 
 ```
-sudo apt-get install mariadb-server
+sudo apt-get install mariadb-server mariadb-client
 ```
+
+MariaDB database is now installed
 
 
 ## 1.10. Installing PHP on the server (Work in progress)

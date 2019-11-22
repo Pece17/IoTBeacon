@@ -1287,3 +1287,6 @@ Now we can change the previously created ```BeaconScanner.py``` instead of ```te
 ```
 sudo ./forever BeaconScanner.py
 ```
+
+# 6. Database
+

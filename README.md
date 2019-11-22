@@ -1081,6 +1081,45 @@ except KeyError:
         pass
 ```
 
+Fifth modification where we replaced ```elif``` with three ```if``` statements
+
+```
+#This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
+
+import ScanUtility
+import bluetooth._bluetooth as bluez
+
+#Set bluetooth device. Default 0.
+dev_id = 0
+try:
+        sock = bluez.hci_open_dev(dev_id)
+        print ("\n *** Looking for BLE Beacons ***\n")
+        print ("\n *** CTRL-C to Cancel ***\n")
+except:
+        print ("Error accessing bluetooth")
+
+ScanUtility.hci_enable_le_scan(sock)
+#Scans for iBeacons
+try:
+        while True:
+                resultsArray = ScanUtility.parse_events(sock, 10)
+                for packet in resultsArray:
+                        if packet ["macAddress"] == "e2:e3:23:d1:b0:54":
+                                print("BEACON 1")
+                        elif  packet ["macAddress"] == "d6:2c:ca:c0:d4:9c":
+                                print("BEACON 2")
+                        elif packet ["macAddress"] == "f2:36:00:21:c0:50":
+                                print("BEACON 3")
+                        elif packet ["macAddress"] == "f9:cb:56:29:be:f7":
+                                print("BEACON 4")
+                        else:
+                                print("Not found")
+except KeyboardInterrupt:
+    pass
+except KeyError:
+        pass
+```
+
 Original ScanUtility.py file
 
 ```

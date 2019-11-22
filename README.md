@@ -11,7 +11,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Joni Mattsson - Project worker
 
 
-# Xubuntu server
+# 1. Xubuntu server
 
 After initialization, show a cleaned up list of shortened specifications and hardware information of the server using Linux terminal
 
@@ -40,14 +40,14 @@ Here are the specifications of the server computer we are using
 - Operating system - Xubuntu 16.04.6 LTS
 
 
-## Creating a Linux USB stick
+## 1.1. Creating a Linux USB stick
 
 We made a bootable Linux USB stick from Kingston DataTraveler 100 8GB USB 2.0 Flash Drive by downloading Rufus 3.8 application from https://rufus.ie/ and using it on a Windows computer to create an ISO (International Standards Organization) image with Xubuntu 16.04.3 that we downloaded from http://cdimage.ubuntu.com/xubuntu/releases/16.04.3/release/ - Xubuntu is a lighter derivative of the Ubuntu operating system
 
 We initially tried using an UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
 
 
-## Initializing the server (Work in progress)
+## 1.2. Initializing the server (Work in progress)
 
 We had trouble getting Xubuntu to boot from the previously created Linux USB stick, but with these steps we got it working eventually
 
@@ -111,7 +111,7 @@ sudo reboot
 ```
 
 
-## Configuring firewall on the server
+## 1.3. Configuring firewall on the server
 
 Start configuring firewall by allowing port 22, a crucial step especially if you are configuring a virtual server because this port is responsible for allowing SSH - if you don't allow this port on a virtual server before enabling firewall, you are essentially blocking your access to it 
 
@@ -140,7 +140,7 @@ sudo ufw enable
 Even though firewall is now enabled, it is possible to allow other ports later on if needed
 
 
-## Installing Apache2 Web Server on the server
+## 1.4. Installing Apache2 Web Server on the server
 
 Update package lists for upgrades and new packages from repositories
 
@@ -306,7 +306,7 @@ ff02::2 ip6-allrouters
 www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the contents of the previously created index.html file when using web browser on the server - addresses www.iotbeacon.com and iotbeacon.com open the Apache2 default page as supposed
 
 
-## Configuring static IP addresses on the server using CLI and GUI
+## 1.5. Configuring static IP addresses on the server using CLI and GUI
 
 I initially tried to configure the assigned static IP address using only CLI (command line interface)
 
@@ -369,7 +369,7 @@ Internet is now working, and pinging from other lab environment computers is suc
 Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, did I get the internet working, but now finally the lab environment DNS addresses are working, apparently due to a fix from higher-ups, so I configure them again on the server and keep Google Public DNS as a backup option
 
 
-## Installing SSH on the server
+## 1.6. Installing SSH on the server
 
 Install SSH (Secure Shell) client and server
 
@@ -388,7 +388,7 @@ Connection is successful
 Other project member tries to connect to the server from his house using Linux terminal and SSH - connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
 
 
-## Installing Firefox on the server
+## 1.7. Installing Firefox on the server
 
 Establish an SSH connection in terminal using another Linux computer withing lab environment
 
@@ -411,7 +411,7 @@ sudo apt-get install firefox
 GitHub is now supported by Firefox and writing GitHub README.md report can be done simultaneously with the server while configuring it
 
 
-## Updating the server from version 16.04.3 to 16.04.6
+## 1.8. Updating the server from version 16.04.3 to 16.04.6
 
 Server operating system is updated to a newer version of 16.04 LTS (Long Term Support) via graphical user interface prompt
 
@@ -428,7 +428,7 @@ sudo poweroff
 ```
 
 
-## Installing MariaDB database on the server (Work in progress)
+## 1.9. Installing MariaDB database on the server (Work in progress)
 
 Update package lists for upgrades and new packages from repositories
 
@@ -443,7 +443,7 @@ sudo apt-get install mariadb-server
 ```
 
 
-## Installing PHP on the server (Work in progress)
+## 1.10. Installing PHP on the server (Work in progress)
 
 Check command history to see what commands other project workers have given to the server - PHP does not seem to be installed yet based on the command history
 
@@ -564,7 +564,7 @@ Exit and save the file, and open localhost/~iotbeacon to test if PHP is working 
 The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
 
 
-## Installing Salt on the server
+## 1.11. Installing Salt on the server
 
 Install Salt (SaltStack)
 
@@ -597,14 +597,14 @@ xxx: 172.28.xxx.xx
 ``` 
 
 
-## Establishing SSH connection with PuTTY
+## 1.12. Establishing SSH connection with PuTTY
 
 To use PuTTY application to connect to the server, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the server and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
  
  
-## Establishing remote desktop connection (Work in progress)
+## 1.13. Establishing remote desktop connection (Work in progress)
 
 We first need to install xrdp software to the server before we can connect remotely to it
 

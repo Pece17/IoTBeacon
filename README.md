@@ -1131,6 +1131,8 @@ except KeyError:
         pass
 ```
 
+Sixth modification to ```BeaconScanner.py``` where we added prints for variables ```macAddress``` and ```rssi```, in other words the script now prints the original message it receives from one beacon
+
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
 
@@ -1164,6 +1166,8 @@ except KeyError:
         pass
 ```
 
+Seventh modification to ```BeaconScanner.py``` where we added two other MAC addresses of beacons with ```or``` statements - this way multiple ```ìf``` or ```elif``` statemets are not necessary
+
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
 
@@ -1185,8 +1189,7 @@ try:
         while True:
                 resultsArray = ScanUtility.parse_events(sock, 10)
                 for packet in resultsArray:
-                       # if packet ["macAddress"] == "e2:e3:23:d1:b0:54" or packet ["macAddress"] == "d6:2c:ca:c0:d4:9c" or packet ["macAddress"] == "f2:36:00:21:c0:50":
-                         if packet ["macAddress"] == "e2:e3:23:d1:b0:54":
+                         if packet ["macAddress"] == "e2:e3:23:d1:b0:54" or packet ["macAddress"] == "d6:2c:ca:c0:d4:9c" or packet ["macAddress"] == "f2:36:00:21:c0:50":
                                 print("BEACON FOUND:")
                                 print("macAddress:",packet ["macAddress"])
                                 print("rssi:",packet ["rssi"])
@@ -1361,6 +1364,7 @@ Now we can change the previously created ```BeaconScanner.py``` instead of ```te
 ```
 sudo ./forever BeaconScanner.py
 ```
+
 
 # 6. Database
 

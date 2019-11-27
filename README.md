@@ -1051,7 +1051,7 @@ except KeyError:
         pass
 ```
 
-Fourth modification to BeaconScanner.py file where we added ```elif``` statemets for three other beacons and named the prints of the four beacons to ```BEACON 1```, ```BEACON 2```, ```BEACON 3```, and ```BEACON 4``` respectively when they are found by the scanner, though ```BEACON 3``` is not physically working currently - next step is to get the script to run continuously in an infinite loop and start looking ways to recoqnize the beacons based on RSSI (Received Signal Strength Indicator), or basically distance or signal strength
+Fourth modification to ```BeaconScanner.py``` file where we added ```elif``` statemets for three other beacons and named the prints of the four beacons to ```BEACON 1```, ```BEACON 2```, ```BEACON 3```, and ```BEACON 4``` respectively when they are found by the scanner, though ```BEACON 3``` is not physically working currently - next step is to get the script to run continuously in an infinite loop and start looking ways to recoqnize the beacons based on RSSI (Received Signal Strength Indicator), or basically distance or signal strength
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1090,7 +1090,7 @@ except KeyError:
         pass
 ```
 
-Fifth modification to ```BeaconScanner.py``` where we replaced ```elif``` with three ```if``` statements and added countering ```else```
+Fifth modification to ```BeaconScanner.py``` file where we replaced ```elif``` with three ```if``` statements and added countering ```else```
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1131,7 +1131,7 @@ except KeyError:
         pass
 ```
 
-Sixth modification to ```BeaconScanner.py``` where we added prints for variables ```macAddress``` and ```rssi```, in other words the script now prints the original message it receives from one beacon
+Sixth modification to ```BeaconScanner.py``` file where we added prints for variables ```macAddress``` and ```rssi```, in other words the script now prints the original message it receives from one beacon
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1166,7 +1166,7 @@ except KeyError:
         pass
 ```
 
-Seventh modification to ```BeaconScanner.py``` where we added the MAC addresses of two other beacons with ```or``` statements - this way multiple ```ìf``` or ```elif``` statements are not necessary
+Seventh modification to ```BeaconScanner.py``` file where we added the MAC addresses of two other beacons with ```or``` statements - this way multiple ```ìf``` or ```elif``` statements are not necessary
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1201,7 +1201,7 @@ except KeyError:
         pass
 ```
 
-Eight modification to ```BeaconScanner.py``` where we removed ```else``` statement and moved ```print("Not found")``` one level higher, so that it is not dependent on beacons being in vicinity - now the script will print ```Not found``` when ```while True:``` is working
+Eight modification to ```BeaconScanner.py``` file where we removed ```else``` statement and moved ```print("Not found")``` one level higher, so that it is not dependent on beacons being in vicinity - now the script will print ```Not found``` when ```while True:``` is working
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1235,7 +1235,7 @@ except KeyError:
         pass
 ```
 
-Ninth modification to ```BeaconScanner.py``` where went back to the original ```BeaconScanner.py``` file
+Ninth modification to ```BeaconScanner.py``` file where went back to the original ```BeaconScanner.py``` file
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS

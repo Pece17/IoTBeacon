@@ -925,7 +925,7 @@ Run BeaconScanner.py python script with this command infinitely
 sudo python BeaconScanner.py &
 ```
 
-Original BeaconScanner.py file
+Original ```BeaconScanner.py``` file
 
 ```  
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -954,7 +954,7 @@ except KeyboardInterrupt:
     pass
 ```
 
-First modification to BeaconScanner.py file - this does not work correctly, and only prints ```Nope``` even though the beacon with the desired MAC address ```e2:e3:23:d1:b0:54``` is on
+First modification to ```BeaconScanner.py``` file - this does not work correctly, and only prints ```Nope``` even though the beacon with the desired MAC address ```e2:e3:23:d1:b0:54``` is on
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -985,7 +985,7 @@ except KeyboardInterrupt:
     pass
 ```
 
-Second modification to BeaconScanner.py file where ```returnedList``` was changed to ```resultsArray``` and ```macAddress``` was changed to ```packet``` - ```except KeyError:``` was also added because KeyError was stopping the script, and we need to be able to bypass it to run the script in a continous loop, but this particular modification is not currently working and is giving ```Traceback (most recent call last):File "BeaconScanner.py", line 21, in <module> if packet ["macAddress"] == "e2:e3:23:d1:b0:54":KeyError: error 'macAddress'```
+Second modification to ```BeaconScanner.py``` file where ```returnedList``` was changed to ```resultsArray``` and ```macAddress``` was changed to ```packet``` - ```except KeyError:``` was also added because KeyError was stopping the script, and we need to be able to bypass it to run the script in a continous loop, but this particular modification is not currently working and is giving ```Traceback (most recent call last):File "BeaconScanner.py", line 21, in <module> if packet ["macAddress"] == "e2:e3:23:d1:b0:54":KeyError: error 'macAddress'```
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1018,7 +1018,7 @@ except KeyboardInterrupt:
     pass
 ```
 
-Third modification to BeaconScanner.py file where ```KeyError:``` problem seemes to have been fixed, or at least it does not print it anymore
+Third modification to ```BeaconScanner.py``` file where ```KeyError:``` problem seemes to have been fixed, or at least it does not print it anymore
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1235,7 +1235,7 @@ except KeyError:
         pass
 ```
 
-Ninth modification to ```BeaconScanner.py``` where 
+Ninth modification to ```BeaconScanner.py``` where went back to the original ```BeaconScanner.py``` file
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS

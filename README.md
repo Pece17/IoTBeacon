@@ -831,6 +831,63 @@ Repeat for all three Raspberry Pis
 
 ## 3.10. Installing BlueZ on Raspberry Pis
 
+Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the instructions for installing BlueZ Bluetooth stack for Linux kernel-based family of operating systems
+
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get install python-pip python-dev ipython
+```
+
+```
+sudo apt-get install bluetooth libbluetooth-dev
+```
+
+```
+sudo pip install pybluez
+```
+
+```
+cd /lib/systemd/system
+```
+
+```
+sudo nano bluetooth.service
+```
+
+```
+[Unit]
+Description=Bluetooth service
+Documentation=man:bluetoothd(8)
+ConditionPathIsDirectory=/sys/class/bluetooth
+
+[Service]
+Type=dbus
+BusName=org.bluez
+ExecStart=/usr/lib/bluetooth/bluetoothd --experimental
+NotifyAccess=main
+#WatchdogSec=10
+#Restart=on-failure
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+LimitNPROC=1
+
+[Install]
+WantedBy=bluetooth.target
+Alias=dbus-org.bluez.service
+```
+
+```
+sudo systemctl daemon-reload
+```
+
+```
+sudo systemctl restart bluetooth
+```
+
+BlueZ is now installed
+
 
 # 4. Bluetooth scanner script (Work in progress)
 

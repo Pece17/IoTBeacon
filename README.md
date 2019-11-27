@@ -801,7 +801,7 @@ Once in VDI desktop, we need to open the PuTTY application in Windows and enter 
 ## 3.7. Establishing SSH connection with terminal to Raspberry Pi (Work in progress)
 
 ```
-ssh username@x.x.x.x
+ssh projektimies@x.x.x.x
 ```
  
  

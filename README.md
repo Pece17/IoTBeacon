@@ -1166,7 +1166,7 @@ except KeyError:
         pass
 ```
 
-Seventh modification to ```BeaconScanner.py``` where we added two other MAC addresses of beacons with ```or``` statements - this way multiple ```ìf``` or ```elif``` statemets are not necessary
+Seventh modification to ```BeaconScanner.py``` where we added the MAC addresses of two other beacons with ```or``` statements - this way multiple ```ìf``` or ```elif``` statements are not necessary
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS

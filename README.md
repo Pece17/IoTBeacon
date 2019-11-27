@@ -174,6 +174,9 @@ Enable userdir Apache2 module and restart the Apache2 service
 
 ```
 sudo a2enmod userdir
+```
+
+```
 service apache2 restart
 ```
 
@@ -181,9 +184,21 @@ Go to the home directory and make the public_html folder, list the contents of t
 
 ```
 cd
+```
+
+```
 mkdir public_html
+```
+
+```
 ls
+```
+
+```
 cd public_html
+```
+
+```
 nano index.html
 ```
 
@@ -191,6 +206,9 @@ I forgot to create the index.html file with sudo or "superuser do" permission so
 
 ```
 rm -r index.html
+```
+
+```
 sudo nano index.html
 ```
 
@@ -214,9 +232,7 @@ Copy basic HTML (Hypertext Markup Language) template from https://www.w3schools.
 Save the file
 
 ```
-Ctrl X
-Yes
-Enter
+Ctrl + X + Y + Enter
 ```
 
 Check the name of the current Xubuntu user - it is needed to open the the index page that we previously made by creating and editing the index.html file
@@ -233,7 +249,13 @@ Navigate to sites-available directory and open the 000-default.conf file
 
 ```
 cd /etc/apache2/sites-available
+```
+
+```
 ls
+```
+
+```
 sudo nano 000-default.conf
 ```
 
@@ -284,6 +306,9 @@ Navigate to etc directory and open the hosts file
 
 ```
 cd /etc/
+```
+
+```
 sudo nano hosts
 ```
 

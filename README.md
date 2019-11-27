@@ -829,6 +829,9 @@ sudo reboot
 Repeat for all three Raspberry Pis
 
 
+## 3.10. Installing BlueZ on Raspberry Pis
+
+
 # 4. Bluetooth scanner script (Work in progress)
 
 Copy scanner Shell script from https://stackoverflow.com/questions/27401918/detecting-presence-of-particular-bluetooth-device-with-mac-address

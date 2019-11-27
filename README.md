@@ -891,14 +891,14 @@ BlueZ is now installed
 
 # 4. Bluetooth scanner script (Work in progress)
 
-The Bluetooth scanner script needs to be able to locate Bluetooth beacons based on MAC addresses, and print an assigned ID like "BEACON1", original MAC address, and RSSI (Received Signal Strength Indicator) value of the desired beacon
+The Bluetooth scanner script needs to be able to locate Bluetooth beacons based on MAC addresses, and print an assigned ID like ```BEACON1```, the original MAC address, and the RSSI (Received Signal Strength Indicator) value of the desired beacon
 
 
 ## 4.1. Shell script
 
 Copy scanner Shell script from https://stackoverflow.com/questions/27401918/detecting-presence-of-particular-bluetooth-device-with-mac-address
 
-Make a bash folder for testing purposes in one of the Rasperry Pis
+Make a Bash ```test``` folder for testing purposes in one of the Rasperry Pis
 
 ```
 sudo mkdir test
@@ -908,6 +908,9 @@ Navigate inside it and create the Shell file
 
 ```
 cd test
+```
+
+```
 sudo nano test.sh
 ```
 
@@ -975,6 +978,9 @@ fi
 
 done
 ```
+
+
+## 4.2. Python script
 
 Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
 

@@ -1201,7 +1201,7 @@ except KeyError:
         pass
 ```
 
-Eight modification to ```BeaconScanner.py``` where we removed ```else``` statement and moved ```print("Not found")``` one level higher, so that it's not dependent on beacons - now the script will print "Not found" when ```while True:```
+Eight modification to ```BeaconScanner.py``` where we removed ```else``` statement and moved ```print("Not found")``` one level higher, so that it is not dependent on beacons being in vicinity - now the script will print ```Not found``` when ```while True:``` is working
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
@@ -1235,7 +1235,7 @@ except KeyError:
         pass
 ```
 
-Ninth modification to ```BeaconScanner.py```
+Ninth modification to ```BeaconScanner.py``` where 
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS

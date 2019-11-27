@@ -1201,6 +1201,40 @@ except KeyError:
         pass
 ```
 
+Eight modification to ```BeaconScanner.py``` where we removed ```else``` statement and moved ```print("Not found")``` one level higher, so that it's not dependent on beacons - now the script will print "Not found" when ```while True:```
+
+```
+#This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
+
+import ScanUtility
+import bluetooth._bluetooth as bluez
+
+#Set bluetooth device. Default 0.
+dev_id = 0
+try:
+        sock = bluez.hci_open_dev(dev_id)
+        print ("\n *** Looking for BLE Beacons ***\n")
+        print ("\n *** CTRL-C to Cancel ***\n")
+except:
+        print ("Error accessing bluetooth")
+
+ScanUtility.hci_enable_le_scan(sock)
+#Scans for iBeacons
+try:
+        while True:
+                resultsArray = ScanUtility.parse_events(sock, 10)
+                for packet in resultsArray:
+                         if packet ["macAddress"] == "e2:e3:23:d1:b0:54" or packet ["macAddress"] == "d6:2c:ca:c0:d4:9c" or packet ["macAddress"] == "f2:36:00:21:c0:50":
+                                print("BEACON FOUND:")
+                                print("macAddress:",packet ["macAddress"])
+                                print("rssi:",packet ["rssi"])
+                print("Not found")
+except KeyboardInterrupt:
+        pass
+except KeyError:
+        pass
+```
+
 Ninth modification to ```BeaconScanner.py```
 
 ```

@@ -630,7 +630,7 @@ sudo apt-get install phpmyadmin
 ```
 
 
-# 2. Bluetooth beacon
+# 2. Bluetooth beacon (Work in progress)
 
 - 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp
 - Beacons broadcast their identifier to nearby devices - in this project to Raspberry Pis

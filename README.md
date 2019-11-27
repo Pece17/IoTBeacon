@@ -623,7 +623,7 @@ sudo systemctl enable xrdp
 ```
 
 
-# 1.14 Installing phpMyAdmin on the server
+## 1.14 Installing phpMyAdmin on the server (Work in progress)
 
 ```
 sudo apt-get install phpmyadmin

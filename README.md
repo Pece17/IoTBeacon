@@ -1531,9 +1531,9 @@ def parse_events(sock, loop_count=100):
 ```
 
 
-# 5. Restarting Python script after exception and running it forever (Work in progress)
+# 5. Restarting Python script after exception and running it in an infinite loop with ```forever``` file (Work in progress)
 
-Navigate to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the following script
+Navigate to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the ```forever``` file
 
 ```
 sudo nano test.py
@@ -1593,6 +1593,8 @@ DELIMITER $$ CREATE TRIGGER beacon_status_updater AFTER INSERT ON a1_beacon_logs
 
 Here is a list of current issues and tasks to be solved
 
-1. Timeout for ```BeaconScanner.py``` script - Status?
+1. Timeout and restart for ```BeaconScanner.py``` script - Status?
 
 2. Test whether BeaconScanner.py notices difference in RSSI value when walking between the classrooms where Raspberry Pi 2 and 3 are located - can you say with certainty if the beacon is inside the respective classrooms?
+
+3. Running BeaconScanner.py in Salt Minions (Raspberry Pis) from the Salt Master (Ubuntu server)

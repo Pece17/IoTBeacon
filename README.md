@@ -670,7 +670,7 @@ sudo apt-get install phpmyadmin
 
 # 3. Raspberry Pi
 
-We are using three to five Raspberry Pi 3 model B computers on this project
+We are using three Raspberry Pi 3 model B computers on this project
 
 Here are the specifications of the Raspberry Pi models we are using
 
@@ -709,6 +709,9 @@ Rasbian has a default user "pi". For safety reasons we replaced pi with a new us
 
 ```
 sudo adduser xxxx
+```
+
+```
 sudo adduser xxxx sudo
 ```
 

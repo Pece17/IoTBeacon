@@ -1536,6 +1536,52 @@ def parse_events(sock, loop_count=100):
 
 ## 4.3. PHP script (Work in progress)
 
+This is the PHP code that 
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>IoT Beacon</h1>
+
+<p>Monialaprojekti</p>
+
+<p>Web application will be added here<p>
+
+<meta http-equiv="refresh" content="5" >
+
+<?php
+$servername = "localhost";
+$username = "niko";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT user_first_name, user_last_name, beacon_name FROM room_1_output";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "   " . $row["user_first_name"]. " - Name: " . $row["user_last_name"]. " " . $row["beacon_name"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+</body>
+</html>
+```
+
 
 # 5. Restarting Python script after exception and running it in an infinite loop with ```forever``` file (Work in progress)
 

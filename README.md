@@ -1593,8 +1593,12 @@ DELIMITER $$ CREATE TRIGGER beacon_status_updater AFTER INSERT ON a1_beacon_logs
 
 Here is a list of current issues and tasks to be solved
 
-1. Timeout and restart for ```BeaconScanner.py``` script - Status?
+1. Timeout and restart for ```BeaconScanner.py``` script - while loop?
 
-2. Test whether BeaconScanner.py notices difference in RSSI value when walking between the classrooms where Raspberry Pi 2 and 3 are located - can you say with certainty if the beacon is inside the respective classrooms?
+2. Test whether ```BeaconScanner.py``` notices difference in RSSI value when walking between the two classrooms where Raspberry Pi 2 and 3 are located - can you say with certainty if the beacon is inside the respective classrooms?
 
-3. Running BeaconScanner.py in Salt Minions (Raspberry Pis) from the Salt Master (Ubuntu server)
+3. Running BeaconScanner.py in Salt Minions (Raspberry Pis) from the Salt Master (Ubuntu server) - Salt States, modules?
+
+4. Database configuration and writing the instructions to GitHub - PHP script not working currently
+
+5. 

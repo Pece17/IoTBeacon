@@ -1719,6 +1719,218 @@ Description here
 DELIMITER $$ CREATE TRIGGER beacon_status_updater AFTER INSERT ON a1_beacon_logs FOR EACH ROW BEGIN IF (SELECT COUNT(*) FROM (SELECT * FROM a1_beacon_logs ORDER BY checkmark DESC LIMIT 20) AS list20 WHERE a1_status = 'detected' AND bname = 'a1') < 1 THEN INSERT INTO room_1_reports (user_first_name, user_last_name, beacon_name, mac_address, beacon_status) VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Missing'); END IF; IF (SELECT COUNT(*) FROM (SELECT * FROM a1_beacon_logs ORDER BY checkmark DESC LIMIT 20) AS list20 WHERE a1_status = 'detected' AND bname = 'a1') >= 1 THEN INSERT INTO room_1_reports (user_first_name, user_last_name, beacon_name, mac_address, beacon_status) VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Detected'); END IF; END$$ DELIMITER ;
 ```
 
+```
+PÖYTIEN LUONTI
+
+
+
+
+CREATE TABLE users (
+
+                           id INT PRIMARY KEY AUTO_INCREMENT,
+
+                           first_name VARCHAR(20),
+
+                           last_name VARCHAR(20),
+
+                           phone_number VARCHAR(20),
+
+                           email VARCHAR(30),
+
+                           address VARCHAR(30)             
+
+);
+
+ 
+
+CREATE TABLE beacons (
+
+                           id INT PRIMARY KEY AUTO_INCREMENT,
+
+                           bname VARCHAR (25),
+
+                           mac_address VARCHAR (25),
+
+                           beacon_user INT FOREIGN KEY REFERENCES users(id)
+
+);
+
+ 
+
+CREATE TABLE room_1_raw_data (
+
+                           bname VARCHAR(25),
+
+                           beacon_status VARCHAR(25),
+
+                           checkmark TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+ 
+
+
+CREATE TABLE room_1_output (
+
+ 
+
+                           user_first_name VARCHAR(20),
+
+                           user_last_name VARCHAR(20),                        
+
+                           beacon_name VARCHAR(25),
+
+                           mac_address VARCHAR (25),
+
+                           beacon_status VARCHAR(25),
+
+                           updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+
+);
+
+
+
+
+TRIGGERI
+
+
+
+
+DELIMITER $$
+
+CREATE TRIGGER beacon_status_updater AFTER INSERT ON room_1_raw_data
+FOR EACH ROW BEGIN
+
+IF
+
+(SELECT COUNT(*) FROM (SELECT * FROM room_1_raw_data ORDER BY checkmark DESC LIMIT 30) AS list30 WHERE beacon_status = 'detected' AND bname = 'a1') < 1
+THEN INSERT INTO room_1_output (user_first_name, user_last_name, beacon_name, mac_address, beacon_status)
+VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Missing');
+
+END IF;
+
+IF
+
+(SELECT COUNT(*) FROM (SELECT * FROM room_1_raw_data ORDER BY checkmark DESC LIMIT 30) AS list30 WHERE beacon_status = 'detected' AND bname = 'a1') >= 1
+THEN INSERT INTO room_1_output (user_first_name, user_last_name, beacon_name, mac_address, beacon_status)
+VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Detected');
+
+END IF;
+
+END$$
+
+
+
+PHP SQL INSERT
+
+Jos beacon ei näy:
+
+
+
+<?php
+$servername = "localhost";
+$username = "niko";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO a1_beacon_logs (bname, a1_status) VALUES ('a1', 'scanning')"; 
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
+
+
+Jos beacon näkyy:
+
+
+<?php
+$servername = "localhost";
+$username = "niko";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO a1_beacon_logs (bname, a1_status) VALUES ('a1', 'detected')"; 
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
+
+
+
+PHP SQL SELECT + HTML muotoilu (nettisivulla oleva)
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>IoT Beacon</h1>
+
+<p>Monialaprojekti</p>
+
+<p>Web application will be added here<p>
+
+ <?php
+$servername = "localhost";
+$username = "niko";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT user_first_name, user_last_name, beacon_name, mac_address, beacon_status, MAX(updated) FROM room_1_output GROUP BY beacon_name;";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo " Room1<br><br>  " . $row["user_first_name"]. "  " . $row["user_last_name"]. "  " . $row["beacon_name"]. "  "  . $row["mac_address"].  "  "  . $row["updated"]." <br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?> 
+
+</body>
+</html>
+```
+
 
 # Issues and tasks
 

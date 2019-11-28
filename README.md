@@ -1008,7 +1008,7 @@ done
 ```
 
 
-## 4.2. Python script
+## 4.2. Python script (Work in progress)
 
 Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
 
@@ -1581,6 +1581,9 @@ sudo ./forever BeaconScanner.py
 
 Description here
 
+
+## 6.1. (Work in progress)
+
 ```
 DELIMITER $$ CREATE TRIGGER beacon_status_updater AFTER INSERT ON a1_beacon_logs FOR EACH ROW BEGIN IF (SELECT COUNT(*) FROM (SELECT * FROM a1_beacon_logs ORDER BY checkmark DESC LIMIT 20) AS list20 WHERE a1_status = 'detected' AND bname = 'a1') < 1 THEN INSERT INTO room_1_reports (user_first_name, user_last_name, beacon_name, mac_address, beacon_status) VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Missing'); END IF; IF (SELECT COUNT(*) FROM (SELECT * FROM a1_beacon_logs ORDER BY checkmark DESC LIMIT 20) AS list20 WHERE a1_status = 'detected' AND bname = 'a1') >= 1 THEN INSERT INTO room_1_reports (user_first_name, user_last_name, beacon_name, mac_address, beacon_status) VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Detected'); END IF; END$$ DELIMITER ;
 ```
@@ -1588,8 +1591,8 @@ DELIMITER $$ CREATE TRIGGER beacon_status_updater AFTER INSERT ON a1_beacon_logs
 
 # Issues and tasks
 
-Here is a list of current issues and tasks
+Here is a list of current issues and tasks to be solved
 
 1. Timeout for ```BeaconScanner.py``` script - Status?
 
-2. Test whether BeaconScanner.py notices difference in RSSI when walking between the classrooms on Raspberry Pi 2 and 3
+2. Test whether BeaconScanner.py notices difference in RSSI value when walking between the classrooms where Raspberry Pi 2 and 3 are located - can you say with certainty if the beacon is inside the respective classrooms?

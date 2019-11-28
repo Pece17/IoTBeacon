@@ -1534,6 +1534,9 @@ def parse_events(sock, loop_count=100):
 ```
 
 
+## 4.3. PHP script (Work in progress)
+
+
 # 5. Restarting Python script after exception and running it in an infinite loop with ```forever``` file (Work in progress)
 
 Navigate to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the ```forever``` file

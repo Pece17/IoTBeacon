@@ -1584,7 +1584,7 @@ def parse_events(sock, loop_count=100):
 
 ## 4.3. PHP script (Work in progress)
 
-This is the PHP script that 
+This is the ```DatabaseInsert.php``` file that inserts into the database
 
 ```
 <?php

@@ -1536,7 +1536,38 @@ def parse_events(sock, loop_count=100):
 
 ## 4.3. PHP script (Work in progress)
 
-This is the PHP code that 
+This is the PHP script that 
+
+```
+<?php
+$servername = "172.28.175.41";
+$username = "miko";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO room_1_raw_data (bname, beacon_status) VALUES ('a1', 'scanning');";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+```
+
+
+## 4.4. HTML file (Work in progress)
+
+This is the HTML file
 
 ```
 <!DOCTYPE html>

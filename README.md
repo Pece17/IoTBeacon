@@ -1366,7 +1366,7 @@ except KeyboardInterrupt:
     pass
 ```
 
-Tenth modification to ```BeaconScanner.py``` file
+Tenth modification to ```BeaconScanner.py``` file where we replaced ```if item ["macAddress"] == "e2:e3:23:d1:b0:54":``` with ```if item.get("macAddress") == "e2:e3:23:d1:b0:54":``` syntax - this seems to have solved the ```KeyError```
 
 ```
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS

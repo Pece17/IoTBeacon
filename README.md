@@ -1719,48 +1719,6 @@ Description here
 DELIMITER $$ CREATE TRIGGER beacon_status_updater AFTER INSERT ON a1_beacon_logs FOR EACH ROW BEGIN IF (SELECT COUNT(*) FROM (SELECT * FROM a1_beacon_logs ORDER BY checkmark DESC LIMIT 20) AS list20 WHERE a1_status = 'detected' AND bname = 'a1') < 1 THEN INSERT INTO room_1_reports (user_first_name, user_last_name, beacon_name, mac_address, beacon_status) VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Missing'); END IF; IF (SELECT COUNT(*) FROM (SELECT * FROM a1_beacon_logs ORDER BY checkmark DESC LIMIT 20) AS list20 WHERE a1_status = 'detected' AND bname = 'a1') >= 1 THEN INSERT INTO room_1_reports (user_first_name, user_last_name, beacon_name, mac_address, beacon_status) VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Detected'); END IF; END$$ DELIMITER ;
 ```
 
-```
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>IoT Beacon</h1>
-
-<p>Monialaprojekti</p>
-
-<p>Web application will be added here<p>
-
- <?php
-$servername = "localhost";
-$username = "niko";
-$password = "MonialaProjekti";
-$dbname = "iotbeacon";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT bname, a1_status, checkmark FROM a1_beacon_logs";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo " Room1<br><br>  " . $row["bname"]. "  " . $row["a1_status"]. "  " . $row["checkmark"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
-$conn->close();
-?> 
-
-</body>
-</html>
-```
-
 
 # Issues and tasks
 

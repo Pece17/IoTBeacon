@@ -1506,7 +1506,7 @@ except KeyboardInterrupt:
 ```
 
 
-## 4.3. Python ```ScanUtility.py``` script
+## 4.3. ```ScanUtility.py``` Python script
 
 Original ```ScanUtility.py``` file
 

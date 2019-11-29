@@ -2185,3 +2185,9 @@ Here is a list of current issues and tasks to be solved
 7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Beacons, Raspberry Pis, working scripts, webpage, and database could be divided to paragraphs in advance
 
 8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home
+
+9. Make mindmap of script and device dependencies in https://bubbl.us/ or other website
+
+10. Establish the final path ```/home/projektimies/Lighthouse/``` to ALL SCRIPTS in ALL THREE Raspberry Pis, so that it is the same path in ALL THREE Raspberry Pis, for example, ```BeaconScanner.py``` script is located in ```/home/projektimies/Lighthouse/BeaconScanner.py``` in ALL THREE Raspberry Pis - also, establish naming conventions to all relevant scripts and folders, ```Lighthouse``` is the folder where all the scripts like ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` are located in Raspberry Pis, and in the server, ```ìndex.php``` webpage file is located inside ```public_html``` folder in path ```/home/iotbeacon/public_html/index.php```
+
+11.

@@ -657,20 +657,13 @@ sudo apt-get install phpmyadmin
 ```
 
 
-# 2. Bluetooth beacon (Work in progress)
+# 2. Bluetooth beacons (Work in progress)
 
-- 2 x Bluetooth low energy (BLE) BlueBeacon tags developed by BlueUp
-- Beacons broadcast their identifier to nearby devices - in this project to Raspberry Pis
-- Beacons are configured using BlueBeacon Manager App
-
-
-## 2.1. BlueBeacon Manager App
-
-- Includes Device (beacon) information, Global settings, Eddystone slots, iBeacon / Quuppa slots, Safety slot
-- We upgraded the firmware and changed the passwords for the beacons
+- Three Bluetooth low energy (BLE) beacons
+- Beacons broadcast their identifier to nearby devices that are Raspberry Pis in this project
 
 
-# 3. Raspberry Pi
+# 3. Raspberry Pis
 
 We are using three Raspberry Pi 3 model B computers on this project
 

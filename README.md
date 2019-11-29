@@ -1651,7 +1651,7 @@ $conn->close();
 ```
 
 
-# 5. Running and stopping the scripts (Work in progress)
+# 5. Running and stopping scripts (Work in progress)
 
 Description here
 

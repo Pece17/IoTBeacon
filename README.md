@@ -919,7 +919,7 @@ sudo systemctl restart bluetooth
 BlueZ is now installed
 
 
-# 4. Bluetooth scanner script (Work in progress)
+# 4. Scripts (Work in progress)
 
 The Bluetooth scanner script needs to be able to locate Bluetooth beacons based on MAC addresses, and print an assigned ID like ```BEACON1```, the original MAC address, and the RSSI (Received Signal Strength Indicator) value of the desired beacon
 

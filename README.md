@@ -1940,5 +1940,6 @@ Here is a list of current issues and tasks to be solved
 
 5. RSSI value to database - show room A, B, or C?
 
+poista ylemmät
 
 1. Website must show all three rooms (Servula, 5005, 5004) as permanent elements, and inform whether the Raspberry Pis (1,2,3) can see Beacons (1,2,3) in the room currently - for example, the website informs that Beacon 1 is in the vicinity of Servula, but Beacon 1 is not found in the vicinity of 5005 or 5004

@@ -2177,3 +2177,7 @@ poista ylemmät
 3. Run ```BeaconScanner.py``` script simultaneously in all Salt Mininions, ```raspberrypi1```, ```raspberrypi2```, and ```raspberrypi3```, from the Salt Master ```Xubuntu server``` using Salt command or Salt states
 
 4. Automatic timeout or restart for ```BeaconScanner.py``` script, because running it infinitely is not ideal - will the timeout be for ```while loop``` or something else, and should we use ```forever``` file as a failsafe if the script stops?
+
+5. Step-by-step instructions for creating the database and accessing database remotely from Raspberry Pis, especially the latter since we had problems getting it to work - start writing database instructions to GitHub from paragraph ```6.1.``` and divide to appropriate topics like for example, ```6.1. Creating the tables in database```, ```6.2. Creating the triggers in database```, and so on - every single command from opening MariaDB database to creating the tables should be listed chronologically inside ```code elements``` so that in theory, a random person could create a working database without prior knowledge using the instructions
+
+6.

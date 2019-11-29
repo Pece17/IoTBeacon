@@ -1580,7 +1580,7 @@ def parse_events(sock, loop_count=100):
 
 ## 4.3. PHP script (Work in progress)
 
-This is the ```DatabaseInsert.php``` file that inserts into the database
+This is the ```DatabaseInsert1.php``` file for the BEACON1 that inserts data into the database
 
 ```
 <?php
@@ -1611,7 +1611,7 @@ $conn->close();
 
 ## 4.4. HTML file (Work in progress)
 
-This is the HTML file
+This is the HTML file that will show on the website that was configured with the server
 
 ```
 <!DOCTYPE html>
@@ -1875,10 +1875,9 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
+```
 
-
-
-
+```
 PHP SQL SELECT + HTML muotoilu (nettisivulla oleva)
 
 

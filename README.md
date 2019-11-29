@@ -2016,7 +2016,7 @@ Here is a list of current issues and tasks to be solved
 
 2. Test whether ```BeaconScanner.py``` notices difference in RSSI value when walking between the two classrooms where Raspberry Pi 2 and 3 are located - can you say with certainty if the beacon is inside the respective classrooms?
 
-3. Running BeaconScanner.py in Salt Minions (Raspberry Pis) from the Salt Master (Ubuntu server) - Salt States, modules?
+3. Running BeaconScanner.py in Salt Minions (Raspberry Pis) from the Salt Master (server) - Salt States, modules?
 
 4. Database configuration and writing the instructions to GitHub - PHP script not working currently
 

@@ -2170,6 +2170,6 @@ Here is a list of current issues and tasks to be solved
 
 poista ylemmät
 
-1. Website must show three people (Joni, Rasmus, and Niko), one for each Beacon, as permanent elements, and inform whether the Raspberry Pis (1,2,3) can see the Beacons (1,2,3) in the room currently - for example, the website informs that Beacon 1 is found in the vicinity of Servula, but Beacon 1 is not found in the vicinity of 5005 or 5004 - information about the beacons should appear under the permanent room elements, and update without making multiple rows
+1. The website must show three people, ```Joni Mattsson```, ```Rasmus Ekman```, and ```Niko Kulmanen```, one for each Beacon, as permanent HTML elements and inform below each person ```Beacon number - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` or for example ```BEACON1 - Joni Mattsson - Last seen in 5004 - 2019-11-29 20:14:32``` - for instance, the website informs that person ```Joni Mattsson``` is found in the vicinity of room ```5004``` at the time of ```2019-11-29 20:14:32```, but is not found in the vicinity of 5005 or Servula currently - three newest rows of information about each person should update based on timestamp every 1-10 seconds
 
 2. 

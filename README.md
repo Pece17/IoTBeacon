@@ -1003,7 +1003,7 @@ done
 ```
 
 
-## 4.2. Python scripts (Work in progress)
+## 4.2. Python ```BeaconScanner.py``` script (Work in progress)
 
 Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
 
@@ -1452,6 +1452,9 @@ except KeyboardInterrupt:
     pass
 ```
 
+
+## 4.3. Python ```ScanUtility.py``` script
+
 Original ```ScanUtility.py``` file
 
 ```
@@ -1571,7 +1574,7 @@ def parse_events(sock, loop_count=100):
 ```
 
 
-## 4.3. PHP scripts (Work in progress)
+## 4.4. PHP scripts (Work in progress)
 
 This is the ```DatabaseInsert1.php``` file for BEACON1 that inserts data into the database
 
@@ -1614,7 +1617,7 @@ This is the ```DatabaseInsert3.php``` file for BEACON3 that inserts data into th
 ```
 
 
-## 4.4. PHP website (Work in progress)
+## 4.5. PHP website (Work in progress)
 
 This is the ```index.php``` PHP file that is enclosed with HTML, and will be the actual website that was configured with the server
 

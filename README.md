@@ -2158,6 +2158,7 @@ $conn->close();
 
 Here is a list of current issues and tasks to be solved
 
+```
 1. Timeout and restart for ```BeaconScanner.py``` script - while loop?
 
 2. Test whether ```BeaconScanner.py``` notices difference in RSSI value when walking between the two classrooms where Raspberry Pi 2 and 3 are located - can you say with certainty if the beacon is inside the respective classrooms?
@@ -2167,8 +2168,7 @@ Here is a list of current issues and tasks to be solved
 4. Database configuration and writing the instructions to GitHub - PHP script not working currently
 
 5. RSSI value to database - show room A, B, or C?
-
-poista ylemmät
+```
 
 1. The website must show three people, ```Joni Mattsson```, ```Rasmus Ekman```, and ```Niko Kulmanen```, one for each Beacon, as permanent HTML elements and inform below each person ```Beacon number - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` or for example ```BEACON1 - Joni Mattsson - Last seen in 5004 - 2019-11-29 20:14:32``` - for instance, the website informs that person ```Joni Mattsson``` is found in the vicinity of room ```5004``` at the time of ```2019-11-29 20:14:32```, but is not found in the vicinity of 5005 or Servula currently - three newest rows of information about each person should update based on timestamp every 1-10 seconds
 
@@ -2183,3 +2183,5 @@ poista ylemmät
 6. Clean up GitHub report so that it is updated to the latest information, logical, chronological, neat, and follows the established standardization in formatting, for example paragraphs ```2.``` and ```3.``` need some polishing along many other paragraphs - Pekka's responsibility
 
 7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Beacons, Raspberry Pis, working scripts, webpage, and database could be divided to paragraphs in advance
+
+8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home

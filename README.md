@@ -1788,13 +1788,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT beacon_name, updated FROM room_1_output ORDER BY updated DESC LIMIT 3";
+$sql = "SELECT beacon_name, updated, user_first_name, user_last_name FROM room_1_output ORDER BY updated DESC LIMIT 3";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "   " . $row["beacon_name"]. " - Last seen " . $row["updated"]. "<br>";
+        echo "   " . $row["beacon_name"]. " - " . $row["user_first_name"]. " " . $row["user_last_name"]. " - Last seen in ROOMPLACEHOLDER - " . $row["updated"]. "<br>";
     }
 } else {
     echo "0 results";
@@ -1817,13 +1817,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT beacon_name, updated FROM room_1_output ORDER BY updated DESC LIMIT 3";
+$sql = "SELECT beacon_name, updated, user_first_name, user_last_name FROM room_1_output ORDER BY updated DESC LIMIT 3";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "   " . $row["beacon_name"]. " - Last seen " . $row["updated"]. "<br>";
+        echo "   " . $row["beacon_name"]. " - " . $row["user_first_name"]. " " . $row["user_last_name"]. " - Last seen in ROOMPLACEHOLDER - " . $row["updated"]. "<br>";
     }
 } else {
     echo "0 results";
@@ -1846,13 +1846,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT beacon_name, updated FROM room_1_output ORDER BY updated DESC LIMIT 3";
+$sql = "SELECT beacon_name, updated, user_first_name, user_last_name FROM room_1_output ORDER BY updated DESC LIMIT 3";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "   " . $row["beacon_name"]. " - Last seen " . $row["updated"]. "<br>";
+        echo "   " . $row["beacon_name"]. " - " . $row["user_first_name"]. " " . $row["user_last_name"]. " - Last seen in ROOMPLACEHOLDER - " . $row["updated"]. "<br>";
     }
 } else {
     echo "0 results";

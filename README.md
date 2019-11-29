@@ -1609,9 +1609,9 @@ $conn->close();
 ```
 
 
-## 4.4. HTML file (Work in progress)
+## 4.4. PHP website (Work in progress)
 
-This is the HTML file that will show on the website that was configured with the server
+This is the ```index.php``` PHP file that is enclosed with HTML, and will be the actual website that was configured with the server
 
 ```
 <!DOCTYPE html>

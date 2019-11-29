@@ -1,6 +1,6 @@
 # IoT Beacon "Lighthouse"
 
-IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure Project -course. End product will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database i.e. a server. The data will then be used to build a HTML based application which either alerts when the beacons leave a designated area or alerts when they enter a forbidden area.
+IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastructure Project -course. End product "Lighthouse" will be able to scan data from Bluetooth beacons with Raspberry Pi -computers and forward it to a database i.e. a server. The data will then be used to build a HTML based application which either alerts when the beacons leave a designated area or alerts when they enter a forbidden area.
 
 
 ## Project team

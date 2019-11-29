@@ -633,6 +633,8 @@ Once in VDI desktop, we need to open the PuTTY application in Windows and enter 
 
 ## 1.13. Establishing remote desktop connection to the server (Work in progress)
 
+http://c-nergy.be/blog/?p=9962
+
 We first need to install xrdp software to the server before we can connect remotely to it
 
 ```

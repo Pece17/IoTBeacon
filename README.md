@@ -1651,7 +1651,7 @@ $conn->close();
 ```
 
 
-# 5. Running and stopping the python scripts (Work in progress)
+# 5. Running and stopping the scripts (Work in progress)
 
 Description here
 
@@ -1688,6 +1688,33 @@ Now we can run the previously created ```BeaconScanner.py``` infinitely as a fai
 
 ```
 sudo ./forever BeaconScanner.py
+```
+
+
+## 5.2. Running and stopping the ```BeaconScanner.py``` script with Salt (Work in progress)
+
+In Salt Master, that is the server, give the following command to run ```BeaconScanner.py``` remotely in ```raspberry1``` Salt Minion that is the first Raspberry Pi
+
+```
+sudo salt 'raspberrypi1' cmd.run 'python /home/projektimies/path/BeaconScanner.py'
+```
+
+Give the following command to run ```BeaconScanner.py``` remotely in all three Salt Minions that are the three Raspberry Pis
+
+```
+sudo salt '*' cmd.run 'python /home/projektimies/path/BeaconScanner.py'
+```
+
+Give the following command to stop ```BeaconScanner.py``` remotely in ```raspberry1``` Salt Minion that is the first Raspberry Pi
+
+```
+sudo salt 'raspberrypi1' cmd.run 'killall python'
+```
+
+Give the following command to stop ```BeaconScanner.py``` remotely in all three Salt Minions that are the three Raspberry Pis
+
+```
+sudo salt '*' cmd.run 'killall python'
 ```
 
 

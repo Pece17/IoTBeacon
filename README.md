@@ -1003,7 +1003,7 @@ done
 ```
 
 
-## 4.2. Python script (Work in progress)
+## 4.2. Python scripts (Work in progress)
 
 Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
 
@@ -1571,7 +1571,7 @@ def parse_events(sock, loop_count=100):
 ```
 
 
-## 4.3. PHP script (Work in progress)
+## 4.3. PHP scripts (Work in progress)
 
 This is the ```DatabaseInsert1.php``` file for the BEACON1 that inserts data into the database
 
@@ -1653,21 +1653,12 @@ $conn->close();
 
 # 5. Running and stopping the python scripts (Work in progress)
 
+Description here
+
 
 ## 5.1. Restarting Python script after exception and running it infinitely (Work in progress)
 
 Navigate to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the ```forever``` file
-
-```
-sudo nano test.py
-```
-
-```
-import time
-
-time.sleep(2)
-raise Exception("Oh oh, this script just died")
-```
 
 ```
 sudo nano forever
@@ -1693,7 +1684,7 @@ sudo chmod +x forever
 sudo ./forever test.py
 ```
 
-Now we can change the previously created ```BeaconScanner.py``` instead of ```test.py```
+Now we can run the previously created ```BeaconScanner.py``` infinitely as a failsafe
 
 ```
 sudo ./forever BeaconScanner.py

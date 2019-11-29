@@ -402,7 +402,7 @@ Install SSH (Secure Shell) client and server
 sudo apt-get install -y openssh-server openssh-client
 ```
 
-After installing SSH, I try to connect with another Linux computer from the lab enviroment to the server
+After installing SSH, I try to connect with another Linux computer from the lab environment to the server
 
 ```
 ssh iotbeacon@x.x.x.x
@@ -1672,7 +1672,7 @@ This is the ```DatabaseInsert3.php``` file for BEACON3 that inserts data into th
 
 ## 4.5. PHP website (Work in progress)
 
-This is the ```index.php``` PHP file that is enclosed with HTML, and will be the actual website that was configured with the server
+This is the first version of ```index.php``` file which is the PHP script enclosed with HTML - this will be the actual website that the server shows in the lab environment
 
 ```
 <!DOCTYPE html>

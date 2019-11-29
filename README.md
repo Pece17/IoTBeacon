@@ -1672,7 +1672,7 @@ This is the ```DatabaseInsert3.php``` file for BEACON3 that inserts data into th
 
 ## 4.5. PHP website (Work in progress)
 
-This is the first version of ```index.php``` file which is the PHP script enclosed with HTML - this will be the actual website that the server shows in the lab environment
+This is the first version of ```index.php``` file which is the PHP script enclosed with HTML elements - this will be the actual website that the server shows in the lab environment
 
 ```
 <!DOCTYPE html>
@@ -1718,7 +1718,7 @@ $conn->close();
 </html>
 ```
 
-This is the second version of ```index.php``` where edited the HTML
+This is the second version of ```index.php``` where we edited HTML elements
 
 ```
 <!DOCTYPE html>

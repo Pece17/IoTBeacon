@@ -1939,3 +1939,6 @@ Here is a list of current issues and tasks to be solved
 4. Database configuration and writing the instructions to GitHub - PHP script not working currently
 
 5. RSSI value to database - show room A, B, or C?
+
+
+1. Website to show all three rooms (Servula, 5005, 5004) as permanent elements and that can they see Beacons

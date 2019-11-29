@@ -1712,7 +1712,7 @@ sudo ./forever BeaconScanner.py
 
 # 6. Database (Work in progress)
 
-We are using previously installed MariaDB to create the database on the server
+We are using previously installed MariaDB database to create our database on the server
 
 
 ## 6.1. Creating the tables in database (Work in progress)
@@ -1790,10 +1790,9 @@ CREATE TABLE room_1_output (
 
 
 );
+```
 
-
-
-
+```
 TRIGGERI
 
 
@@ -1821,9 +1820,9 @@ VALUES ('Etunimi', 'Sukunimi', 'a1', 'AA:BB:CC:DD:EE:FF', 'Detected');
 END IF;
 
 END$$
+```
 
-
-
+```
 PHP SQL INSERT
 
 Jos beacon ei näy:

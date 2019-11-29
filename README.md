@@ -1573,7 +1573,7 @@ def parse_events(sock, loop_count=100):
 
 ## 4.3. PHP scripts (Work in progress)
 
-This is the ```DatabaseInsert1.php``` file for the BEACON1 that inserts data into the database
+This is the ```DatabaseInsert1.php``` file for BEACON1 that inserts data into the database
 
 ```
 <?php
@@ -1599,6 +1599,18 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
+```
+
+This is the ```DatabaseInsert2.php``` file for BEACON2 that inserts data into the database
+
+```
+
+```
+
+This is the ```DatabaseInsert3.php``` file for BEACON3 that inserts data into the database
+
+```
+
 ```
 
 

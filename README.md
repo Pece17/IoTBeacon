@@ -1712,7 +1712,7 @@ sudo ./forever BeaconScanner.py
 
 # 6. Database (Work in progress)
 
-Description here
+We are using previously installed MariaDB to create the database on the server
 
 
 ## 6.1. Creating the tables in database (Work in progress)

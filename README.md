@@ -1020,12 +1020,6 @@ Run BeaconScanner.py python script with this command
 sudo python BeaconScanner.py
 ```
 
-Run BeaconScanner.py python script with this command infinitely
-
-```
-sudo python BeaconScanner.py &
-```
-
 Original ```BeaconScanner.py``` file
 
 ```  

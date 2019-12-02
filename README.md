@@ -2144,15 +2144,15 @@ CREATE USER 'raspbian_3'@'172.28.175.45' IDENTIFIED BY 'MonialaProjekti';
 ## 6.4. Giving permissions to all users in database
 
 ```
-GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_1'@'172.28.175.42';'
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_1'@'172.28.175.42';
 ```
 
 ```
-GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_2'@'172.28.175.44';'
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_2'@'172.28.175.44';
 ```
 
 ```
-GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';'
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 ```
 
 

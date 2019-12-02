@@ -2098,9 +2098,13 @@ We are using previously installed MariaDB database to create our database on the
 
 ## 6.1. Initializing the database
 
+```
 sudo mysql
+```
 
+```
 CREATE DATABASE iotbeacon;
+```
 
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41';'
@@ -2138,10 +2142,6 @@ CREATE USER 'raspbian_3'@'172.28.175.45' IDENTIFIED BY 'MonialaProjekti';
 
 
 ## 6.4. Giving permissions to all users in database
-
-```
-GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41';'
-```
 
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_1'@'172.28.175.42';'

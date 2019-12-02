@@ -2096,7 +2096,11 @@ sudo salt '*' cmd.run 'killall python'
 We are using previously installed MariaDB database to create our database on the server
 
 
-## 6.1. Creating the main user in database
+## 6.1. Initializing the database
+
+sudo mysql
+
+CREATE DATABASE iotbeacon;
 
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41';'

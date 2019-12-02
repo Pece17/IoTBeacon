@@ -1629,12 +1629,12 @@ def parse_events(sock, loop_count=100):
 
 ## 4.4. PHP scripts (Work in progress)
 
-This is the ```DatabaseInsert1.php``` file for BEACON1 that inserts data into the database
+This is the ```DatabaseInsert1.php``` file for BEACON1 in Raspberry Pi 1 that inserts data into the database
 
 ```
 <?php
 $servername = "172.28.175.41";
-$username = "miko";
+$username = "raspbian_1";
 $password = "MonialaProjekti";
 $dbname = "iotbeacon";
 
@@ -1645,7 +1645,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO room_1_raw_data (bname, beacon_status) VALUES ('a1', 'scanning');";
+$sql = "INSERT INTO beaconusers (beacon_name, user_first_name, user_last_name, room_name) VALUES ('Beacon1', 'Joni', 'Mattsson', 'Ser$
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -1657,16 +1657,60 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for BEACON2 that inserts data into the database
+This is the ```DatabaseInsert2.php``` file for BEACON2 in Raspberry Pi 1 that inserts data into the database
 
 ```
+<?php
+$servername = "172.28.175.41";
+$username = "raspbian_1";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO beaconusers (beacon_name, user_first_name, user_last_name, room_name) VALUES ('Beacon2', 'Rasmus', 'Ekman', 'Serv$
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
 ```
 
-This is the ```DatabaseInsert3.php``` file for BEACON3 that inserts data into the database
+This is the ```DatabaseInsert3.php``` file for BEACON3 that in Raspberry Pi 1 inserts data into the database
 
 ```
+<?php
+$servername = "172.28.175.41";
+$username = "raspbian_1";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO beaconusers (beacon_name, user_first_name, user_last_name, room_name) VALUES ('Beacon3', 'Niko', 'Kulmanen', 'Ser$
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
 ```
 
 

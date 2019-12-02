@@ -912,6 +912,13 @@ sudo systemctl restart bluetooth
 BlueZ is now installed
 
 
+## 3.11. Installing PHP on Raspberry Pis
+
+```
+sudo apt-get install php php-mysql
+```
+
+
 # 4. Scripts (Work in progress)
 
 The Bluetooth scanner script needs to be able to locate Bluetooth beacons based on MAC addresses, and print an assigned ID like ```BEACON1```, the original MAC address, and the RSSI (Received Signal Strength Indicator) value of the desired beacon

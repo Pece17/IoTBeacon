@@ -2098,14 +2098,58 @@ We are using previously installed MariaDB database to create our database on the
 
 ## 6.1. Creating the main user in database
 
+```
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41';'
+```
 
-## 6.2. Creating the table in database (Work in progress)
+
+## 6.2. Creating the tables in database (Work in progress)
+
+```
+CREATE TABLE beaconusers (
+
+beacon_name VARCHAR(30),
+user_first_name VARCHAR(30),
+user_last_name VARCHAR(30),
+room_name VARCHAR(20),
+updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+```
 
 
 ## 6.3. Creating remote users in database for three Raspberry Pis
 
+```
+CREATE USER 'raspbian_1'@'172.28.175.42' IDENTIFIED BY 'MonialaProjekti';
+```
+
+```
+CREATE USER 'raspbian_2'@'172.28.175.44' IDENTIFIED BY 'MonialaProjekti';
+```
+
+```
+CREATE USER 'raspbian_3'@'172.28.175.45' IDENTIFIED BY 'MonialaProjekti';
+```
+
 
 ## 6.4. Giving permissions to all users in database
+
+```
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41';'
+```
+
+```
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_1'@'172.28.175.42';'
+```
+
+```
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_2'@'172.28.175.44';'
+```
+
+```
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';'
+```
 
 
 # Issues and tasks

@@ -1713,6 +1713,18 @@ $conn->close();
 ?>
 ```
 
+This is the ```DatabaseInsert1.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
+
+This is the ```DatabaseInsert2.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
+
+This is the ```DatabaseInsert3.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
+
+This is the ```DatabaseInsert1.php``` file for BEACON3 that in Raspberry Pi 3 inserts data into the database
+
+This is the ```DatabaseInsert2.php``` file for BEACON3 that in Raspberry Pi 3 inserts data into the database
+
+This is the ```DatabaseInsert3.php``` file for BEACON3 that in Raspberry Pi 3 inserts data into the database
+
 
 ## 4.5. PHP website (Work in progress)
 

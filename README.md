@@ -1715,9 +1715,87 @@ $conn->close();
 
 This is the ```DatabaseInsert1.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
 
+```
+<?php
+$servername = "172.28.175.41";
+$username = "raspbian_2";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO beaconusers (beacon_name, user_first_name, user_last_name, room_name) VALUES ('Beacon1', 'Joni', 'Mattsson', '5005');";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+```
+
 This is the ```DatabaseInsert2.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
 
+```
+<?php
+$servername = "172.28.175.41";
+$username = "raspbian_2";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO beaconusers (beacon_name, user_first_name, user_last_name, room_name) VALUES ('Beacon2', 'Joni', 'Mattsson', '5005');";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+```
+
 This is the ```DatabaseInsert3.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
+
+```
+<?php
+$servername = "172.28.175.41";
+$username = "raspbian_2";
+$password = "MonialaProjekti";
+$dbname = "iotbeacon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO beaconusers (beacon_name, user_first_name, user_last_name, room_name) VALUES ('Beacon3', 'Joni', 'Mattsson', '5005');";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+```
 
 This is the ```DatabaseInsert1.php``` file for BEACON3 that in Raspberry Pi 3 inserts data into the database
 

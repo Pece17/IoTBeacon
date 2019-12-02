@@ -2247,6 +2247,7 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41';'
 CREATE TABLE beaconusers (
 
 beacon_name VARCHAR(30),
+beacon_mac_address VARCHAR(40),
 user_first_name VARCHAR(30),
 user_last_name VARCHAR(30),
 room_name VARCHAR(20),

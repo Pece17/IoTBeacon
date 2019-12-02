@@ -2098,6 +2098,58 @@ We are using previously installed MariaDB database to create our database on the
 
 ## 6.1. Initializing the database
 
+https://www.configserverfirewall.com/ubuntu-linux/enable-mysql-remote-access-ubuntu/
+
+```
+sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+```
+
+Change ```bind-address            = 127.0.0.1``` to ```bind-address            = 0.0.0.0```
+
+```
+#
+# These groups are read by MariaDB server.
+# Use it for options that only the server (but not clients) should see
+#
+# See the examples of server my.cnf files in /usr/share/mysql/
+#
+
+# this is read by the standalone daemon and embedded servers
+[server]
+
+# this is only for the mysqld standalone daemon
+[mysqld]
+
+#
+# * Basic Settings
+#
+user            = mysql
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+port            = 3306
+basedir         = /usr
+datadir         = /var/lib/mysql
+tmpdir          = /tmp
+lc-messages-dir = /usr/share/mysql
+skip-external-locking
+
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+bind-address            = 0.0.0.0
+```
+
+```
+sudo ufw allow from 172.28.175.42 to any port 3306
+```
+
+```
+sudo ufw allow from 172.28.175.44 to any port 3306
+```
+
+```
+sudo ufw allow from 172.28.175.45 to any port 3306
+```
+
 ```
 sudo mysql
 ```

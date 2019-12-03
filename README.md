@@ -2267,12 +2267,14 @@ sudo salt '*' cmd.run 'killall python'
 
 # 6. Database (Work in progress)
 
-We are using previously installed MariaDB database to create our database on the server
+We are using previously installed MariaDB relational database to create our database on the server
 
 
 ## 6.1. Initializing the database
 
-https://www.configserverfirewall.com/ubuntu-linux/enable-mysql-remote-access-ubuntu/
+Go to address https://www.configserverfirewall.com/ubuntu-linux/enable-mysql-remote-access-ubuntu/ to view the instructions for allowing remote access to Xubuntu MariaDB relational database from all three Raspberry Pis
+
+Edit ```/etc/mysql/mariadb.conf.d/50-server.cnf``` file
 
 ```
 sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
@@ -2312,17 +2314,25 @@ skip-external-locking
 bind-address            = 0.0.0.0
 ```
 
+Allow port 3306 that is responsible for MySQL database system to Raspberry Pi 1
+
 ```
 sudo ufw allow from 172.28.175.42 to any port 3306
 ```
+
+Allow port 3306 that is responsible for MySQL database system to Raspberry Pi 2
 
 ```
 sudo ufw allow from 172.28.175.44 to any port 3306
 ```
 
+Allow port 3306 that is responsible for MySQL database system to Raspberry Pi 3
+
 ```
 sudo ufw allow from 172.28.175.45 to any port 3306
 ```
+
+
 
 ```
 sudo mysql
@@ -2337,7 +2347,7 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41';'
 ```
 
 
-## 6.2. Creating the tables in database (Work in progress)
+## 6.2. Creating tables in the database (Work in progress)
 
 ```
 CREATE TABLE beaconusers (
@@ -2353,7 +2363,7 @@ updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ```
 
 
-## 6.3. Creating remote users in database for three Raspberry Pis
+## 6.3. Creating remote users in the database for three Raspberry Pis
 
 ```
 CREATE USER 'raspbian_1'@'172.28.175.42' IDENTIFIED BY 'MonialaProjekti';
@@ -2368,7 +2378,7 @@ CREATE USER 'raspbian_3'@'172.28.175.45' IDENTIFIED BY 'MonialaProjekti';
 ```
 
 
-## 6.4. Giving permissions to all users in database
+## 6.4. Giving permissions to all users in the database
 
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_1'@'172.28.175.42';
@@ -2401,7 +2411,7 @@ List here all the ideas for further development of the project
 
 1. Android app instead of HTML webpage
 
-2. Python database insertion instead of PHP files - could the Python database insertion be in ```BeaconScanner.py``` or would it need additional files?
+2. Python database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` or would it need additional scripts?
 
 
 # Issues and tasks

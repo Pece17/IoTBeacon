@@ -919,9 +919,9 @@ sudo apt-get install php php-mysql
 ```
 
 
-# 4. Scripts (Work in progress)
+# 4. Scripts
 
-The Bluetooth scanner script needs to be able to locate Bluetooth beacons based on MAC addresses, and print an assigned ID like ```BEACON1```, the original MAC address, and the RSSI (Received Signal Strength Indicator) value of the desired beacon
+The Bluetooth scanner script needs to be able to locate Bluetooth beacons based on MAC addresses, and print an assigned ID like ```Beacon1```, the original MAC address, and the RSSI (Received Signal Strength Indicator) value of the desired beacon
 
 
 ## 4.1. Shell scripts
@@ -1010,7 +1010,7 @@ done
 ```
 
 
-## 4.2. Python script ```BeaconScanner.py``` (Work in progress)
+## 4.2. Python script ```BeaconScanner.py```
 
 Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
 
@@ -2198,18 +2198,22 @@ $conn->close();
 ```
 
 
-# 5. Running and stopping scripts (Work in progress)
+# 5. Running and stopping scripts
 
-Description here
+We need to be able to run and stop all the scripts in all three Raspberry Pis efficiently and reliably, preferably using one command in Xubuntu server to start all the scripts, and another command to stop all the scripts in all three Raspberry Pis
 
 
-## 5.1. Restarting Python script after exception and running it infinitely (Work in progress)
+## 5.1. Restarting Python script ```BeaconScanner.py``` automatically after exception and running it infinitely with script ```forever```
 
 Navigate to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the ```forever``` file
+
+Create the ```forever``` file
 
 ```
 sudo nano forever
 ```
+
+Paste the following text inside the ```forever``` file
 
 ```
 #!/usr/bin/python
@@ -2223,15 +2227,13 @@ while True:
     p.wait()
 ```
 
+Make the ```forever``` file executable
+
 ```
 sudo chmod +x forever
 ```
 
-```
-sudo ./forever test.py
-```
-
-Now we can run the previously created ```BeaconScanner.py``` infinitely as a failsafe
+Now we can run the previously created ```BeaconScanner.py``` infinitely using ```forever``` file as a failsafe 
 
 ```
 sudo ./forever BeaconScanner.py

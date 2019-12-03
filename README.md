@@ -2406,12 +2406,6 @@ List here all the ideas for further development of the project
 
 Here is a list of current issues and tasks to be solved
 
-```
-2. Test whether ```BeaconScanner.py``` notices difference in RSSI value when walking between the two classrooms where Raspberry Pi 2 and 3 are located - can you say with certainty if the beacon is inside the respective classrooms?
-
-5. RSSI value to database - show room A, B, or C?
-```
-
 ~~1. The website must show three people, ```Joni Mattsson```, ```Rasmus Ekman```, and ```Niko Kulmanen```, one for each Beacon, as permanent HTML elements and inform below each person ```Beacon number - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` or for example ```BEACON1 - Joni Mattsson - Last seen in 5004 - 2019-11-29 20:14:32``` - for instance, the website informs that person ```Joni Mattsson``` is found in the vicinity of room ```5004``` at the time of ```2019-11-29 20:14:32```, but is not found in the vicinity of 5005 or Servula currently - five newest rows of information about each person should update based on timestamp every 1-10 seconds~~
 
 ~~2. The website must work simultaneously with all three Beacons, ```BEACON1```, ```BEACON2```, and ```BEACON3```, meaning that ```BEACON2``` and ```BEACON3``` must be added to the database as well as all three Raspberry Pis which serve as rooms, ```5004```, ```5005```, and ```Servula``` - all three Beacons must have one PHP script each, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```, meaning total of three PHP scripts for ALL THREE Beacons on ALL THREE Raspberry Pis, so a total of nine different PHP scripts - also, remember to add line ```import os``` and three ```os.system("php /home/projektimies/Lighthouse/DatabaseInsert1-3.php")``` lines inside all three ```if``` statements in ```BeaconScanner.py``` files on all three Raspberry Pis~~
@@ -2433,5 +2427,3 @@ Here is a list of current issues and tasks to be solved
 10. Establish the final path ```/home/projektimies/Lighthouse/``` to ALL SCRIPTS in ALL THREE Raspberry Pis, so that it is the same path in ALL THREE Raspberry Pis, for example, ```BeaconScanner.py``` script is located in ```/home/projektimies/Lighthouse/BeaconScanner.py``` in ALL THREE Raspberry Pis - also, establish naming conventions to all relevant scripts and folders, ```Lighthouse``` is the folder where all the scripts like ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` are located in Raspberry Pis, and in the server, ```ìndex.php``` webpage file is located inside ```public_html``` folder in path ```/home/iotbeacon/public_html/index.php```
 
 11. Create or edit the database based on new instructions - the database must focus around people instead of rooms, and it must print ```Beacon name - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` information like for example ```BEACON1 - Joni Mattsson - Last seen in Servula - 2019-11-29 20:14:32``` - how can we deduce in which room a Beacon is if two Raspberry Pis detect it simultaneously, or can we just print two rooms like ```Last seen in 5004 5005``` if two Raspberry Pis detect it at the same time, is there also any way to at least print RSSI value to the webpage, since in best case the database would deduce the room based on strongest RSSI value?
-
-12.

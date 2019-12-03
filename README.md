@@ -2092,7 +2092,7 @@ $conn->close();
 </html>
 ```
 
-This is the fourth and final version of ```ìndex.php``` file
+This is the fourth and final version of ```index.php``` file
 
 ```
 <!DOCTYPE html>

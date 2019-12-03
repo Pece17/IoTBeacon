@@ -2428,7 +2428,7 @@ To recap, after following the instructions, you should have the following items
 
 List here all the ideas for further development of the project
 
-1. Android app instead of HTML webpage
+1. Android app instead of HTML website
 
 2. Python database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` or would it need additional scripts?
 
@@ -2449,14 +2449,14 @@ Here is a list of current issues and tasks to be solved
 
 6. Clean up GitHub report so that it is updated to the latest information, logical, chronological, neat, and follows the established standardization in formatting, for example paragraphs ```2.``` and ```3.``` need some polishing along many other paragraphs - Pekka's responsibility
 
-7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Beacons, Raspberry Pis, working scripts, webpage, and database could be divided to paragraphs in advance
+7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Beacons, Raspberry Pis, working scripts, website, and database could be divided to paragraphs in advance
 
 8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home
 
 9. Make mindmap of script and device dependencies in https://bubbl.us/ or other website
 
-10. Establish the final path ```/home/projektimies/Lighthouse/``` to ALL SCRIPTS in ALL THREE Raspberry Pis, so that it is the same path in ALL THREE Raspberry Pis, for example, ```BeaconScanner.py``` script is located in ```/home/projektimies/Lighthouse/BeaconScanner.py``` in ALL THREE Raspberry Pis - also, establish naming conventions to all relevant scripts and folders, ```Lighthouse``` is the folder where all the scripts like ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` are located in Raspberry Pis, and in the server, ```ìndex.php``` webpage file is located inside ```public_html``` folder in path ```/home/iotbeacon/public_html/index.php```
+10. Establish the final path ```/home/projektimies/Lighthouse/``` to ALL SCRIPTS in ALL THREE Raspberry Pis, so that it is the same path in ALL THREE Raspberry Pis, for example, ```BeaconScanner.py``` script is located in ```/home/projektimies/Lighthouse/BeaconScanner.py``` in ALL THREE Raspberry Pis - also, establish naming conventions to all relevant scripts and folders, ```Lighthouse``` is the folder where all the scripts like ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` are located in Raspberry Pis, and in the server, ```ìndex.php``` website file is located inside ```public_html``` folder in path ```/home/iotbeacon/public_html/index.php```
 
-11. Create or edit the database based on new instructions - the database must focus around people instead of rooms, and it must print ```Beacon name - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` information like for example ```BEACON1 - Joni Mattsson - Last seen in Servula - 2019-11-29 20:14:32``` - how can we deduce in which room a Beacon is if two Raspberry Pis detect it simultaneously, or can we just print two rooms like ```Last seen in 5004 5005``` if two Raspberry Pis detect it at the same time, is there also any way to at least print RSSI value to the webpage, since in best case the database would deduce the room based on strongest RSSI value?
+11. Create or edit the database based on new instructions - the database must focus around people instead of rooms, and it must print ```Beacon name - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` information like for example ```BEACON1 - Joni Mattsson - Last seen in Servula - 2019-11-29 20:14:32``` - how can we deduce in which room a Beacon is if two Raspberry Pis detect it simultaneously, or can we just print two rooms like ```Last seen in 5004 5005``` if two Raspberry Pis detect it at the same time, is there also any way to at least print RSSI value to the website, since in best case the database would deduce the room based on strongest RSSI value?
 
 12. Add the final versions of ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, ```DatabaseInsert3.php``` (total of nice because of three Raspberry Pis), and ```index.php``` to separate GitHub pages/files

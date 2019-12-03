@@ -2434,6 +2434,8 @@ To recap, after following the instructions, you should have the following items
 - Database on the Xubuntu server
 - ```index.php``` website on the Xubuntu server
 
+<img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Lighthouse.png>
+
 
 # 8. Further development
 

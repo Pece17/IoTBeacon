@@ -650,14 +650,7 @@ sudo systemctl enable xrdp
 ```
 
 
-## 1.14 Installing phpMyAdmin on the server (Work in progress)
-
-```
-sudo apt-get install phpmyadmin
-```
-
-
-# 2. Bluetooth beacons (Work in progress)
+# 2. Bluetooth beacons
 
 - Three Bluetooth low energy (BLE) beacons
 - Beacons broadcast their identifier to nearby devices that are Raspberry Pis in this project
@@ -2433,6 +2426,8 @@ To recap, after following the instructions, you should have the following items
 - ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` in folder ```Lighthouse``` in the same path in all three Raspberry Pis - notice that ```DatabaseInsert.php``` files actually have nine sligthly different versions because the script changes based on which of the three Raspberry Pis it is located
 - Database on the Xubuntu server
 - ```index.php``` website on the Xubuntu server
+
+The following mindmap should clarify the dependencies of the files and devices of the whole system
 
 <img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Lighthouse.png>
 

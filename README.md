@@ -1634,12 +1634,12 @@ def parse_events(sock, loop_count=100):
 ```
 
 
-## 4.4. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` (Work in progress)
+## 4.4. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```
 
 All three Raspberry Pis will have PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```, but they are slightly different in all three Raspberry Pis, so there has to be a total of nine different PHP database insertion scripts
 
 
-### 4.4.1. PHP scripts in Raspberry Pi 1
+### 4.4.1. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 1
 
 This is the ```DatabaseInsert1.php``` file for Beacon 1 in Raspberry Pi 1 that inserts data into the database
 
@@ -1725,7 +1725,7 @@ $conn->close();
 ?>
 ```
 
-### 4.4.2. PHP scripts in Raspberry Pi 2
+### 4.4.2. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 2
 
 This is the ```DatabaseInsert1.php``` file for Beacon 1 that in Raspberry Pi 2 inserts data into the database
 
@@ -1813,7 +1813,7 @@ $conn->close();
 ```
 
 
-### 4.4.3. PHP scripts in Raspberry Pi 3
+### 4.4.3. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 3
 
 This is the ```DatabaseInsert1.php``` file for Beacon 1 that in Raspberry Pi 3 inserts data into the database
 
@@ -1900,7 +1900,7 @@ $conn->close();
 ```
 
 
-## 4.5. PHP website (Work in progress)
+## 4.5. PHP website ```index.php```
 
 This is the first version of ```index.php``` file which is the PHP script enclosed with HTML elements - this will be the actual website that the server shows in the lab environment
 

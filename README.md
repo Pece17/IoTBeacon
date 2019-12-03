@@ -6,11 +6,8 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 ## Project team
 
 - Rasmus Ekman - Project manager
-
 - Pekka Hämäläinen - Project worker and secretary
-
 - Niko Kulmanen - Project worker
-
 - Joni Mattsson - Project worker
 
 
@@ -2432,7 +2429,6 @@ Here is a list of current issues and tasks to be solved
 5. Step-by-step instructions for creating the database and accessing database remotely from Raspberry Pis, especially the latter since we had problems getting it to work - start writing database instructions to GitHub from paragraph ```6.1.``` and divide to appropriate topics like for example, ```6.1. Creating the tables in database```, ```6.2. Creating the triggers in database```, and so on - every single command from opening MariaDB database to creating the tables should be listed chronologically inside ```code elements``` so that in theory, a random person could create a working database without prior knowledge using the instructions
 
 6. Clean up GitHub report so that it is updated to the latest information, logical, chronological, neat, and follows the established standardization in formatting, for example paragraphs ```2.``` and ```3.``` need some polishing along many other paragraphs - Pekka's responsibility
-
 7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Beacons, Raspberry Pis, working scripts, webpage, and database could be divided to paragraphs in advance
 
 8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home

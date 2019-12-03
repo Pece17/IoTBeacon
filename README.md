@@ -2389,7 +2389,7 @@ To recap, after following the instructions you should have
 - Three Raspberry Pis
 - Three Blutooth beacons
 - ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` in folder ```Lighthouse``` on the same path in all three Raspberry Pis - notice that ```DatabaseInsert.php``` file actually has nine sligthly different versions, because the script changes based on on which of the three Raspberry Pis it is
-- ```ìndex.php``` webpage and Apache web server configured on Xubuntu server
+- ```ìndex.php``` webpage on the Xubuntu server
 - Database on the Xubuntu server
 
 
@@ -2399,7 +2399,7 @@ List here all the ideas for further development of the project
 
 1. Android app instead of HTML webpage
 
-2. 
+2. Python database insertion instead of PHP files - could the Python database insertion be in ```BeaconScanner.py``` or would it need additional files?
 
 
 # Issues and tasks

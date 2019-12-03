@@ -2423,16 +2423,15 @@ To recap, after following the instructions, you should have the following items
 - ```index.php``` website on the Xubuntu server
 
 
-
 # 8. Further development
 
-List here all the ideas for further development of the project
+List of all the ideas for further development of the project
 
 1. Android app instead of HTML website
 
 2. Python database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` or would it need additional scripts?
 
-3. Accurate room deduction based on RSSI signal strength, that is the lowest RSSI value
+3. Accurate room deduction based on RSSI signal strength, i.e. the lowest RSSI value
 
 
 # Issues and tasks

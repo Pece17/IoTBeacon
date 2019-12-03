@@ -2383,6 +2383,15 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 
 # 7. In conclusion
 
+To recap, after following the instructions you should have
+
+- One Xubuntu web server
+- Three Raspberry Pis
+- Three Blutooth beacons
+- ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` in folder ```Lighthouse``` on the same path in all three Raspberry Pis - notice that ```DatabaseInsert.php``` file actually has nine sligthly different versions, because the script changes based on on which of the three Raspberry Pis it is
+- ```ìndex.php``` webpage and Apache web server configured on Xubuntu server
+- Database on the Xubuntu server
+
 
 # 8. Further development
 

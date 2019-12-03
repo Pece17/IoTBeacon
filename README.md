@@ -2265,14 +2265,14 @@ sudo salt '*' cmd.run 'killall python'
 ```
 
 
-# 6. Database (Work in progress)
+# 6. Database
 
-We are using previously installed MariaDB relational database to create our database on the server
+We are using previously installed MariaDB relational database to create our database on the Xubuntu server
 
 
 ## 6.1. Initializing the database
 
-Go to address https://www.configserverfirewall.com/ubuntu-linux/enable-mysql-remote-access-ubuntu/ to view the instructions for allowing remote access to Xubuntu MariaDB relational database from all three Raspberry Pis
+Go to address https://www.configserverfirewall.com/ubuntu-linux/enable-mysql-remote-access-ubuntu/ to view the instructions for allowing remote access to MariaDB on the server from all three Raspberry Pis
 
 Edit ```/etc/mysql/mariadb.conf.d/50-server.cnf``` file
 
@@ -2314,40 +2314,46 @@ skip-external-locking
 bind-address            = 0.0.0.0
 ```
 
-Allow port 3306 that is responsible for MySQL database system to Raspberry Pi 1
+Allow port 3306 that is responsible for MySQL database system for Raspberry Pi 1
 
 ```
 sudo ufw allow from 172.28.175.42 to any port 3306
 ```
 
-Allow port 3306 that is responsible for MySQL database system to Raspberry Pi 2
+Allow port 3306 that is responsible for MySQL database system for Raspberry Pi 2
 
 ```
 sudo ufw allow from 172.28.175.44 to any port 3306
 ```
 
-Allow port 3306 that is responsible for MySQL database system to Raspberry Pi 3
+Allow port 3306 that is responsible for MySQL database system for Raspberry Pi 3
 
 ```
 sudo ufw allow from 172.28.175.45 to any port 3306
 ```
 
-
+Open MariaDB
 
 ```
 sudo mysql
 ```
 
+Create database ```iotbeacon```
+
 ```
 CREATE DATABASE iotbeacon;
 ```
+
+Grant all privileges on database ```iotbeacon``` to user ```niko``` - the user ```niko``` is created automatically by granting these privileges to it
 
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41';'
 ```
 
 
-## 6.2. Creating tables in the database (Work in progress)
+## 6.2. Creating tables in the database
+
+Using database ```iotbeacon```, create table ```beaconusers``` and add the following information inside the table
 
 ```
 CREATE TABLE beaconusers (
@@ -2365,28 +2371,40 @@ updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
 ## 6.3. Creating remote users in the database for three Raspberry Pis
 
+Create user ```raspbian_1``` for Raspberry Pi 1
+
 ```
 CREATE USER 'raspbian_1'@'172.28.175.42' IDENTIFIED BY 'MonialaProjekti';
 ```
 
+Create user ```raspbian_2``` for Raspberry Pi 2
+
 ```
 CREATE USER 'raspbian_2'@'172.28.175.44' IDENTIFIED BY 'MonialaProjekti';
 ```
+
+Create user ```raspbian_3``` for Raspberry Pi 3
 
 ```
 CREATE USER 'raspbian_3'@'172.28.175.45' IDENTIFIED BY 'MonialaProjekti';
 ```
 
 
-## 6.4. Giving permissions to all users in the database
+## 6.4. Giving permissions to remote users in the database
+
+Grant all privileges on database ```iotbeacon``` to user ```raspbian_1```
 
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_1'@'172.28.175.42';
 ```
 
+Grant all privileges on database ```iotbeacon``` to user ```raspbian_2```
+
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_2'@'172.28.175.44';
 ```
+
+Grant all privileges on database ```iotbeacon``` to user ```raspbian_3```
 
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';

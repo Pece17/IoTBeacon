@@ -2381,7 +2381,10 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 ```
 
 
-# Further development
+# 7. In conclusion
+
+
+# 8. Further development
 
 List here all the ideas for further development of the project
 

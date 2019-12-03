@@ -789,21 +789,21 @@ sudo systemctl restart salt-minion.sercive
 ```
 
 
-## 3.6. Establishing SSH connection with PuTTY to Raspberry Pi
+## 3.6. Establishing SSH connection with PuTTY to Raspberry Pis
 
 To use PuTTY application to connect to Raspberry Pis, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the Raspberry Pi and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
 
 
-## 3.7. Establishing SSH connection with terminal to Raspberry Pi (Work in progress)
+## 3.7. Establishing SSH connection with terminal to Raspberry Pis
 
 ```
 ssh projektimies@x.x.x.x
 ```
  
  
-## 3.8. Establishing Remote Desktop Connection to Raspberry Pi(Work in progress)
+## 3.8. Establishing Remote Desktop Connection to Raspberry Pis
 
 Update package lists for upgrades and new packages from repositories
 
@@ -822,19 +822,27 @@ To use Remote Desktop Connection application to connect to Raspberry Pis, we fir
 Once in VDI desktop, we need to open the Remote Desktop Connection application in Windows, enter the IP address x.x.x.x of the Raspberry Pi, and connect - the application prompts a warning prompt where you need to press yes, after which the Raspberry Pi desktop opens a login screen and unlocks the desktop after entering the correct credentials
 
 
-## 3.9. Changing hostname in Raspberry Pi (Work in progress)
+## 3.9. Changing the hostname on Raspberry Pis
+
+Replace the old hostname ```raspberrypi``` with ```raspberrypi1```
 
 ```
 sudo hostnamectl set-hostname raspberrypi1
 ```
 
+Check that the new hostname was changed
+
 ```
 hostname
 ```
 
+Edit ```/etc/hosts``` file
+
 ```
 sudo nano /etc/hosts
 ```
+
+Add new hostname ```raspberrypi1``` after ```127.0.1.1```
 
 ```
 127.0.0.1       localhost
@@ -845,11 +853,13 @@ ff02::2         ip6-allrouters
 127.0.1.1       raspberrypi1
 ```
 
+Reboot the system
+
 ```
 sudo reboot
 ```
 
-Repeat for all three Raspberry Pis
+Repeat for Raspberry Pi 1 and Raspberry Pi 2, but change the hostnames to ```raspberrypi2``` and ```raspberrypi3``` respectively
 
 
 ## 3.10. Installing BlueZ on Raspberry Pis

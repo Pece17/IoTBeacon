@@ -2240,9 +2240,9 @@ sudo ./forever BeaconScanner.py
 ```
 
 
-## 5.2. Running and stopping the ```BeaconScanner.py``` script with Salt (Work in progress)
+## 5.2. Running and stopping Python script ```BeaconScanner.py``` with Salt
 
-In Salt Master, that is the server, give the following command to run ```BeaconScanner.py``` remotely in ```raspberrypi1``` Salt Minion that is the Raspberry Pi 1
+In Salt Master, that is the Xubuntu server, give the following command to run ```BeaconScanner.py``` remotely in ```raspberrypi1``` Salt Minion that is the Raspberry Pi 1
 
 ```
 sudo salt 'raspberrypi1' cmd.run 'python /home/projektimies/Lighthouse/BeaconScanner.py'
@@ -2254,7 +2254,7 @@ Give the following command to run ```BeaconScanner.py``` remotely in all three S
 sudo salt '*' cmd.run 'python /home/projektimies/Lighthouse/BeaconScanner.py'
 ```
 
-Give the following command to stop ```BeaconScanner.py``` remotely in ```raspberrypi1``` Salt Minion that is the first Raspberry Pi
+Give the following command to stop ```BeaconScanner.py``` remotely in ```raspberrypi1``` Salt Minion that is the Raspberry Pi 1
 
 ```
 sudo salt 'raspberrypi1' cmd.run 'killall python'

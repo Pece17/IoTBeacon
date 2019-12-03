@@ -2381,6 +2381,15 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 ```
 
 
+# Further development
+
+List here all the ideas for further development of the project
+
+1. Android app instead of HTML webpage
+
+2. 
+
+
 # Issues and tasks
 
 Here is a list of current issues and tasks to be solved
@@ -2401,7 +2410,7 @@ Here is a list of current issues and tasks to be solved
 
 ~~2. The website must work simultaneously with all three Beacons, ```BEACON1```, ```BEACON2```, and ```BEACON3```, meaning that ```BEACON2``` and ```BEACON3``` must be added to the database as well as all three Raspberry Pis which serve as rooms, ```5004```, ```5005```, and ```Servula``` - all three Beacons must have one PHP script each, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```, meaning total of three PHP scripts for ALL THREE Beacons on ALL THREE Raspberry Pis, so a total of nine different PHP scripts - also, remember to add line ```import os``` and three ```os.system("php /home/projektimies/Lighthouse/DatabaseInsert1-3.php")``` lines inside all three ```if``` statements in ```BeaconScanner.py``` files on all three Raspberry Pis~~
 
-3. Run ```BeaconScanner.py``` script simultaneously in all Salt Mininions, ```raspberrypi1```, ```raspberrypi2```, and ```raspberrypi3```, from the Salt Master ```Xubuntu server``` using Salt command or Salt states
+~~3. Run ```BeaconScanner.py``` script simultaneously in all Salt Mininions, ```raspberrypi1```, ```raspberrypi2```, and ```raspberrypi3```, from the Salt Master ```Xubuntu server``` using Salt command or Salt states~~
 
 4. Automatic timeout or restart for ```BeaconScanner.py``` script, because running it infinitely is not ideal - will the timeout be for ```while loop``` or something else, and should we use ```forever``` file as a failsafe if the script stops?
 

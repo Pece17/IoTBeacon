@@ -924,7 +924,7 @@ sudo apt-get install php php-mysql
 The Bluetooth scanner script needs to be able to locate Bluetooth beacons based on MAC addresses, and print an assigned ID like ```BEACON1```, the original MAC address, and the RSSI (Received Signal Strength Indicator) value of the desired beacon
 
 
-## 4.1. Shell script
+## 4.1. Shell scripts
 
 Copy scanner Shell script from https://stackoverflow.com/questions/27401918/detecting-presence-of-particular-bluetooth-device-with-mac-address
 
@@ -1010,7 +1010,7 @@ done
 ```
 
 
-## 4.2. Python ```BeaconScanner.py``` script (Work in progress)
+## 4.2. Python script ```BeaconScanner.py``` (Work in progress)
 
 Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
 
@@ -1634,12 +1634,14 @@ def parse_events(sock, loop_count=100):
 ```
 
 
-## 4.4. PHP scripts (Work in progress)
+## 4.4. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` (Work in progress)
+
+All three Raspberry Pis will have PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```, but they are slightly different in all three Raspberry Pis, so there has to be a total of nine different PHP database insertion scripts
 
 
 ### 4.4.1. PHP scripts in Raspberry Pi 1
 
-This is the ```DatabaseInsert1.php``` file for BEACON1 in Raspberry Pi 1 that inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 in Raspberry Pi 1 that inserts data into the database
 
 ```
 <?php
@@ -1667,7 +1669,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for BEACON2 in Raspberry Pi 1 that inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 in Raspberry Pi 1 that inserts data into the database
 
 ```
 <?php
@@ -1695,7 +1697,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert3.php``` file for BEACON3 that in Raspberry Pi 1 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 1 inserts data into the database
 
 ```
 <?php
@@ -1725,7 +1727,7 @@ $conn->close();
 
 ### 4.4.2. PHP scripts in Raspberry Pi 2
 
-This is the ```DatabaseInsert1.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 that in Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -1753,7 +1755,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 that in Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -1782,7 +1784,7 @@ $conn->close();
 
 ```
 
-This is the ```DatabaseInsert3.php``` file for BEACON3 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -1813,7 +1815,7 @@ $conn->close();
 
 ### 4.4.3. PHP scripts in Raspberry Pi 3
 
-This is the ```DatabaseInsert1.php``` file for BEACON3 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 that in Raspberry Pi 3 inserts data into the database
 
 ```
 <?php
@@ -1841,7 +1843,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for BEACON3 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 that in Raspberry Pi 3 inserts data into the database
 
 ```
 <?php
@@ -1869,7 +1871,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert3.php``` file for BEACON3 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 3 inserts data into the database
 
 ```
 <?php
@@ -2238,7 +2240,7 @@ sudo ./forever BeaconScanner.py
 
 ## 5.2. Running and stopping the ```BeaconScanner.py``` script with Salt (Work in progress)
 
-In Salt Master, that is the server, give the following command to run ```BeaconScanner.py``` remotely in ```raspberry1``` Salt Minion that is the first Raspberry Pi
+In Salt Master, that is the server, give the following command to run ```BeaconScanner.py``` remotely in ```raspberrypi1``` Salt Minion that is the Raspberry Pi 1
 
 ```
 sudo salt 'raspberrypi1' cmd.run 'python /home/projektimies/Lighthouse/BeaconScanner.py'
@@ -2250,7 +2252,7 @@ Give the following command to run ```BeaconScanner.py``` remotely in all three S
 sudo salt '*' cmd.run 'python /home/projektimies/Lighthouse/BeaconScanner.py'
 ```
 
-Give the following command to stop ```BeaconScanner.py``` remotely in ```raspberry1``` Salt Minion that is the first Raspberry Pi
+Give the following command to stop ```BeaconScanner.py``` remotely in ```raspberrypi1``` Salt Minion that is the first Raspberry Pi
 
 ```
 sudo salt 'raspberrypi1' cmd.run 'killall python'

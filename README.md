@@ -2389,7 +2389,7 @@ To recap, after following the instructions you should have
 - Three Raspberry Pis
 - Three Blutooth beacons
 - ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` in folder ```Lighthouse``` on the same path in all three Raspberry Pis - notice that ```DatabaseInsert.php``` file actually has nine sligthly different versions, because the script changes based on on which of the three Raspberry Pis it is
-- ```ìndex.php``` webpage on the Xubuntu server
+- ```index.php``` webpage on the Xubuntu server
 - Database on the Xubuntu server
 
 

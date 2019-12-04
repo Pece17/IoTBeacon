@@ -629,25 +629,6 @@ xxx: 172.28.xxx.xx
 To use PuTTY application to connect to the server, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the server and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
- 
-
-## 1.13. Establishing remote desktop connection to the server (Does not work)
-
-http://c-nergy.be/blog/?p=9962
-
-We first need to install xrdp software to the server before we can connect remotely to it
-
-```
-sudo apt-get install xrdp
-```
-
-sudo apt-get install xfce4
-
-Enable xrdp software
-
-```
-sudo systemctl enable xrdp
-```
 
 
 # 2. Bluetooth beacons

@@ -586,42 +586,63 @@ print(1+3);
 </html>
 ```
 
-Exit and save the file, and open localhost/~iotbeacon to test if PHP is working correctly
+Exit and save the file, and open address http://localhost/~iotbeacon to test if PHP is working correctly
 
 The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
 
 
 ## 1.11. Installing Salt Master on the server
 
-Install Salt (SaltStack)
+Install Salt Master
 
 ```
 sudo apt-get -y install salt-master
 ```
 
-Salt Master communicates with the minions over TCP ports 4505 and 4506 so we need to allow those for firewall
+Allow port 4505 that is responsible for Salt Master
 
 ```
 sudo ufw allow 4505/tcp
+```
+
+Allow port 4506 that is also responsible for Salt Master
+
+```
 sudo ufw allow 4506/tcp
 ```
 
-Accept Minion Key on Master (after installing and configuring the Salt-Minions)
+List all public keys
+
+```
+sudo salt-key -L
+```
+
+Accept all public keys for Salt Minions ```raspberrypi1```, ```raspberrypi2```, and ```raspberrypi3``` - do this only after installing and configuring Salt Minion to all three Raspberry Pis
 
 ```
 sudo salt-key -A
+```
+
+The following output appears for which press ```Y``` to proceed
+
+```
 Unaccepted Keys:
 xxx
 Proceed? [n/Y]
 Key for minion xxx accepted.
 ```
 
-Testing
+Using Salt command, check the static IP addresses of all three minions
 
 ``` 
-sudo salt 'xxx' cmd.run 'hostname -I' 
-xxx: 172.28.xxx.xx
+sudo salt '*' cmd.run 'hostname -I'
 ``` 
+
+Send a message to all the minions and tell them to return ```True``` to check which minions are alive
+
+```
+sudo salt '*' test.ping
+```
 
 
 ## 1.12. Establishing SSH connection with PuTTY to the server
@@ -756,14 +777,60 @@ Reached the new static IP address with a local ping, and SSH connection was also
 
 ## 3.4. Installing Salt Minion on Raspberry Pis
 
-- SALT MINION
+Update package lists for upgrades and new packages from repositories
 
-  Configuration management and orchestration tool
-  
+```
+sudo apt-get update
+```
+
+Install Salt Minion
+
 ```
 sudo apt-get -y install salt-minion
-sudoedit /etc/salt/minion → master: (master ip address) & id: (the name on the minion)
-sudo systemctl restart salt-minion.sercive
+```
+
+Edit ```/etc/salt/minion``` file
+
+```
+sudo nano /etc/salt/minion
+```
+
+Change ```# master: salt``` to ```master: 172.28.175.41``` that is the IP address of the server, and remove the hashtag
+
+```
+##### Primary configuration settings #####
+##########################################
+# This configuration file is used to manage the behavior of the Salt Minion.
+# With the exception of the location of the Salt Master Server, values that are
+# commented out but have an empty line after the comment are defaults that need
+# not be set in the config. If there is no blank line after the comment, the
+# value is presented as an example and is not the default.
+
+# Per default the minion will automatically include all config files
+# from minion.d/*.conf (minion.d is a directory in the same directory
+# as the main minion config file).
+#default_include: minion.d/*.conf
+
+# Set the location of the salt master server. If the master server cannot be
+# resolved, then the minion will fail to start.
+master: 172.28.175.41
+```
+
+Also, change ```# id:``` to ```id: raspberrypi1``` and remove the hashtag
+
+```
+# Explicitly declare the id for this minion to use, if left commented the id
+# will be the hostname as returned by the python call: socket.getfqdn()
+# Since salt uses detached ids it is possible to run multiple minions on the
+# same machine but with different ids, this can be useful for salt compute
+# clusters.
+id: raspberrypi1
+```
+
+Restart Salt Minion
+
+```
+sudo service salt-minion restart
 ```
 
 

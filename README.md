@@ -765,15 +765,13 @@ Reboot the system
 sudo reboot  
 ```
 
-Ping your device
+Ping the local Raspberry Pi
 
 ```
 Ping raspberrypi.local
 ```
 
-Reached the new static ip address with a ping
-
-The SSH connection was also successfully established
+Reached the new static IP address with a local ping, and SSH connection was also successfully established with the new static IP address
 
 
 ## 3.5. Programs installed on Raspberry Pis

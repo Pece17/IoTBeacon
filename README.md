@@ -756,22 +756,6 @@ Reached the new static IP address with a local ping, and SSH connection was also
 
 ## 3.4. Installing Salt Minion on Raspberry Pis
 
-- BlueZ 
-
-  Bluetooth stack for Linux kernel-based family of operating systems
-
-```
-sudo apt-get -y install bluez bluez-hcidump
-```
-
-- MQTT
-  
-  Network protocol that transports messages between devices
-  
-```
-sudo pip install paho-mqtt
-```
-
 - SALT MINION
 
   Configuration management and orchestration tool

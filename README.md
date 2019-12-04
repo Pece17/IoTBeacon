@@ -674,6 +674,8 @@ Here are the specifications of the Raspberry Pi models we are using
 - RJ45
 - 4x USB
 - MicroSD card reader
+- installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
+- Operating system - Raspbian version 10 (buster)
 
 
 ## 3.1. Installing Raspberry Pis
@@ -688,13 +690,7 @@ Here are the specifications of the Raspberry Pi models we are using
 - Display
 
 
-## 3.2. Operating system on Raspberry Pis
-
-- installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
-- Raspbian version 10 (buster)
-
-
-## 3.3. Creating a new sudo user on Raspberry Pis
+## 3.2. Creating a new sudo user on Raspberry Pis
 
 Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
 
@@ -738,7 +734,7 @@ sudo raspi-config
 ```
 
 
-## 3.4. Configuring static IP addresses on Raspberry Pis
+## 3.3. Configuring static IP addresses on Raspberry Pis
 
 Edit ```/etc/dhcpcd.conf```
 
@@ -777,7 +773,7 @@ Ping raspberrypi.local
 Reached the new static IP address with a local ping, and SSH connection was also successfully established with the new static IP address
 
 
-## 3.5. Programs installed on Raspberry Pis
+## 3.4. Programs installed on Raspberry Pis
 
 - BlueZ 
 
@@ -806,21 +802,21 @@ sudo systemctl restart salt-minion.sercive
 ```
 
 
-## 3.6. Establishing SSH connection with PuTTY to Raspberry Pis
+## 3.5. Establishing SSH connection with PuTTY to Raspberry Pis
 
 To use PuTTY application to connect to Raspberry Pis, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the Raspberry Pi and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
 
 
-## 3.7. Establishing SSH connection with terminal to Raspberry Pis
+## 3.6. Establishing SSH connection with terminal to Raspberry Pis
 
 ```
 ssh projektimies@x.x.x.x
 ```
  
  
-## 3.8. Establishing Remote Desktop Connection to Raspberry Pis
+## 3.7. Establishing Remote Desktop Connection to Raspberry Pis
 
 Update package lists for upgrades and new packages from repositories
 
@@ -839,7 +835,7 @@ To use Remote Desktop Connection application to connect to Raspberry Pis, we fir
 Once in VDI desktop, we need to open the Remote Desktop Connection application in Windows, enter the IP address x.x.x.x of the Raspberry Pi, and connect - the application prompts a warning prompt where you need to press yes, after which the Raspberry Pi desktop opens a login screen and unlocks the desktop after entering the correct credentials
 
 
-## 3.9. Changing the hostname on Raspberry Pis
+## 3.8. Changing the hostname on Raspberry Pis
 
 Replace the old hostname ```raspberrypi``` with ```raspberrypi1```
 
@@ -879,7 +875,7 @@ sudo reboot
 Repeat for Raspberry Pi 1 and Raspberry Pi 2, but change the hostnames to ```raspberrypi2``` and ```raspberrypi3``` respectively
 
 
-## 3.10. Installing BlueZ on Raspberry Pis
+## 3.9. Installing BlueZ on Raspberry Pis
 
 Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the instructions for installing BlueZ Bluetooth stack for Linux kernel-based family of operating systems
 
@@ -939,7 +935,7 @@ sudo systemctl restart bluetooth
 BlueZ is now installed
 
 
-## 3.11. Installing PHP on Raspberry Pis
+## 3.10. Installing PHP on Raspberry Pis
 
 ```
 sudo apt-get install php php-mysql

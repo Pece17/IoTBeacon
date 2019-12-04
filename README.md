@@ -1662,6 +1662,8 @@ def parse_events(sock, loop_count=100):
 
 ## 4.4. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```
 
+Go to address https://www.w3schools.com/php/php_mysql_insert.asp to view the source of the ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` files
+
 All three Raspberry Pis will have PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```, but they are slightly different in all three Raspberry Pis, so there has to be a total of nine different PHP database insertion scripts
 
 
@@ -1928,7 +1930,7 @@ $conn->close();
 
 ## 4.5. PHP website ```index.php```
 
-Go to address https://www.w3schools.com/php/php_mysql_select.asp to view the source of the 
+Go to address https://www.w3schools.com/php/php_mysql_select.asp to view the source of the ```index.php``` file
 
 This is the first version of ```index.php``` file which is the PHP script enclosed with HTML elements - this will be the actual website that the server shows in the lab environment
 

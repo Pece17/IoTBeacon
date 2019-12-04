@@ -1036,9 +1036,9 @@ done
 
 ## 4.2. Python script ```BeaconScanner.py```
 
-Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the source of the following scripts
+Go to address https://github.com/singaCapital/BLE-Beacon-Scanner to view the source of the ```BeaconScanner.py``` file
 
-Run BeaconScanner.py python script with this command
+Run ```BeaconScanner.py``` python script with this command
 
 ```
 sudo python BeaconScanner.py
@@ -1539,6 +1539,8 @@ except KeyboardInterrupt:
 
 ## 4.3. Python script ```ScanUtility.py```
 
+Go to address https://github.com/singaCapital/BLE-Beacon-Scanner to view the source of the ```ScanUtility.py``` file
+
 Original ```ScanUtility.py``` file
 
 ```
@@ -1925,6 +1927,8 @@ $conn->close();
 
 
 ## 4.5. PHP website ```index.php```
+
+Go to address https://www.w3schools.com/php/php_mysql_select.asp to view the source of the 
 
 This is the first version of ```index.php``` file which is the PHP script enclosed with HTML elements - this will be the actual website that the server shows in the lab environment
 

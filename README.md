@@ -2364,7 +2364,7 @@ sudo ufw allow from 172.28.175.45 to any port 3306
 ```
 
 
-## 6.2. Creating database ```iotbeacon``` and tables in the database
+## 6.2. Creating database ```iotbeacon``` and tables in the database ```iotbeacon```
 
 Open MariaDB
 

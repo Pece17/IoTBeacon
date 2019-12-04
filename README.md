@@ -2455,7 +2455,7 @@ List of all the ideas for further development of the project
 
 2. Python database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` or would it need additional scripts?
 
-3. Accurate room deduction based on RSSI signal strength, i.e. the lowest RSSI value is the nearest room
+3. Accurate room deduction based on RSSI signal strength, i.e. the lowest RSSI value is the nearest room - RSSI values of Bluetooth beacons needs to be able to insert to the database
 
 4. Automation of Raspberry Pi configuration for additional scanners
 
@@ -2497,3 +2497,9 @@ Here is a list of current issues and tasks to be solved
 16. Add weekly working hours to Moodle
 
 17. Raspberry Pi 3 to a further classroom
+
+18. Own chapter for ```Installing Salt Minion on Raspberry Pis```
+
+19. Remove passwords from GitHub
+
+20. Make text file with all the devices, usernames, and passwords used in the system

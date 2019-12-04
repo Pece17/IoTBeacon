@@ -591,7 +591,7 @@ Exit and save the file, and open localhost/~iotbeacon to test if PHP is working 
 The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
 
 
-## 1.11. Installing Salt on the server
+## 1.11. Installing Salt Master on the server
 
 Install Salt (SaltStack)
 
@@ -795,7 +795,7 @@ sudo apt-get -y install bluez bluez-hcidump
 sudo pip install paho-mqtt
 ```
 
-- SALT
+- SALT MINION
 
   Configuration management and orchestration tool
   

@@ -942,7 +942,7 @@ sudo apt-get install php php-mysql
 ```
 
 
-# 4. Scripts
+# 4. Scripts and files
 
 The Bluetooth scanner script needs to be able to locate Bluetooth beacons based on MAC addresses, and print an assigned ID like ```Beacon1```, the original MAC address, and the RSSI (Received Signal Strength Indicator) value of the desired beacon
 

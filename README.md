@@ -2498,11 +2498,11 @@ Here is a list of current issues and tasks to be solved
 
 12. Add the final versions of ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, ```DatabaseInsert3.php``` (total of nine files because of three Raspberry Pis), and ```index.php``` files to separate GitHub files
 
-13. Powerpoint presentation and live demo
+13. Peer review, everyone in the project group makes their own
 
-14. Final report
+14. Powerpoint presentation and live demo
 
-15. Peer review, everyone in the project group makes their own
+15. Final report
 
 16. Add weekly working hours to Moodle
 

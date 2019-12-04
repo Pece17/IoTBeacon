@@ -833,6 +833,8 @@ Restart Salt Minion
 sudo service salt-minion restart
 ```
 
+Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the ```id:``` to ```raspberrypi2``` and ```raspberrypi3``` respectively
+
 
 ## 3.5. Establishing SSH connection with PuTTY to Raspberry Pis
 
@@ -904,7 +906,7 @@ Reboot the system
 sudo reboot
 ```
 
-Repeat for Raspberry Pi 1 and Raspberry Pi 2, but change the hostnames to ```raspberrypi2``` and ```raspberrypi3``` respectively
+Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the hostnames to ```raspberrypi2``` and ```raspberrypi3``` respectively
 
 
 ## 3.9. Installing BlueZ on Raspberry Pis

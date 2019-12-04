@@ -2451,13 +2451,13 @@ The following mindmap should clarify the dependencies of the files and devices o
 
 List of all the ideas for further development of the project
 
-1. Android or iOS app, or improved web application
+1. Android or iOS app, or improved web application instead of our PHP website ```index.php```
 
-2. Python database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` or would it need additional scripts?
+2. Python files for database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` or would it need additional scripts?
 
-3. Accurate room deduction based on RSSI signal strength, i.e. the lowest RSSI value is the nearest room - RSSI values of Bluetooth beacons needs to be able to insert to the database
+3. Accurate room deduction based on RSSI signal strength, i.e. the lowest RSSI value is the nearest room - RSSI values of Bluetooth beacons need to be insertable to the database
 
-4. Automation of Raspberry Pi configuration for additional scanners
+4. Automation of Raspberry Pi configuration for additional Bluetooth scanners, i.e. Raspberry Pi 4, Raspberry Pi 5, and so on
 
 
 # Issues and tasks

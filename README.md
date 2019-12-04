@@ -2364,7 +2364,7 @@ sudo ufw allow from 172.28.175.45 to any port 3306
 ```
 
 
-## 6.2. Creating database ```iotbeacon``` and tables in the database ```iotbeacon```
+## 6.2. Creating database ```iotbeacon``` in the database
 
 Open MariaDB
 
@@ -2384,6 +2384,9 @@ Grant all privileges on database ```iotbeacon``` to user ```niko``` - the user `
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41' IDENTIFIED BY 'xxxx';
 ```
 
+
+## 6.3. Creating the tables in the database ```iotbeacon```
+
 Using database ```iotbeacon```, create table ```beaconusers``` and add the following information inside the table
 
 ```
@@ -2400,7 +2403,7 @@ updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ```
 
 
-## 6.3. Creating remote users in the database for three Raspberry Pis
+## 6.4. Creating remote users in the database for three Raspberry Pis
 
 Create user ```raspbian_1``` for Raspberry Pi 1
 
@@ -2421,7 +2424,7 @@ CREATE USER 'raspbian_3'@'172.28.175.45' IDENTIFIED BY 'xxxx';
 ```
 
 
-## 6.4. Giving permissions to remote users in the database
+## 6.5. Giving permissions to remote users in the database
 
 Grant all privileges on database ```iotbeacon``` to user ```raspbian_1```
 

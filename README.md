@@ -652,7 +652,10 @@ sudo systemctl enable xrdp
 
 # 2. Bluetooth beacons
 
+Go to address https://www.aliexpress.com/item/32776774253.html to view the source of store where the beacons were bought
+
 - Three Bluetooth low energy (BLE) beacons
+- Model is ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
 - Beacons broadcast their identifier to nearby devices that are Raspberry Pis in this project
 
 

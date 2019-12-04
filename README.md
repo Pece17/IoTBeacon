@@ -2426,7 +2426,12 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 ```
 
 
-# 7. In conclusion
+# 7. Testing
+
+Description here
+
+
+# 8. In conclusion
 
 To recap, after following the instructions, you should have the following items
 
@@ -2442,7 +2447,7 @@ The following mindmap should clarify the dependencies of the files and devices o
 <img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Lighthouse.png>
 
 
-# 8. Further development
+# 9. Further development
 
 List of all the ideas for further development of the project
 

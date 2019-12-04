@@ -737,20 +737,43 @@ sudo raspi-config
 
 ## 3.4. Configuring static IP addresses on Raspberry Pis
 
+Edit ```/etc/dhcpcd.conf```
+
 ```
 sudo nano /etc/dhcpcd.conf 
-  -> uncomment and edit under Example static IP configuration section
-  
+```
+
+Remove the the hashtags from the following lines and add your IP address, default gateway, and DNS addresses - ```interface eth0``` is LAN interface and ```interface wlan0``` is WLAN interface, we added our IP addresses to both just in case
+
+```
+# Example static IP configuration:
+interface eth0
+static ip_address=172.28.175.42
+#static ip6_address=fd51:42f8:caae:d92e::ff/64
+static routers=172.28.1.254
+static domain_name_servers=172.28.170.201 172.28.170.202              
+
+interface wlan0
+static ip_address=172.28.175.42
+static routers=172.28.1.254
+static domain_name_servers=172.28.170.201 172.28.170.202
+```
+
+Reboot the system
+
+```
 sudo reboot  
 ```
 
-Tested:
+Ping your device
+
 ```
 Ping raspberrypi.local
 ```
+
 Reached the new static ip address with a ping
 
-The ssh connection was also successfully established
+The SSH connection was also successfully established
 
 
 ## 3.5. Programs installed on Raspberry Pis

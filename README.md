@@ -773,7 +773,7 @@ Ping raspberrypi.local
 Reached the new static IP address with a local ping, and SSH connection was also successfully established with the new static IP address
 
 
-## 3.4. Programs installed on Raspberry Pis
+## 3.4. Installing Salt Minion on Raspberry Pis
 
 - BlueZ 
 

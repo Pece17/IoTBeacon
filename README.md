@@ -2301,7 +2301,7 @@ sudo salt '*' cmd.run 'killall python'
 We are using previously installed MariaDB relational database to create our database on the Xubuntu server
 
 
-## 6.1. Initializing the database
+## 6.1. Allowing remote access to the database
 
 Go to address https://www.configserverfirewall.com/ubuntu-linux/enable-mysql-remote-access-ubuntu/ to view the instructions for allowing remote access to MariaDB on the server from all three Raspberry Pis
 
@@ -2363,6 +2363,9 @@ Allow port 3306 that is responsible for MySQL database system for Raspberry Pi 3
 sudo ufw allow from 172.28.175.45 to any port 3306
 ```
 
+
+## 6.2. Creating database ```iotbeacon``` and tables in the database
+
 Open MariaDB
 
 ```
@@ -2380,9 +2383,6 @@ Grant all privileges on database ```iotbeacon``` to user ```niko``` - the user `
 ```
 GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41' IDENTIFIED BY 'xxxx';
 ```
-
-
-## 6.2. Creating tables in the database
 
 Using database ```iotbeacon```, create table ```beaconusers``` and add the following information inside the table
 

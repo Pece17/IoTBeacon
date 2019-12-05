@@ -11,6 +11,13 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Joni Mattsson - Project worker
 
 
+## Index
+
+1. [Xubuntu server](https://github.com/Rasmusekmanhh/IoTBeacon#1-xubuntu-server)
+
+1.1.
+
+
 # 1. Xubuntu server
 
 After initialization, show a cleaned up list of shortened specifications and hardware information of the server using Linux terminal

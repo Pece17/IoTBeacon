@@ -856,14 +856,20 @@ sudo service salt-minion restart
 Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the ```id:``` to ```raspberrypi2``` and ```raspberrypi3``` respectively
 
 
-## 3.5. Establishing SSH connection with PuTTY to Raspberry Pis
+## 3.6. Establishing SSH connection with PuTTY to Raspberry Pis
 
 To use PuTTY application to connect to Raspberry Pis, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
 Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the Raspberry Pi and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
 
 
-## 3.6. Establishing SSH connection with terminal to Raspberry Pis
+## 3.5. Establishing SSH connection with terminal to Raspberry Pis
+
+Install SSH (Secure Shell) client and server to Raspberry Pis
+
+```
+sudo apt-get install -y openssh-server openssh-client
+```
 
 After installing SSH, I connect to the server with another Linux terminal within the lab environment
 

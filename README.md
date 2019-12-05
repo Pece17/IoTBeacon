@@ -702,11 +702,13 @@ Here are the specifications of the Raspberry Pi models we are using
 
 ## 3.2. Creating a new sudo user on Raspberry Pis
 
-Create a new user ```projektimies``` for security reasons, since we don't want to use the default root user ```pi```
+Create a new user ```projektimies```, since we don't want to use the default root user ```pi```
 
 ```
 sudo adduser projektimies
 ```
+
+The following output appears and we need to assign a new password and repeat it - we press ```Enter``` for empty for all other values, and finally press ```Y``` to confirm the information
 
 ```
 Adding user `projektimies' ...
@@ -727,21 +729,23 @@ Enter the new value, or press ENTER for the default
 Is the information correct? [Y/n]
 ```
 
+Give user ```projektimies``` sudo admin privileges
+
 ```
 sudo adduser projektimies sudo
 ```
 
-Add new user to same groups as "pi"
+Add new user ```projektimies``` to same groups as root user ```pi```
 
 ```
 for GROUP in $(groups pi | sed -e 's/^pi //'); do
-sudo adduser xxxx $GROUP; done
+sudo adduser projektimies $GROUP; done
 ```
 
-Add nopasswd rule for new user and change "pi" to "xxxx"
+Copy ```nopasswd``` rules from root user ```pi``` to user ```projektimies```
 
 ```
-sudo cp /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_xxx-nopasswd
+sudo cp /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_projektimies-nopasswd
 ```
 
 ```

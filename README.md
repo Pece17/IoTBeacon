@@ -772,18 +772,30 @@ Reboot the system
 sudo reboot
 ```
 
-Remove user "pi" &
-Log in as xxxx 
+If the log in screen opens after rebooting, log in as user ```projektimies```
+
+If the log in screen does not open automatically, and opens the root user ```pi``` desktop instead, open the terminal and log in manually as user ```projektimies```
 
 ```
-sudo deluser -remove-home pi
+su - projektimies
+```
+
+Delete root user ```pi```
+
+```
+sudo deluser pi
+```
+
+Delete root user ```pi``` home directory
+
+```
+sudo deluser --remove-home pi
+```
+
+Delete nopasswd rules from root user ```pi```
+
+```
 sudo rm -vf /etc/sudoers.d/010_pi-nopasswd
-```
-
-Changed user password & enabled ssh using Raspberry Pi Software Configuration Tool
-
-```
-sudo raspi-config
 ```
 
 

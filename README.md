@@ -626,16 +626,18 @@ The following output appears for which press ```Y``` to proceed
 ```
 The following keys are going to be accepted:
 Unaccepted Keys:
-myminion
-ubuntuminion
+raspberrypi1
+raspberrypi2
+raspberrypi3
 Proceed? [n/Y]
 ```
 
 The following output appears which indicates that keys for Salt Minions ```raspberrypi1```, ```raspberrypi2```, and ```raspberrypi3``` were accepted
 
 ```
-Key for minion myminion accepted.
-Key for minion ubuntuminion accepted.
+Key for minion raspberrypi1 accepted.
+Key for minion raspberrypi2 accepted.
+Key for minion raspberrypi3 accepted.
 ```
 
 Using Salt command, check the static IP addresses of all three Salt Minions

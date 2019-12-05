@@ -402,7 +402,7 @@ Install SSH (Secure Shell) client and server to the server
 sudo apt-get install -y openssh-server openssh-client
 ```
 
-After installing SSH, I try to connect with another Linux computer from the lab environment to the server
+After installing SSH, I try to connect with another Linux computer within the lab environment to the server
 
 ```
 ssh iotbeacon@x.x.x.x

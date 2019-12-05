@@ -1518,7 +1518,7 @@ except KeyboardInterrupt:
 
 Twelfth and final modification to ```BeaconScanner.py``` file where we added ```os.system("php /home/projektimies/Lighthouse/DatabaseInsert2.php")``` and ```os.system("php /home/projektimies/Lighthouse/DatabaseInsert3.php")``` lines respectively for ```BEACON2``` and ```BEACON3```, since ```BEACON1``` already had the same line inside its ```if``` statement - we also changed the path for all the scripts in all Raspberry Pis to ```/home/projektimies/Lighthouse/```
 
-```
+```python
 #This is a working prototype. DO NOT USE IT IN LIVE PROJECTS
 
 import ScanUtility
@@ -2159,7 +2159,7 @@ $conn->close();
 
 This is the fourth and final version of ```index.php``` file
 
-```
+```php
 <!DOCTYPE html>
 <html>
 <body>

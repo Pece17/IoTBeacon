@@ -72,14 +72,12 @@ The terminal gave a prompt "A start job is running for Hold until boot process f
 
 We restarted the server computer multiple times until the system finally booted properly, and executed the following steps during installation
 
-1. English
-2. Install Xubuntu/Erase disk and install Xubuntu
-3. Continue
-4. Continue
-5. Erase disk and install Xubuntu
-6. Continue
-7. Helsinki
-8. Keyboard layout Finnish and Finnish
+1. ```English``` and ```Install Xubuntu```
+2. ```Continue```
+3. ```Erase disk and install Xubuntu``` and ```Install Now```
+4. ```Continue```
+5. ```Helsinki``` and ```Continue```
+6. ```Finnish```, ```Finnish```, and ```Continue```
 9. Your name: iotbeacon
 10. Computer name: rauta
 11. Username: iotbeacon

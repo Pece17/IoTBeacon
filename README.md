@@ -6,11 +6,8 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 ## Project team
 
 - Rasmus Ekman - Project manager
-
 - Pekka Hämäläinen - Project worker and secretary
-
 - Niko Kulmanen - Project worker
-
 - Joni Mattsson - Project worker
 
 
@@ -75,20 +72,20 @@ The terminal gave a prompt "A start job is running for Hold until boot process f
 
 We restarted the server computer multiple times until the system finally booted properly, and executed the following steps during installation
 
-- English
-- Install Xubuntu/Erase disk and install Xubuntu
-- Continue
-- Continue
-- Erase disk and install Xubuntu
-- Continue
-- Helsinki
-- Keyboard layout Finnish and Finnish
-- Your name: iotbeacon
-- Computer name: rauta
-- Username: iotbeacon
-- Require password to login
-- Continue
-- Restart
+1. English
+2. Install Xubuntu/Erase disk and install Xubuntu
+3. Continue
+4. Continue
+5. Erase disk and install Xubuntu
+6. Continue
+7. Helsinki
+8. Keyboard layout Finnish and Finnish
+9. Your name: iotbeacon
+10. Computer name: rauta
+11. Username: iotbeacon
+12. Require password to login
+13. Continue
+14. Restart
 
 When Xubuntu operating system restarts and opens the desktop screen, open the Linux terminal - we will be mainly using terminal to configure the server
 

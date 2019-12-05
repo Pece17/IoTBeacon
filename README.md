@@ -416,7 +416,7 @@ Other project worker tries to connect to the server from his house using Linux t
 Establish an SSH connection in terminal using another Linux computer withing lab environment
 
 ```
-ssh iotbeacon@x.x.x.x
+ssh iotbeacon@172.28.175.41
 ```
 
 Update package lists for upgrades and new packages from repositories

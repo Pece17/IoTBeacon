@@ -967,7 +967,7 @@ sudo apt-get install xrdp
 
 To use Remote Desktop Connection application to connect to Raspberry Pis, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
-Once in VDI desktop, we need to open the Remote Desktop Connection application in Windows, enter the IP address x.x.x.x of the Raspberry Pi, and connect - the application prompts a warning prompt where you need to press yes, after which the Raspberry Pi desktop opens a login screen and unlocks the desktop after entering the correct credentials
+Once in VDI desktop, we need to open the Remote Desktop Connection application in Windows, enter the IP address ```172.28.175.42``` of the Raspberry Pi 1, ```172.28.175.44``` of the Raspberry Pi 2, or ```172.28.175.45``` of the Raspberry Pi 3, and connect - the application prompts a warning prompt where you need to press yes, after which the Raspberry Pi desktop opens a login screen and unlocks the desktop after entering the correct credentials
 
 
 ## 3.8. Changing the hostname on Raspberry Pis

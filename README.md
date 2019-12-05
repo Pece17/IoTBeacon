@@ -624,10 +624,18 @@ sudo salt-key -A
 The following output appears for which press ```Y``` to proceed
 
 ```
+The following keys are going to be accepted:
 Unaccepted Keys:
-xxx
+myminion
+ubuntuminion
 Proceed? [n/Y]
-Key for minion xxx accepted.
+```
+
+The following output appears which indicates that keys for Salt Minions ```raspberrypi1```, ```raspberrypi2```, and ```raspberrypi3``` were accepted
+
+```
+Key for minion myminion accepted.
+Key for minion ubuntuminion accepted.
 ```
 
 Using Salt command, check the static IP addresses of all three Salt Minions

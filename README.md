@@ -815,7 +815,7 @@ Ping the local Raspberry Pi
 Ping raspberrypi.local
 ```
 
-Reached the new static IP address with a local ping, and SSH connection was also successfully established with the new static IP address
+Reached the new static IP address with a local ping
 
 
 ## 3.4. Installing Salt Minion on Raspberry Pis

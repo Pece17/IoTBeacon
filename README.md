@@ -632,13 +632,13 @@ Proceed? [n/Y]
 Key for minion xxx accepted.
 ```
 
-Using Salt command, check the static IP addresses of all three minions
+Using Salt command, check the static IP addresses of all three Salt Minions
 
 ``` 
 sudo salt '*' cmd.run 'hostname -I'
 ``` 
 
-Send a message to all the minions and tell them to return ```True``` to check which minions are alive
+Send a message to all Salt Minions and tell them to return ```True``` to check which Salt Minions are alive
 
 ```
 sudo salt '*' test.ping

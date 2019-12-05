@@ -394,7 +394,7 @@ Reboot the system
 sudo reboot
 ```
 
-Configuration does seem to work using command line but I still remove any changes I did in terminal just to be safe - I read many tutorials stating that it is highly recommended to configure IP addresses with GUI (graphical user interface) using Network Connections application in current versions of Ubuntu because the application might override any command line changes nevertheless
+Configuration does seem to work using command line, but I still remove any changes I did in terminal just to be safe - I read many tutorials stating that it is highly recommended to configure IP addresses with GUI (graphical user interface) using ```Network Connections``` application in current versions of Ubuntu, because the application might override any command line changes nevertheless
 
 - Go to desktop and open ```Edit Connections...``` from upper right corner under a symbol depicting two arrows
 - Choose ```Ethernet```, ```Wired connection 1```, and ```Edit```
@@ -413,7 +413,7 @@ sudo reboot
 
 Internet is now working, and pinging from other lab environment computers is successful
 
-Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses 8.8.8.8 and 8.8.4.4, did I get the internet working, but now finally the lab environment DNS addresses are working, apparently due to a fix from higher-ups, so I configure them again on the server and keep Google Public DNS as a backup option
+Both terminal and graphical configuration had problems at first with the assigned lab environment DNS addresses since I couldn't get them working at all - only after I changed the DNS addresses to Google Public DNS addresses ```8.8.8.8``` and ```8.8.4.4```, did I get the internet working, but now finally the lab environment DNS addresses are working, apparently due to a fix from higher-ups, so I configure them again on the server and keep Google Public DNS as a backup option
 
 
 ## 1.6. Establishing SSH connection with terminal to the server

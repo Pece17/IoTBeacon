@@ -2415,7 +2415,7 @@ CREATE DATABASE iotbeacon;
 Grant all privileges on database ```iotbeacon``` to user ```niko``` - the user ```niko``` is created automatically by granting these privileges to it
 
 ```
-GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41' IDENTIFIED BY 'xxxx';
+GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41' IDENTIFIED BY 'MonialaProjekti';
 ```
 
 
@@ -2442,19 +2442,19 @@ updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 Create user ```raspbian_1``` for Raspberry Pi 1
 
 ```
-CREATE USER 'raspbian_1'@'172.28.175.42' IDENTIFIED BY 'xxxx';
+CREATE USER 'raspbian_1'@'172.28.175.42' IDENTIFIED BY 'MonialaProjekti';
 ```
 
 Create user ```raspbian_2``` for Raspberry Pi 2
 
 ```
-CREATE USER 'raspbian_2'@'172.28.175.44' IDENTIFIED BY 'xxxx';
+CREATE USER 'raspbian_2'@'172.28.175.44' IDENTIFIED BY 'MonialaProjekti';
 ```
 
 Create user ```raspbian_3``` for Raspberry Pi 3
 
 ```
-CREATE USER 'raspbian_3'@'172.28.175.45' IDENTIFIED BY 'xxxx';
+CREATE USER 'raspbian_3'@'172.28.175.45' IDENTIFIED BY 'MonialaProjekti';
 ```
 
 

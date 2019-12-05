@@ -2541,18 +2541,20 @@ Here is a list of current issues and tasks to be solved
 
 12. Add the final versions of ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, ```DatabaseInsert3.php``` (total of nine files because of three Raspberry Pis), and ```index.php``` files to separate GitHub files
 
-13. Peer review, everyone in the project group makes their own
+13. Write Peer review, everyone in the project group writes their own!
 
-14. Powerpoint presentation and live demo
+14. Write Powerpoint presentation and live demo!
 
-15. Final report
+15. Write Final report!
 
-16. Add weekly working hours to Moodle
+16. Write Technical report!
 
-17. Raspberry Pi 3 to a further classroom
+17. Add weekly working hours to Moodle!
 
-18. Own chapter for ```Installing Salt Minion on Raspberry Pis```
+18. Raspberry Pi 3 to a further classroom?
 
-19. Remove passwords from GitHub
+~~19. Own chapter for ```Installing Salt Minion on Raspberry Pis```~~
 
-20. Make text file with all the devices, usernames, and passwords used in the system
+20. Remove passwords from GitHub
+
+21. Make a text file with all the devices, usernames, and passwords used in the system

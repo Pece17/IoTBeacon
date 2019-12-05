@@ -694,10 +694,10 @@ Here are the specifications of the Raspberry Pi models we are using
 
 ## 3.2. Creating a new sudo user on Raspberry Pis
 
-Rasbian has a default user "pi". For safety reasons we replaced pi with a new user:
+Create a new user ```projektimies``` for security reasons, since we don't want to use the default root user ```pi```
 
 ```
-sudo adduser xxxx
+sudo adduser projektimies
 ```
 
 ```

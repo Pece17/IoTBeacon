@@ -792,7 +792,7 @@ Delete root user ```pi``` home directory
 sudo deluser --remove-home pi
 ```
 
-Delete nopasswd rules from root user ```pi```
+Delete ```nopasswd``` rules from root user ```pi```
 
 ```
 sudo rm -vf /etc/sudoers.d/010_pi-nopasswd

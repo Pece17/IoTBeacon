@@ -11,7 +11,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Joni Mattsson - Project worker
 
 
-# Index
+## Index
 
 - [1. Xubuntu server](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#1-xubuntu-server)
 - [2. Bluetooth beacons](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#2-bluetooth-beacons)
@@ -20,15 +20,15 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 - [4. Scripts and files](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#4-scripts-and-files)
 
-[5. Running and stopping scripts](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#5-running-and-stopping-scripts)
+- [5. Running and stopping scripts](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#5-running-and-stopping-scripts)
 
-[6. Database](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#6-database)
+- [6. Database](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#6-database)
 
-[7. Testing](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#7-testing)
+- [7. Testing](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#7-testing)
 
-[8. In conclusion](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#8-in-conclusion)
+- [8. In conclusion](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#8-in-conclusion)
 
-[9. Further development](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#9-further-development)
+- [9. Further development](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#9-further-development)
 
 
 # 1. Xubuntu server

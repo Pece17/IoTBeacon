@@ -348,26 +348,38 @@ clear && echo $(ip -o -4 route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
 ifconfig
 ```
 
-Edit interfaces file and add the required parameters for the static IP address - don't remove any old text from inside the file
+Edit ```/etc/network/interfaces``` file
 
 ```
 sudo nano /etc/network/interfaces
 ```
 
+Add the required parameters for the static IP address - don't remove any old text from inside the file
+
 ```
 auto eno1
 iface eno1 inet static
-address x.x.x.x
-netmask x.x.x.x
-gateway x.x.x.x
-dns-nameservers x.x.x.x x.x.x.x
+address 172.28.175.41
+netmask 255.255.0.0
+gateway 172.28.1.254
+dns-nameservers 172.28.170.201 172.28.170.202
 ```
 
-Flush IP, restart networking service, and reboot the server
+Flush IP
 
 ```
 sudo ip addr flush eno1
+```
+
+Restart networking service
+
+```
 systemctl restart networking.service
+```
+
+Reboot the system
+
+```
 sudo reboot
 ```
 

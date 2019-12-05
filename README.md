@@ -168,7 +168,7 @@ Find out the current dynamic IP address of the server
 hostname -I
 ```
 
-Try the dynamic IP address x.x.x.x on web browser address bar - this also works and opens the Apache2 default page
+Try the dynamic IP address ```x.x.x.x``` on web browser address bar - this also works and opens the Apache2 default page
 
 Enable userdir Apache2 module and restart the Apache2 service
 
@@ -241,7 +241,7 @@ Check the name of the current Xubuntu user - it is needed to open the the index 
 whoami
 ```
 
-Open addresses localhost/~iotbeacon and x.x.x.x/~iotbeacon using web browser
+Open addresses http://localhost/~iotbeacon and http://x.x.x.x/~iotbeacon using web browser
 
 Both addresses work successfully inside the lab environment
 

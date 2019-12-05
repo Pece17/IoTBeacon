@@ -825,7 +825,7 @@ Ping raspberrypi.local
 
 Reached the new static IP address with a local ping
 
-Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the static IP addresses to 172.28.175.44 and 172.28.175.45 respectively
+Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the static IP address to ```172.28.175.44``` and ```172.28.175.45``` respectively
 
 
 ## 3.4. Installing Salt Minion on Raspberry Pis
@@ -897,10 +897,22 @@ Install SSH (Secure Shell) client and server to Raspberry Pis
 sudo apt-get install -y openssh-server openssh-client
 ```
 
-After installing SSH, I connect to the server with another Linux terminal within the lab environment
+After installing SSH, I connect to Raspberry Pi 1 with another Linux terminal within the lab environment
 
 ```
-ssh projektimies@172.28.175.41
+ssh projektimies@172.28.175.42
+```
+
+I connect to Raspberry Pi 2 with another Linux terminal within the lab environment
+
+```
+ssh projektimies@172.28.175.44
+```
+
+I connect to Raspberry Pi 3 with another Linux terminal within the lab environment
+
+```
+ssh projektimies@172.28.175.45
 ```
 
 

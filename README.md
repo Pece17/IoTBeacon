@@ -402,7 +402,7 @@ Install SSH (Secure Shell) client and server to the server
 sudo apt-get install -y openssh-server openssh-client
 ```
 
-After installing SSH, I connect with another Linux computer within the lab environment to the server
+After installing SSH, I connect to the server with another Linux terminal within the lab environment
 
 ```
 ssh iotbeacon@x.x.x.x
@@ -856,6 +856,8 @@ Once in VDI desktop, we need to open the PuTTY application in Windows and enter 
 
 
 ## 3.6. Establishing SSH connection with terminal to Raspberry Pis
+
+After installing SSH, I connect to the server with another Linux terminal within the lab environment
 
 ```
 ssh projektimies@x.x.x.x

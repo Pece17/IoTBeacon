@@ -11,15 +11,14 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - Joni Mattsson - Project worker
 
 
-## Index
+# Index
 
-[1. Xubuntu server](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#1-xubuntu-server)
+- [1. Xubuntu server](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#1-xubuntu-server)
+- [2. Bluetooth beacons](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#2-bluetooth-beacons)
 
-[2. Bluetooth beacons](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#2-bluetooth-beacons)
+- [3. Raspberry Pis](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#3-raspberry-pis)
 
-[3. Raspberry Pis](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#3-raspberry-pis)
-
-[4. Scripts and files](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#4-scripts-and-files)
+- [4. Scripts and files](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#4-scripts-and-files)
 
 [5. Running and stopping scripts](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#5-running-and-stopping-scripts)
 

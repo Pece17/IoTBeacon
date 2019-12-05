@@ -396,17 +396,17 @@ sudo reboot
 
 Configuration does seem to work using command line but I still remove any changes I did in terminal just to be safe - I read many tutorials stating that it is highly recommended to configure IP addresses with GUI (graphical user interface) using Network Connections application in current versions of Ubuntu because the application might override any command line changes nevertheless
 
-- Navigate to desktop and open Edit Connections tab from upper right corner under a symbol depicting two arrows
-- Choose Ethernet and Wired connection 1 and press Edit
-- Go to IPv4 Settings
-- Change Method to Manual
-- Add a new address and enter the parameters
-- Add DNS servers
-- Save
-- Open Connection Information from upper right corner under the same symbol depicting two arrows
+- Navigate to desktop and open ```Edit Connections``` tab from upper right corner under a symbol depicting two arrows
+- Choose ```Ethernet```, ```Wired connection 1```, and press ```Edit```
+- Go to ```IPv4 Settings```
+- Change ```Method:``` to ```Manual```
+- Under ```Addresses```, add ```172.28.175.41``` to ```Address```, ```16``` to ```Netmask```, and ```172.28.1.254``` to ```Gateway```
+- Add ```172.28.170.201``` and ```172.28.170.202``` to ```DNS servers:```
+- ```Save```
+- Open ```Connection Information``` from upper right corner under the same symbol depicting two arrows
 - Check that the IPv4 settings are correct
 
-Reboot the server to apply changes
+Reboot the system to apply changes
 
 ```
 sudo reboot

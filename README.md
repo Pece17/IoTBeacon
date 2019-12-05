@@ -79,7 +79,7 @@ We restarted the server computer multiple times until the system finally booted 
 5. ```Helsinki``` and ```Continue```
 6. ```Finnish```, ```Finnish```, and ```Continue```
 7. 
-- ```Your name: iotbeacon``` 
+   - ```Your name: iotbeacon``` 
 ```Your computer's name: rauta```
 ```Pick a username: iotbeacon```
 ```Choose a password: MonialaProjekti```

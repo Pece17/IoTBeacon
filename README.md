@@ -1086,17 +1086,19 @@ The Bluetooth scanner script needs to be able to locate Bluetooth beacons based 
 
 Copy scanner Shell script from https://stackoverflow.com/questions/27401918/detecting-presence-of-particular-bluetooth-device-with-mac-address
 
-Make a Bash ```test``` folder for testing purposes in one of the Rasperry Pis
+Create ```test``` directory for testing purposes in Rasperry Pis
 
 ```
 sudo mkdir test
 ```
 
-Navigate inside it and create the Shell file
+Navigate inside ```test``` directory
 
 ```
 cd test
 ```
+
+Create ```test.sh``` Shell file
 
 ```
 sudo nano test.sh

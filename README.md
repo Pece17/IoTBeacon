@@ -14,6 +14,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 ## Index
 
 [1. Xubuntu server](https://github.com/Rasmusekmanhh/IoTBeacon#1-xubuntu-server)
+
 [1.1. Creating a Linux USB stick](https://github.com/Rasmusekmanhh/IoTBeacon#11-creating-a-linux-usb-stick)
 
 

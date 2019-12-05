@@ -140,7 +140,7 @@ We made a bootable Linux USB stick from Kingston DataTraveler 100 8GB USB 2.0 Fl
 We initially tried using an UNetboot based Linux USB stick but it was not recognized by the server computer we chose to use on this project
 
 
-## 1.2. Initializing the server (Work in progress)
+## 1.2. Initializing the server
 
 We had trouble getting Xubuntu to boot from the previously created Linux USB stick, but with these steps we got it working eventually
 

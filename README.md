@@ -2159,7 +2159,7 @@ $conn->close();
 
 This is the fourth and final version of ```index.php``` file
 
-```html
+```
 <!DOCTYPE html>
 <html>
 <body>

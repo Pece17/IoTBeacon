@@ -421,7 +421,7 @@ sudo apt-get install -y openssh-server openssh-client
 After installing SSH, I connect to the server with another Linux terminal within the lab environment
 
 ```
-ssh iotbeacon@x.x.x.x
+ssh iotbeacon@172.28.175.41
 ```
 
 Other project worker tries to connect to the server from his house using Linux terminal and SSH - connection is not successful because you can't reach these static IP addresses outside of the lab environment
@@ -673,7 +673,7 @@ sudo salt '*' test.ping
 
 To use PuTTY application to connect to the server, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
-Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the server and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
+Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address ```172.28.175.41``` of the server and use the port ```22``` for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
 
 
 # 2. Bluetooth beacons
@@ -925,19 +925,19 @@ Install SSH (Secure Shell) client and server to Raspberry Pis
 sudo apt-get install -y openssh-server openssh-client
 ```
 
-After installing SSH, I connect to Raspberry Pi 1 with another Linux terminal within the lab environment
+After installing SSH, I connect to the Raspberry Pi 1 with another Linux terminal within the lab environment
 
 ```
 ssh projektimies@172.28.175.42
 ```
 
-I connect to Raspberry Pi 2 with another Linux terminal within the lab environment
+I connect to the Raspberry Pi 2 with another Linux terminal within the lab environment
 
 ```
 ssh projektimies@172.28.175.44
 ```
 
-I connect to Raspberry Pi 3 with another Linux terminal within the lab environment
+I connect to the Raspberry Pi 3 with another Linux terminal within the lab environment
 
 ```
 ssh projektimies@172.28.175.45
@@ -948,7 +948,7 @@ ssh projektimies@172.28.175.45
 
 To use PuTTY application to connect to Raspberry Pis, we first need to open the VDI (virtual desktop infrastructure) of Haaga-Helia from address https://vdi.haaga-helia.fi/vpn/index.html so that we can be in that same lab environment remotely
 
-Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address x.x.x.x of the Raspberry Pi and use the port 22 for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
+Once in VDI desktop, we need to open the PuTTY application in Windows and enter the IP address ```172.28.175.42``` of the Raspberry Pi 1, ```172.28.175.44``` of the Raspberry Pi 2, or ```172.28.175.45``` of the Raspberry Pi 3, and use the port ```22``` for SSH connection - the terminal prompts a login screen after which the server terminal unlocks
  
  
 ## 3.7. Establishing Remote Desktop Connection to Raspberry Pis

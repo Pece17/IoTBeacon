@@ -408,9 +408,7 @@ After installing SSH, I connect to the server with another Linux terminal within
 ssh iotbeacon@x.x.x.x
 ```
 
-Connection is successful
-
-Other project member tries to connect to the server from his house using Linux terminal and SSH - connection is not succesful because apparently you can't reach these static IP addresses outside of the lab environment
+Other project worker tries to connect to the server from his house using Linux terminal and SSH - connection is not successful because you can't reach these static IP addresses outside of the lab environment
 
 
 ## 1.7. Installing Firefox on the server

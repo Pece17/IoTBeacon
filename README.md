@@ -709,7 +709,26 @@ sudo adduser projektimies
 ```
 
 ```
-sudo adduser xxxx sudo
+Adding user `projektimies' ...
+Adding new group `projektimies' (1001) ...
+Adding new user `projektimies' (1001) with group `projektimies' ...
+Creating home directory `/home/projektimies' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for projektimies
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n]
+```
+
+```
+sudo adduser projektimies sudo
 ```
 
 Add new user to same groups as "pi"

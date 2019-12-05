@@ -357,6 +357,10 @@ sudo nano /etc/network/interfaces
 Add the required parameters for the static IP address - don't remove any old text from inside the file
 
 ```
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
 auto eno1
 iface eno1 inet static
 address 172.28.175.41

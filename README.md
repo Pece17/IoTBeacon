@@ -715,9 +715,21 @@ Add nopasswd rule for new user and change "pi" to "xxxx"
 
 ```
 sudo cp /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_xxx-nopasswd
+```
+
+```
 sudo chmod u+w /etc/sudoers.d/010_xxx-nopasswd
+```
+
+```
 sudo sed -i 's/pi/xxx/g' /etc/sudoers.d/010_xxx-nopasswd
+```
+
+```
 sudo chmod u-w /etc/sudoers.d/010_xxx-nopasswd
+```
+
+```
 sudo reboot
 ```
 

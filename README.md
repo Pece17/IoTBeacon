@@ -550,14 +550,14 @@ sudo nano index.html
 </html>
 ```
 
-Delete the index.html file and check that it is removed
+Delete the ```index.html``` file and check that it is removed
 
 ```
 sudo rm -r index.html
 ls
 ```
 
-Create a new file called index.php, paste the previously copied HTML inside it, and add a simple calculation of 1+3 to test the function of PHP
+Create a new file called ```index.php```, paste the previously copied HTML inside it, and add a simple calculation of 1+3 to test the function of PHP
 
 ```
 sudo nano index.php
@@ -702,7 +702,7 @@ Here are the specifications of the Raspberry Pi models we are using
 
 ## 3.2. Creating a new sudo user on Raspberry Pis
 
-Create a new user ```projektimies```, since we don't want to use the default root user ```pi```
+Create a new user ```projektimies``` on all three Raspberry Pis, since we don't want to use the default root user ```pi```
 
 ```
 sudo adduser projektimies
@@ -748,17 +748,25 @@ Copy ```nopasswd``` rules from root user ```pi``` to user ```projektimies```
 sudo cp /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_projektimies-nopasswd
 ```
 
-```
-sudo chmod u+w /etc/sudoers.d/010_xxx-nopasswd
-```
+Give the following command related to ```nopasswd``` rules
 
 ```
-sudo sed -i 's/pi/xxx/g' /etc/sudoers.d/010_xxx-nopasswd
+sudo chmod u+w /etc/sudoers.d/010_projektimies-nopasswd
 ```
 
+Give the following command related to ```nopasswd``` rules
+
 ```
-sudo chmod u-w /etc/sudoers.d/010_xxx-nopasswd
+sudo sed -i 's/pi/projektimies/g' /etc/sudoers.d/010_projektimies-nopasswd
 ```
+
+Give the following command related to ```nopasswd``` rules
+
+```
+sudo chmod u-w /etc/sudoers.d/010_projektimies-nopasswd
+```
+
+Reboot the system
 
 ```
 sudo reboot
@@ -816,6 +824,8 @@ Ping raspberrypi.local
 ```
 
 Reached the new static IP address with a local ping
+
+Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the static IP addresses to 172.28.175.44 and 172.28.175.45 respectively
 
 
 ## 3.4. Installing Salt Minion on Raspberry Pis

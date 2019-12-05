@@ -472,7 +472,7 @@ sudo poweroff
 ```
 
 
-## 1.9. Installing MariaDB database on the server (Work in progress)
+## 1.9. Installing MariaDB database on the server
 
 Update package lists for upgrades and new packages from repositories
 
@@ -489,7 +489,7 @@ sudo apt-get install mariadb-server mariadb-client
 MariaDB database is now installed
 
 
-## 1.10. Installing PHP and PHP modules on the server (Work in progress)
+## 1.10. Installing PHP and PHP modules on the server
 
 Check command history to see what commands other project workers have given to the server - PHP does not seem to be installed yet based on the command history
 

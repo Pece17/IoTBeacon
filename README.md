@@ -93,7 +93,7 @@ Change keyboard layout to Finnish keyboard, so that the keys respond correctly w
 setxkbmap fi
 ```
 
-Check the name of the current user, in this case the user is iotbeacon because that is the only user on this server
+Check the name of the current user, in this case the user is ```iotbeacon``` because that is the only user on this server
 
 ```
 whoami

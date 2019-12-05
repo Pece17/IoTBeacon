@@ -202,7 +202,7 @@ cd public_html
 nano index.html
 ```
 
-I forgot to create the index.html file with sudo or "superuser do" permission so I delete the previous file recursively and create a new, secure index.html file
+I forgot to create the index.html file with sudo (superuser do) permission so I delete the previous file recursively and create a new, secure index.html file
 
 ```
 rm -r index.html

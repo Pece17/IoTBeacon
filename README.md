@@ -78,18 +78,8 @@ We restarted the server computer multiple times until the system finally booted 
 4. ```Continue```
 5. ```Helsinki``` and ```Continue```
 6. ```Finnish```, ```Finnish```, and ```Continue```
-7. - ```Your name: iotbeacon``` 
-   - ```Your computer's name: rauta```
-   - ```Pick a username: iotbeacon```
-   - ```Choose a password: MonialaProjekti```
-   - ```Confirm your password: MonialaProjekti```
-   - ```Require my password to log in```
-   - ```Continue```
-10. Computer name: rauta
-11. Username: iotbeacon
-12. Require password to login
-13. Continue
-14. Restart
+7. ```Your name: iotbeacon```, ```Your computer's name: rauta```, ```Pick a username: iotbeacon```, ```Choose a password: MonialaProjekti```, ```Confirm your password: MonialaProjekti```, ```Require my password to log in```, and ```Continue```
+8. ```Restart Now```
 
 When Xubuntu operating system restarts and opens the desktop screen, open the Linux terminal - we will be mainly using terminal to configure the server
 

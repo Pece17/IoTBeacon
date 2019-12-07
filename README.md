@@ -692,7 +692,7 @@ Once in VDI desktop, we need to open the PuTTY application in Windows and enter 
 
 # 2. Bluetooth beacons
 
-Go to address https://www.aliexpress.com/item/32776774253.html to view the source of store where the Bluetooth beacons we ended up using were bought
+Go to address https://www.aliexpress.com/item/32776774253.html to view the page of the online store where the Bluetooth beacons were bought
 
 - Three Bluetooth low energy (BLE) beacons
 - Model - ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
@@ -727,11 +727,11 @@ cat /etc/os-release
 
 Here are the specifications of Raspberry Pis we are using
 
-- Model - Raspberry Pi 3 Model B Rev 1.2
-- Processor - Quad Core 1.2GHz Broadcom BCM2837 64bit CPU
-- Standard memory - 926MiB System memory
-- Graphics card - Integrated
-- Operating system - Raspbian GNU/Linux 10 (buster)
+- Model - ```Raspberry Pi 3 Model B Rev 1.2```
+- Processor - ```Quad Core 1.2GHz Broadcom BCM2837 64bit CPU```
+- Standard memory - ```926MiB System memory```
+- Graphics card - ```Integrated```
+- Operating system - ```Raspbian GNU/Linux 10 (buster)```
 
 
 ## 3.1. Initializing Raspberry Pis

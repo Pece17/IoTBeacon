@@ -712,7 +712,7 @@ Here are the specifications of the Raspberry Pi models we are using
 - Operating system - Raspbian version 10 (buster)
 
 
-## 3.1. Installing Raspberry Pis
+## 3.1. Initializing Raspberry Pis
 
 - Heat sinks
 - Case

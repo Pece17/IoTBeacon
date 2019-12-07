@@ -50,7 +50,7 @@ Find out the operating system version
 cat /etc/os-release
 ```
 
-Here are the specifications of the server computer we are using
+Here are the specifications of the server we are using
 
 - Model - HP Compaq 8200 Elite CMT (Convertible Minitower) PC
 - Processor - Intel Core i5-2400 3.10GHz

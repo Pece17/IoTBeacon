@@ -44,6 +44,12 @@ Only show PCI information about the graphics card
 lspci | grep -i --color 'vga\|3d\|2d'
 ```
 
+Find out the operating system version
+
+```
+cat /etc/os-release
+```
+
 Here are the specifications of the server computer we are using
 
 - Model - HP Compaq 8200 Elite CMT (Convertible Minitower) PC
@@ -729,7 +735,19 @@ Show a cleaned up list of shortened specifications and hardware information of R
 sudo lshw -short -sanitize
 ```
 
+Find out the operating system version
 
+```
+cat /etc/os-release
+```
+
+Here are the specifications of Raspberry Pis we are using
+
+- Model - 
+- Processor - 
+- Standard memory - 
+- Graphics card - 
+- Operating system - Raspbian GNU/Linux 10 (buster)
 
 
 ## 3.1. Initializing Raspberry Pis

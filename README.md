@@ -696,7 +696,7 @@ Go to address https://www.aliexpress.com/item/32776774253.html to view the page 
 
 - Three Bluetooth low energy (BLE) beacons
 - Model - ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
-- Bluetooth beacons broadcast their identifier to nearby devices that are Raspberry Pis in this project
+- Bluetooth beacons broadcast their identifier to nearby scanners that are Raspberry Pis in this project
 
 
 # 3. Raspberry Pis

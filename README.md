@@ -26,8 +26,6 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 # 1. Xubuntu server
 
-We are using one HP Compaq 8200 Elite CMT (Convertible Minitower) PC on this project
-
 After initialization, show a cleaned up list of shortened specifications and hardware information of the server using Linux terminal
 
 ```
@@ -702,22 +700,6 @@ Go to address https://www.aliexpress.com/item/32776774253.html to view the sourc
 
 
 # 3. Raspberry Pis
-
-We are using three Raspberry Pi 3 Model B computers on this project
-
-Here are the specifications of the Raspberry Pi models we are using
-
-- 1 Gt RAM
-- 1,2 GHz Broadcom BCM2837 64-bit ARMv8 Quad-core CPU
-- BLE
-- BCM43143 Wi-FI IEEE 802.11 b/g/n
-- HDMI/RCA
-- 3.5 mm 
-- RJ45
-- 4x USB
-- MicroSD card reader
-- installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
-- Operating system - Raspbian version 10 (buster)
 
 After initialization, update package lists for upgrades and new packages from repositories
 

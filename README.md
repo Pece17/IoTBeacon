@@ -743,10 +743,10 @@ cat /etc/os-release
 
 Here are the specifications of Raspberry Pis we are using
 
-- Model - 
-- Processor - 
-- Standard memory - 
-- Graphics card - 
+- Model - Raspberry Pi 3 Model B Rev 1.2
+- Processor - Quad Core 1.2GHz Broadcom BCM2837 64bit CPU
+- Standard memory - 926MiB System memory
+- Graphics card - Integrated
 - Operating system - Raspbian GNU/Linux 10 (buster)
 
 

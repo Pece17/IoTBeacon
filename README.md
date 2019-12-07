@@ -26,7 +26,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 # 1. Xubuntu server
 
-After initialization, show a cleaned up list of shortened specifications and hardware information of the server using Linux terminal
+After initialization, show a cleaned up list of shortened specifications and hardware information of the server
 
 ```
 sudo lshw -short -sanitize
@@ -713,7 +713,7 @@ Install lshw (Hardware Lister)
 sudo apt-get install lshw
 ```
 
-Show a cleaned up list of shortened specifications and hardware information of Raspberry Pis using Linux terminal
+Show a cleaned up list of shortened specifications and hardware information of Raspberry Pis
 
 ```
 sudo lshw -short -sanitize

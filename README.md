@@ -711,6 +711,26 @@ Here are the specifications of the Raspberry Pi models we are using
 - installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
 - Operating system - Raspbian version 10 (buster)
 
+After initialization, update package lists for upgrades and new packages from repositories
+
+```
+sudo apt-get update
+```
+
+Install lshw (Hardware Lister)
+
+```
+sudo apt-get install lshw
+```
+
+Show a cleaned up list of shortened specifications and hardware information of Raspberry Pis using Linux terminal
+
+```
+sudo lshw -short -sanitize
+```
+
+
+
 
 ## 3.1. Initializing Raspberry Pis
 

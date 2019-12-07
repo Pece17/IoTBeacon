@@ -54,7 +54,7 @@ Here are the specifications of the server we are using
 
 - Model - ```HP Compaq 8200 Elite CMT (Convertible Minitower) PC```
 - Processor - ```Intel Core i5-2400 3.10GHz```
-- Standard memory - ```4GiB DIMM DDR3 Synchronous 1333 MHz```
+- Memory - ```4GiB DIMM DDR3 Synchronous 1333 MHz```
 - Graphics card - ```Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller```
 - Operating system - ```Xubuntu 16.04.6 LTS```
 
@@ -728,9 +728,9 @@ cat /etc/os-release
 Here are the specifications of Raspberry Pis we are using
 
 - Model - ```Raspberry Pi 3 Model B Rev 1.2```
-- Processor - ```Quad Core 1.2GHz Broadcom BCM2837 64bit CPU```
-- Standard memory - ```926MiB System memory```
-- Graphics card - ```Integrated```
+- Central processing unit - ```Quad Core 1.2GHz Broadcom BCM2837 64bit CPU```
+- Random-access memory - ```926MiB System memory```
+- Graphics processing unit - ```H.264, MPEG-4 decode (1080p30); H.264 encode (1080p30); OpenGL ES 1.1, 2.0 graphics```
 - Operating system - ```Raspbian GNU/Linux 10 (buster)```
 
 

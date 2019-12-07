@@ -52,11 +52,11 @@ cat /etc/os-release
 
 Here are the specifications of the server we are using
 
-- Model - HP Compaq 8200 Elite CMT (Convertible Minitower) PC
-- Processor - Intel Core i5-2400 3.10GHz
-- Standard memory - 4GiB DIMM DDR3 Synchronous 1333 MHz
-- Graphics card - Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller
-- Operating system - Xubuntu 16.04.6 LTS
+- Model - ```HP Compaq 8200 Elite CMT (Convertible Minitower) PC```
+- Processor - ```Intel Core i5-2400 3.10GHz```
+- Standard memory - ```4GiB DIMM DDR3 Synchronous 1333 MHz```
+- Graphics card - ```Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller```
+- Operating system - ```Xubuntu 16.04.6 LTS```
 
 
 ## 1.1. Creating a Linux USB stick
@@ -692,10 +692,10 @@ Once in VDI desktop, we need to open the PuTTY application in Windows and enter 
 
 # 2. Bluetooth beacons
 
-Go to address https://www.aliexpress.com/item/32776774253.html to view the source of store where the beacons were bought
+Go to address https://www.aliexpress.com/item/32776774253.html to view the source of store where the Bluetooth beacons we ended up using were bought
 
 - Three Bluetooth low energy (BLE) beacons
-- Model is ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
+- Model - ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
 - Beacons broadcast their identifier to nearby devices that are Raspberry Pis in this project
 
 

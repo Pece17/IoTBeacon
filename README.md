@@ -177,11 +177,13 @@ hostname -I
 
 Try the dynamic IP address ```x.x.x.x``` on web browser address bar - this also works and opens the Apache2 default page
 
-Enable userdir Apache2 module and restart the Apache2 service
+Enable ```userdir``` Apache2 module 
 
 ```
 sudo a2enmod userdir
 ```
+
+Restart the Apache2 service
 
 ```
 service apache2 restart

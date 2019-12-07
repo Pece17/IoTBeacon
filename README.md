@@ -53,9 +53,9 @@ cat /etc/os-release
 Here are the specifications of the server we are using
 
 - Model - ```HP Compaq 8200 Elite CMT (Convertible Minitower) PC```
-- Processor - ```Intel Core i5-2400 3.10GHz```
-- Memory - ```4GiB DIMM DDR3 Synchronous 1333 MHz```
-- Graphics card - ```Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller```
+- Central processing unit - ```Intel Core i5-2400 3.10GHz```
+- Random-access memory - ```4GiB DIMM DDR3 Synchronous 1333 MHz```
+- Graphics processing unit - ```Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller```
 - Operating system - ```Xubuntu 16.04.6 LTS```
 
 

@@ -560,7 +560,7 @@ Create ```/home/iotbeacon/public_html/index.php``` file
 sudo nano /home/iotbeacon/public_html/index.php
 ```
 
-Paste the previously copied HTML inside it and add a simple calculation of ```1+3``` to test the function of PHP
+Paste the previously copied HTML inside it and add a simple calculation of ```1+3``` to test the functionality of PHP
 
 ```
 <!DOCTYPE html>

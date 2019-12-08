@@ -1020,9 +1020,9 @@ sudo reboot
 Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the hostnames to ```raspberrypi2``` and ```raspberrypi3``` respectively
 
 
-## 3.9. Installing BlueZ on Raspberry Pis
+## 3.9. Installing prerequisites for BLE iBeacon Scanner scripts
 
-Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the instructions for installing BlueZ Bluetooth stack for Linux kernel-based family of operating systems
+Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the instructions for installing prerequisites for BLE iBeacon Scanner scripts
 
 ```
 sudo apt-get update
@@ -1077,7 +1077,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart bluetooth
 ```
 
-BlueZ is now installed
+Prerequisites for BLE iBeacon Scanner scripts are now installed
 
 
 ## 3.10. Installing PHP and PHP modules on Raspberry Pis

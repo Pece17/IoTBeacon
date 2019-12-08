@@ -1835,7 +1835,7 @@ All three Raspberry Pis will have PHP scripts ```DatabaseInsert1.php```, ```Data
 
 ### 4.4.1. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 1
 
-This is the ```DatabaseInsert1.php``` file for Beacon 1 in Raspberry Pi 1 that inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 on Raspberry Pi 1 that inserts data into the database
 
 ```
 <?php
@@ -1863,7 +1863,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for Beacon 2 in Raspberry Pi 1 that inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 on Raspberry Pi 1 that inserts data into the database
 
 ```
 <?php
@@ -1891,7 +1891,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 1 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that on Raspberry Pi 1 inserts data into the database
 
 ```
 <?php
@@ -1921,7 +1921,7 @@ $conn->close();
 
 ### 4.4.2. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 2
 
-This is the ```DatabaseInsert1.php``` file for Beacon 1 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 that on Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -1949,7 +1949,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for Beacon 2 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 that on Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -1978,7 +1978,7 @@ $conn->close();
 
 ```
 
-This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that on Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -2009,7 +2009,7 @@ $conn->close();
 
 ### 4.4.3. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 3
 
-This is the ```DatabaseInsert1.php``` file for Beacon 1 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 that on Raspberry Pi 3 inserts data into the database
 
 ```
 <?php
@@ -2037,7 +2037,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for Beacon 2 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 that on Raspberry Pi 3 inserts data into the database
 
 ```
 <?php
@@ -2065,7 +2065,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that on Raspberry Pi 3 inserts data into the database
 
 ```
 <?php

@@ -492,7 +492,7 @@ Update package lists for upgrades and new packages from repositories
 sudo apt-get update
 ```
 
-Install PHP (Hypertext Preprocessor) and PHP module for Apache2 web server, one of many modules available for PHP
+Install PHP (Hypertext Preprocessor), and PHP modules for Apache2 web server and MySQL, few of many modules available for PHP
 
 ```
 sudo apt-get install php libapache2-mod-php php-mysql
@@ -1081,6 +1081,14 @@ Prerequisites for BLE iBeacon Scanner scripts are now installed
 
 
 ## 3.10. Installing PHP and PHP modules on Raspberry Pis
+
+Update package lists for upgrades and new packages from repositories
+
+```
+sudo apt-get update
+```
+
+Install PHP (Hypertext Preprocessor) and PHP module for MySQL, one of many modules available for PHP
 
 ```
 sudo apt-get install php php-mysql

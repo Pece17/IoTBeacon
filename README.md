@@ -195,39 +195,31 @@ Restart the Apache2 service
 service apache2 restart
 ```
 
-Go to the home directory and make the public_html folder, list the contents of the home directory to check that the public_html folder was succesfully created, after which navigate inside the public_html folder and create the index.html file
+Create ```/home/iotbeacon/public_html``` directory
 
 ```
-cd
+sudo mkdir /home/iotbeacon/public_html
 ```
 
-```
-mkdir public_html
-```
+Create ```/home/iotbeacon/public_html/index.html``` file inside the ```/home/iotbeacon/public_html``` directory
 
 ```
-ls
+nano /home/iotbeacon/public_html/index.html
 ```
 
-```
-cd public_html
-```
+I forgot to create the ```/home/iotbeacon/public_html/index.html``` file with sudo (superuser do) permission so I delete the previous file recursively
 
 ```
-nano index.html
+rm -r /home/iotbeacon/public_html/index.html
 ```
 
-I forgot to create the index.html file with sudo (superuser do) permission so I delete the previous file recursively and create a new, secure index.html file
+Create a new, secure ```/home/iotbeacon/public_html/index.html``` file
 
 ```
-rm -r index.html
+sudo nano /home/iotbeacon/public_html/index.html
 ```
 
-```
-sudo nano index.html
-```
-
-Copy basic HTML (Hypertext Markup Language) template from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some text to headings
+Copy basic HTML (Hypertext Markup Language) template from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the ```/home/iotbeacon/public_html/index.html``` file, and add some text to headings
 
 ```
 <!DOCTYPE html>
@@ -250,7 +242,7 @@ Save the file
 Ctrl + X + Y + Enter
 ```
 
-Check the name of the current Xubuntu user - it is needed to open the the index page that we previously made by creating and editing the index.html file
+Check the name of the current Xubuntu user - it is needed to open the previously created ```index.html``` file in web browser
 
 ```
 whoami

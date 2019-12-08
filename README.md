@@ -252,21 +252,13 @@ Open addresses http://localhost/~iotbeacon and http://x.x.x.x/~iotbeacon using w
 
 Both addresses work successfully inside the lab environment
 
-Navigate to sites-available directory and open the 000-default.conf file
+Edit ```/etc/apache2/sites-available/000-default.conf``` file
 
 ```
-cd /etc/apache2/sites-available
+sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
-```
-ls
-```
-
-```
-sudo nano 000-default.conf
-```
-
-Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and iotbeacon.com respectively in front of them - they are used for testing purposes, and will only work when using web browser on the server
+Edit Apache2 Virtual Hosts by removing hashtags before ```# ServerName``` and ```# ServerAlias``` lines, and by adding temporary domain names ```www.iotbeacon.com``` and ```iotbeacon.com``` respectively in front of them - they are used for testing purposes, and will only work when using web browser on the server
 
 ```
 <VirtualHost *:80>

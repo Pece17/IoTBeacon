@@ -1809,6 +1809,35 @@ Go to address https://www.w3schools.com/php/php_mysql_insert.asp to view the sou
 
 All three Raspberry Pis will have PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```, but they are slightly different in all three Raspberry Pis, so there has to be a total of nine different PHP database insertion scripts
 
+This is the original ```DatabaseInsert.php``` file
+
+```
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+```
+
 
 ### 4.4.1. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 1
 
@@ -2074,6 +2103,37 @@ $conn->close();
 ## 4.5. PHP website ```index.php```
 
 Go to address https://www.w3schools.com/php/php_mysql_select.asp to view the source of the ```index.php``` file
+
+This is the original ```index.php``` file
+
+```
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+```
 
 This is the first version of ```index.php``` file which is the PHP script enclosed with HTML elements - this will be the actual website that the server shows in the lab environment
 

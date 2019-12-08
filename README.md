@@ -492,37 +492,31 @@ Update package lists for upgrades and new packages from repositories
 sudo apt-get update
 ```
 
-Install PHP (Hypertext Preprocessor), and PHP modules for Apache2 web server and MySQL, few of many modules available for PHP
+Install PHP (Hypertext Preprocessor), and PHP modules for Apache2 and MySQL, few of many modules available for PHP
 
 ```
 sudo apt-get install php libapache2-mod-php php-mysql
 ```
 
-Navigate to mods-available directory and list the contents
+Edit ```/etc/apache2/mods-available/php7.0.conf``` file
 
 ```
-cd /etc/apache2/mods-available
-ls
+sudo nano /etc/apache2/mods-available/php7.0.conf
 ```
 
-Edit php7.0.conf file, add hashtags to following lines, and save
+Add hashtags to the following lines
 
 ```
-sudoedit php7.0.conf
-```
-
-```
+# Running PHP scripts in user directories is disabled by default
+#
+# To re-enable PHP in user directories comment the following lines
+# (from <IfModule ...> to </IfModule>.) Do NOT set it to On as it
+# prevents .htaccess files from disabling it.
 #<IfModule mod_userdir.c>
 #    <Directory /home/*/public_html>
 #        php_admin_flag engine Off
 #    </Directory>
 #</IfModule>
-```
-
-```
-Ctrl + X
-Y
-Enter
 ```
 
 Restart Apache2
@@ -531,19 +525,13 @@ Restart Apache2
 sudo service apache2 restart
 ```
 
-Navigate to public_html folder and list the contents
+Edit ```/home/iotbeacon/public_html/index.html``` file
 
 ```
-cd
-cd public_html
-ls
+sudo nano /home/iotbeacon/public_html/index.html
 ```
 
-Open the index.html file, copy the contents from inside, and exit
-
-```
-sudo nano index.html
-```
+Copy the contents from inside ```/home/iotbeacon/public_html/index.html``` file
 
 ```
 <!DOCTYPE html>
@@ -560,18 +548,19 @@ sudo nano index.html
 </html>
 ```
 
-Delete the ```index.html``` file and check that it is removed
+Delete ```/home/iotbeacon/public_html/index.html``` file
 
 ```
-sudo rm -r index.html
-ls
+sudo rm -r /home/iotbeacon/public_html/index.html
 ```
 
-Create a new file called ```index.php```, paste the previously copied HTML inside it, and add a simple calculation of 1+3 to test the function of PHP
+Create ```/home/iotbeacon/public_html/index.php``` file
 
 ```
-sudo nano index.php
+sudo nano /home/iotbeacon/public_html/index.php
 ```
+
+Paste the previously copied HTML inside it and add a simple calculation of ```1+3``` to test the function of PHP
 
 ```
 <!DOCTYPE html>
@@ -594,9 +583,9 @@ print(1+3);
 </html>
 ```
 
-Exit and save the file, and open address http://localhost/~iotbeacon to test if PHP is working correctly
+Open address http://localhost/~iotbeacon to test if PHP is working correctly
 
-The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
+The web page now shows the previously written headings and number ```4```, indicating that the PHP calculation was successful
 
 
 ## 1.11. Installing Salt Master on the server

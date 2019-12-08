@@ -26,7 +26,7 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 
 # 1. Xubuntu server
 
-After initialization, show a cleaned up list of shortened specifications and hardware information of the server using Linux terminal
+After initialization, show a cleaned up list of shortened specifications and hardware information of the server
 
 ```
 sudo lshw -short -sanitize
@@ -44,13 +44,19 @@ Only show PCI information about the graphics card
 lspci | grep -i --color 'vga\|3d\|2d'
 ```
 
-Here are the specifications of the server computer we are using
+Find out the operating system version
 
-- Model - HP Compaq 8200 Elite CMT (Convertible Minitower) PC
-- Processor - Intel Core i5-2400 3.10GHz
-- Standard memory - 4GiB DIMM DDR3 Synchronous 1333 MHz
-- Graphics card - Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller
-- Operating system - Xubuntu 16.04.6 LTS
+```
+cat /etc/os-release
+```
+
+Here are the specifications of the server we are using
+
+- Model - ```HP Compaq 8200 Elite CMT (Convertible Minitower) PC```
+- Central processing unit - ```Intel Core i5-2400 3.10GHz```
+- Random-access memory - ```4GiB DIMM DDR3 Synchronous 1333 MHz```
+- Graphics processing unit - ```Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller```
+- Operating system - ```Xubuntu 16.04.6 LTS```
 
 
 ## 1.1. Creating a Linux USB stick
@@ -686,33 +692,49 @@ Once in VDI desktop, we need to open the PuTTY application in Windows and enter 
 
 # 2. Bluetooth beacons
 
-Go to address https://www.aliexpress.com/item/32776774253.html to view the source of store where the beacons were bought
+Go to address https://www.aliexpress.com/item/32776774253.html to view the page of the online store where the Bluetooth beacons were bought
 
 - Three Bluetooth low energy (BLE) beacons
-- Model is ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
-- Beacons broadcast their identifier to nearby devices that are Raspberry Pis in this project
+- Model - ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
+- Bluetooth beacons broadcast their identifier to nearby scanners that are Raspberry Pis in this project
 
 
 # 3. Raspberry Pis
 
-We are using three Raspberry Pi 3 model B computers on this project
+After initialization, update package lists for upgrades and new packages from repositories
 
-Here are the specifications of the Raspberry Pi models we are using
+```
+sudo apt-get update
+```
 
-- 1 Gt RAM
-- 1,2 GHz Broadcom BCM2837 64-bit ARMv8 Quad-core CPU
-- BLE
-- BCM43143 Wi-FI IEEE 802.11 b/g/n
-- HDMI/RCA
-- 3.5 mm 
-- RJ45
-- 4x USB
-- MicroSD card reader
-- installed Raspbian using MicroSD card with pre-installed NOOBS (New Out Of Box Software)
-- Operating system - Raspbian version 10 (buster)
+Install lshw (Hardware Lister)
+
+```
+sudo apt-get install lshw
+```
+
+Show a cleaned up list of shortened specifications and hardware information of Raspberry Pis
+
+```
+sudo lshw -short -sanitize
+```
+
+Find out the operating system version
+
+```
+cat /etc/os-release
+```
+
+Here are the specifications of Raspberry Pis we are using
+
+- Model - ```Raspberry Pi 3 Model B Rev 1.2```
+- Central processing unit - ```Quad Core 1.2GHz Broadcom BCM2837 64bit CPU```
+- Random-access memory - ```926MiB System memory```
+- Graphics processing unit - ```H.264, MPEG-4 decode (1080p30); H.264 encode (1080p30); OpenGL ES 1.1, 2.0 graphics```
+- Operating system - ```Raspbian GNU/Linux 10 (buster)```
 
 
-## 3.1. Installing Raspberry Pis
+## 3.1. Initializing Raspberry Pis
 
 - Heat sinks
 - Case

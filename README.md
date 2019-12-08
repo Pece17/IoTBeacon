@@ -929,10 +929,10 @@ Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the ```id:``` to ```ras
 
 ## 3.5. Establishing SSH connection with terminal to Raspberry Pis
 
-Install SSH (Secure Shell) client and server to Raspberry Pis
+Since SSH client and server is installed on Raspberry Pis by default, we only need to enable SSH
 
 ```
-sudo apt-get install -y openssh-server openssh-client
+sudo systemctl enable ssh
 ```
 
 After installing SSH, I connect to the Raspberry Pi 1 with another Linux terminal within the lab environment

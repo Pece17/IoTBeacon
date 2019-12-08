@@ -495,7 +495,7 @@ sudo apt-get update
 Install PHP (Hypertext Preprocessor) and PHP module for Apache2 web server, one of many modules available for PHP
 
 ```
-sudo apt-get install php libapache2-mod-php
+sudo apt-get install php libapache2-mod-php php-mysql
 ```
 
 Navigate to mods-available directory and list the contents

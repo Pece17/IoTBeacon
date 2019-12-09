@@ -2734,13 +2734,13 @@ Here is a list of current issues and tasks to be solved
 
 13. Write Peer review, everyone in the project group writes their own!
 
-14. Write Powerpoint presentation and live demo!
+~~14. Write Powerpoint presentation and live demo!~~
 
-15. Write Final report!
+~~15. Write Final report!~~
 
-16. Write Technical report!
+~~16. Write Technical report!~~
 
-17. Add weekly working hours to Moodle!
+~~17. Add weekly working hours to Moodle!~~
 
 18. Raspberry Pi 3 to a further classroom?
 
@@ -2748,4 +2748,4 @@ Here is a list of current issues and tasks to be solved
 
 20. Remove passwords from GitHub
 
-21. Make a text file with all the devices, usernames, and passwords used in the system
+~~21. Make a text file with all the devices, usernames, and passwords used in the system~~

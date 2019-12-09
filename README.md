@@ -2441,6 +2441,10 @@ $conn->close();
 </html>
 ```
 
+This how the final version of ```index.php``` file looks like in our website, in address http://172.28.175.41/~iotbeacon
+
+<img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Nettisivu.JPG>
+
 
 # 5. Running and stopping scripts
 

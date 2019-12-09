@@ -2449,15 +2449,15 @@ We need to be able to run and stop all the scripts in all three Raspberry Pis ef
 
 ## 5.1. Restarting Python script ```BeaconScanner.py``` automatically after exception and running it infinitely with script ```forever```
 
-Go to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the ```forever``` file
+Go to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the ```forever``` file in path ```/home/projektimies/Lighthouse```
 
-Create the ```forever``` file
+Create ```/home/projektimies/Lighthouse/forever``` file
 
 ```
-sudo nano forever
+sudo nano /home/projektimies/Lighthouse/forever
 ```
 
-Paste the following text inside the ```forever``` file
+Paste the following text inside the ```/home/projektimies/Lighthouse/forever``` file
 
 ```
 #!/usr/bin/python
@@ -2471,13 +2471,13 @@ while True:
     p.wait()
 ```
 
-Make the ```forever``` file executable
+Make the ```/home/projektimies/Lighthouse/forever``` file executable
 
 ```
-sudo chmod +x forever
+sudo chmod +x /home/projektimies/Lighthouse/forever
 ```
 
-Now we can run the previously created ```BeaconScanner.py``` infinitely using ```forever``` file as a failsafe 
+Now we can run the previously created ```BeaconScanner.py``` infinitely using ```forever``` file as a failsafe in path ```/home/projektimies/Lighthouse```
 
 ```
 sudo ./forever BeaconScanner.py

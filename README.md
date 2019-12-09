@@ -2720,7 +2720,7 @@ Here is a list of current issues and tasks to be solved
 
 6. Clean up GitHub report so that it is updated to the latest information, logical, chronological, neat, and follows the established standardization in formatting, for example paragraphs ```2.``` and ```3.``` need some polishing along many other paragraphs - Pekka's responsibility
 
-7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Bluetooth beacons, Raspberry Pis, Scripts, Website, and Database could be divided to paragraphs in advance
+~~7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Bluetooth beacons, Raspberry Pis, Scripts, Website, and Database could be divided to paragraphs in advance~~
 
 8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home
 
@@ -2730,9 +2730,9 @@ Here is a list of current issues and tasks to be solved
 
 ~~11. Create or edit the database based on new instructions - the database must focus around people instead of rooms, and it must print ```Beacon name - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` information, like for example, ```Beacon1 - Joni Mattsson - Last seen in Servula - 2019-11-29 20:14:32``` - how can we deduce in which room a Bluetooth beacon is if two Raspberry Pis detect it simultaneously, or can we just print two rooms like ```Last seen in 5004 5005``` if two Raspberry Pis detect it at the same time, is there also any way to at least print RSSI value to the website, since in best case scenario the database would deduce the room based on the lowest RSSI value?~~
 
-12. Add the final versions of ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, ```DatabaseInsert3.php``` (total of nine files because of three Raspberry Pis), and ```index.php``` files to separate GitHub files
+~~12. Add the final versions of ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, ```DatabaseInsert3.php``` (total of nine files because of three Raspberry Pis), and ```index.php``` files to separate GitHub files~~
 
-13. Write Peer review, everyone in the project group writes their own!
+~~13. Write Peer review, everyone in the project group writes their own!~~
 
 ~~14. Write Powerpoint presentation and live demo!~~
 

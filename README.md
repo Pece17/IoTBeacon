@@ -58,6 +58,8 @@ Here are the specifications of the server we are using
 - Graphics processing unit - ```Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller```
 - Operating system - ```Xubuntu 16.04.6 LTS```
 
+<img src=http://myy.haaga-helia.fi/~a1602651/kuvat/servu.jpeg>
+
 
 ## 1.1. Creating a Linux USB stick
 

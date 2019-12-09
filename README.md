@@ -1679,6 +1679,17 @@ except KeyboardInterrupt:
         pass
 ```
 
+The final version of ```BeaconScanner.py``` has worked fine apart from two or three rare occasions when we have gotten the following ```Traceback (most recent call last):``` error - it seems to indicate that ```ScanUtility.py```, a file we haven't edited at all, has some wrong syntax
+
+```
+Traceback (most recent call last):
+  File "BeaconScanner.py", line 20, in <module>
+    returnedList = ScanUtility.parse_events(sock, 10)
+  File "/home/projektimies/Lighthouse/ScanUtility.py", line 71, in parse_events
+    url = prefix + hexUrl.decode("hex")
+UnboundLocalError: local variable 'prefix' referenced before assignment
+```
+
 
 ## 4.3. Python script ```ScanUtility.py```
 
@@ -2682,6 +2693,16 @@ List of all the ideas for further development of the project
 
 4. Automation of Raspberry Pi configuration for additional Bluetooth scanners, i.e. Raspberry Pi 4, Raspberry Pi 5, and so on
 
+5. The final version of ```BeaconScanner.py``` has worked fine apart from two or three rare occasions when we have gotten the following ```Traceback (most recent call last):``` error - it seems to indicate that ```ScanUtility.py```, a file that is in its original state, has some wrong syntax
+
+```
+Traceback (most recent call last):
+  File "BeaconScanner.py", line 20, in <module>
+    returnedList = ScanUtility.parse_events(sock, 10)
+  File "/home/projektimies/Lighthouse/ScanUtility.py", line 71, in parse_events
+    url = prefix + hexUrl.decode("hex")
+UnboundLocalError: local variable 'prefix' referenced before assignment
+```
 
 # Issues and tasks
 

@@ -2662,7 +2662,17 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 
 # 7. Testing
 
-Description here
+We tested our system multiple times during the course of the project to find bugs, faulty code, or other disruptive factors
+
+Testing took place every time in Haaga-Helia University of Applied Sciences Pasila Campus, in floor five, in classes ```Servula```, ```5005```, and ```5004```, where the lab environment network was as internal network
+
+Xubuntu server, Raspberry Pis, and Bluetooth beacons were the same during all tests of the final system
+
+Raspberry Pis were placed as follows
+
+- ```Servula``` - Raspberry Pi 1
+- ```5005``` - Raspberry Pi 2
+- ```5004``` - Raspberry Pi 3
 
 
 # 8. In conclusion
@@ -2703,6 +2713,7 @@ Traceback (most recent call last):
     url = prefix + hexUrl.decode("hex")
 UnboundLocalError: local variable 'prefix' referenced before assignment
 ```
+
 
 # Issues and tasks
 

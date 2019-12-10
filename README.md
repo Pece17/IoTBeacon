@@ -2680,7 +2680,7 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 
 We tested our system multiple times during the course of the project to find bugs, faulty code, or other disruptive factors
 
-Testing took place every time in Haaga-Helia University of Applied Sciences Pasila Campus, in floor five, in classes ```Servula```, ```5005```, and ```5004```, where the lab environment network was as internal network
+Testing took place every time in Haaga-Helia University of Applied Sciences Pasila Campus, in floor five, in classes ```Servula```, ```5005```, and ```5004```, where the lab environment network was an internal network
 
 Xubuntu server, Raspberry Pis, and Bluetooth beacons were the same during all tests of the final system
 

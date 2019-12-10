@@ -58,6 +58,8 @@ Here are the specifications of the server we are using
 - Graphics processing unit - ```Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller```
 - Operating system - ```Xubuntu 16.04.6 LTS```
 
+Our Xubuntu server in ```Servula```
+
 <img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Serveri.jpg>
 
 
@@ -669,6 +671,8 @@ Go to address https://www.aliexpress.com/item/32776774253.html to view the page 
 - Model - ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
 - Bluetooth beacons broadcast their identifier to nearby scanners that are Raspberry Pis in this project
 
+One of our Bluetooth beacons
+
 <img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Majakka.jpg>
 
 
@@ -705,6 +709,8 @@ Here are the specifications of Raspberry Pis we are using
 - Random-access memory - ```926MiB System memory```
 - Graphics processing unit - ```H.264, MPEG-4 decode (1080p30); H.264 encode (1080p30); OpenGL ES 1.1, 2.0 graphics```
 - Operating system - ```Raspbian GNU/Linux 10 (buster)```
+
+One of our Raspberry Pis
 
 <img src=http://myy.haaga-helia.fi/~a1602651/kuvat/RaspberryPi.jpg>
 

@@ -58,6 +58,10 @@ Here are the specifications of the server we are using
 - Graphics processing unit - ```Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller```
 - Operating system - ```Xubuntu 16.04.6 LTS```
 
+Our Xubuntu server in ```Servula```
+
+<img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Serveri.jpg>
+
 
 ## 1.1. Creating a Linux USB stick
 
@@ -195,39 +199,31 @@ Restart the Apache2 service
 service apache2 restart
 ```
 
-Go to the home directory and make the public_html folder, list the contents of the home directory to check that the public_html folder was succesfully created, after which navigate inside the public_html folder and create the index.html file
+Create ```/home/iotbeacon/public_html``` directory
 
 ```
-cd
+sudo mkdir /home/iotbeacon/public_html
 ```
 
-```
-mkdir public_html
-```
+Create ```/home/iotbeacon/public_html/index.html``` file inside the ```/home/iotbeacon/public_html``` directory
 
 ```
-ls
+nano /home/iotbeacon/public_html/index.html
 ```
 
-```
-cd public_html
-```
+I forgot to create the ```/home/iotbeacon/public_html/index.html``` file with sudo (superuser do) permission so I delete the previous file recursively
 
 ```
-nano index.html
+rm -r /home/iotbeacon/public_html/index.html
 ```
 
-I forgot to create the index.html file with sudo (superuser do) permission so I delete the previous file recursively and create a new, secure index.html file
+Create a new, secure ```/home/iotbeacon/public_html/index.html``` file
 
 ```
-rm -r index.html
+sudo nano /home/iotbeacon/public_html/index.html
 ```
 
-```
-sudo nano index.html
-```
-
-Copy basic HTML (Hypertext Markup Language) template from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the index.html file and add some text to headings
+Copy basic HTML (Hypertext Markup Language) template from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document to the ```/home/iotbeacon/public_html/index.html``` file, and add some text to headings
 
 ```
 <!DOCTYPE html>
@@ -250,7 +246,7 @@ Save the file
 Ctrl + X + Y + Enter
 ```
 
-Check the name of the current Xubuntu user - it is needed to open the the index page that we previously made by creating and editing the index.html file
+Check the name of the current Xubuntu user - it is needed to open the previously created ```index.html``` file in web browser
 
 ```
 whoami
@@ -260,21 +256,13 @@ Open addresses http://localhost/~iotbeacon and http://x.x.x.x/~iotbeacon using w
 
 Both addresses work successfully inside the lab environment
 
-Navigate to sites-available directory and open the 000-default.conf file
+Edit ```/etc/apache2/sites-available/000-default.conf``` file
 
 ```
-cd /etc/apache2/sites-available
+sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
-```
-ls
-```
-
-```
-sudo nano 000-default.conf
-```
-
-Edit Apache2 Virtual Hosts by removing hashtags before ServerName and ServerAlias lines and by adding temporary domain names www.iotbeacon.com and iotbeacon.com respectively in front of them - they are used for testing purposes, and will only work when using web browser on the server
+Edit Apache2 Virtual Hosts by removing hashtags before ```# ServerName``` and ```# ServerAlias``` lines, and by adding temporary domain names ```www.iotbeacon.com``` and ```iotbeacon.com``` respectively in front of them - they are used for testing purposes, and will only work when using web browser on the server
 
 ```
 <VirtualHost *:80>
@@ -317,17 +305,13 @@ Restart Apache2
 service apache2 restart
 ```
 
-Navigate to etc directory and open the hosts file
+Edit ```/etc/hosts``` file
 
 ```
-cd /etc/
+sudo nano /etc/hosts
 ```
 
-```
-sudo nano hosts
-```
-
-Edit the hosts file by creating two lines starting with 127.0.0.1 loopback addresses and adding www.iotbeacon.com and iotbeacon.com respectively in front of them - temporary domain name configuration is now complete and should be working when using web browser on the server
+Edit ```/etc/hosts``` file by creating two lines starting with ```127.0.0.1``` loopback addresses and adding ```www.iotbeacon.com``` and ```iotbeacon.com``` respectively in front of them - temporary domain name configuration is now complete and should be working when using web browser on the server
 
 ```
 127.0.0.1       localhost
@@ -343,7 +327,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-www.iotbeacon.com/~iotbeacon and iotbeacon.com/~iotbeacon are now working and showing the contents of the previously created index.html file when using web browser on the server - addresses www.iotbeacon.com and iotbeacon.com open the Apache2 default page as supposed
+Addresses http://www.iotbeacon.com/~iotbeacon and http://iotbeacon.com/~iotbeacon are now working and showing the contents of the previously created ```index.html``` file when using web browser on the server - addresses http://www.iotbeacon.com and http://iotbeacon.com open the Apache2 default page as intended
 
 
 ## 1.5. Configuring static IP addresses on the server using CLI and GUI
@@ -512,37 +496,31 @@ Update package lists for upgrades and new packages from repositories
 sudo apt-get update
 ```
 
-Install PHP (Hypertext Preprocessor) and PHP module for Apache2 web server, one of many modules available for PHP
+Install PHP (Hypertext Preprocessor), and PHP modules for Apache2 and MySQL, few of many modules available for PHP
 
 ```
-sudo apt-get install php libapache2-mod-php
+sudo apt-get install php libapache2-mod-php php-mysql
 ```
 
-Navigate to mods-available directory and list the contents
+Edit ```/etc/apache2/mods-available/php7.0.conf``` file
 
 ```
-cd /etc/apache2/mods-available
-ls
+sudo nano /etc/apache2/mods-available/php7.0.conf
 ```
 
-Edit php7.0.conf file, add hashtags to following lines, and save
+Add hashtags to the following lines
 
 ```
-sudoedit php7.0.conf
-```
-
-```
+# Running PHP scripts in user directories is disabled by default
+#
+# To re-enable PHP in user directories comment the following lines
+# (from <IfModule ...> to </IfModule>.) Do NOT set it to On as it
+# prevents .htaccess files from disabling it.
 #<IfModule mod_userdir.c>
 #    <Directory /home/*/public_html>
 #        php_admin_flag engine Off
 #    </Directory>
 #</IfModule>
-```
-
-```
-Ctrl + X
-Y
-Enter
 ```
 
 Restart Apache2
@@ -551,19 +529,13 @@ Restart Apache2
 sudo service apache2 restart
 ```
 
-Navigate to public_html folder and list the contents
+Edit ```/home/iotbeacon/public_html/index.html``` file
 
 ```
-cd
-cd public_html
-ls
+sudo nano /home/iotbeacon/public_html/index.html
 ```
 
-Open the index.html file, copy the contents from inside, and exit
-
-```
-sudo nano index.html
-```
+Copy the contents from inside ```/home/iotbeacon/public_html/index.html``` file
 
 ```
 <!DOCTYPE html>
@@ -580,18 +552,19 @@ sudo nano index.html
 </html>
 ```
 
-Delete the ```index.html``` file and check that it is removed
+Delete ```/home/iotbeacon/public_html/index.html``` file
 
 ```
-sudo rm -r index.html
-ls
+sudo rm -r /home/iotbeacon/public_html/index.html
 ```
 
-Create a new file called ```index.php```, paste the previously copied HTML inside it, and add a simple calculation of 1+3 to test the function of PHP
+Create ```/home/iotbeacon/public_html/index.php``` file
 
 ```
-sudo nano index.php
+sudo nano /home/iotbeacon/public_html/index.php
 ```
+
+Paste the previously copied HTML inside it and add a simple calculation of ```1+3``` to test the functionality of PHP
 
 ```
 <!DOCTYPE html>
@@ -614,9 +587,9 @@ print(1+3);
 </html>
 ```
 
-Exit and save the file, and open address http://localhost/~iotbeacon to test if PHP is working correctly
+Open address http://localhost/~iotbeacon to test if PHP is working correctly
 
-The web page now shows the previously written headings and number 4, indicating that the PHP calculation was successful
+The web page now shows the previously written headings and number ```4```, indicating that the PHP calculation was successful
 
 
 ## 1.11. Installing Salt Master on the server
@@ -698,6 +671,10 @@ Go to address https://www.aliexpress.com/item/32776774253.html to view the page 
 - Model - ```Wellcore Bluetooth Ibeacon NRF51822 beacon Wristband Ibeacons Module with APP```
 - Bluetooth beacons broadcast their identifier to nearby scanners that are Raspberry Pis in this project
 
+One of our Bluetooth beacons
+
+<img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Majakka.jpg>
+
 
 # 3. Raspberry Pis
 
@@ -732,6 +709,10 @@ Here are the specifications of Raspberry Pis we are using
 - Random-access memory - ```926MiB System memory```
 - Graphics processing unit - ```H.264, MPEG-4 decode (1080p30); H.264 encode (1080p30); OpenGL ES 1.1, 2.0 graphics```
 - Operating system - ```Raspbian GNU/Linux 10 (buster)```
+
+One of our Raspberry Pis
+
+<img src=http://myy.haaga-helia.fi/~a1602651/kuvat/RaspberryPi.jpg>
 
 
 ## 3.1. Initializing Raspberry Pis
@@ -949,10 +930,10 @@ Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the ```id:``` to ```ras
 
 ## 3.5. Establishing SSH connection with terminal to Raspberry Pis
 
-Install SSH (Secure Shell) client and server to Raspberry Pis
+Since SSH client and server is installed on Raspberry Pis by default, we only need to enable SSH
 
 ```
-sudo apt-get install -y openssh-server openssh-client
+sudo systemctl enable ssh
 ```
 
 After installing SSH, I connect to the Raspberry Pi 1 with another Linux terminal within the lab environment
@@ -1040,9 +1021,9 @@ sudo reboot
 Repeat for Raspberry Pi 2 and Raspberry Pi 3, but change the hostnames to ```raspberrypi2``` and ```raspberrypi3``` respectively
 
 
-## 3.9. Installing BlueZ on Raspberry Pis
+## 3.9. Installing prerequisites for BLE iBeacon Scanner scripts
 
-Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the instructions for installing BlueZ Bluetooth stack for Linux kernel-based family of operating systems
+Navigate to address https://github.com/singaCapital/BLE-Beacon-Scanner/blob/master/README.md to view the instructions for installing prerequisites for BLE iBeacon Scanner scripts
 
 ```
 sudo apt-get update
@@ -1097,10 +1078,18 @@ sudo systemctl daemon-reload
 sudo systemctl restart bluetooth
 ```
 
-BlueZ is now installed
+Prerequisites for BLE iBeacon Scanner scripts are now installed
 
 
 ## 3.10. Installing PHP and PHP modules on Raspberry Pis
+
+Update package lists for upgrades and new packages from repositories
+
+```
+sudo apt-get update
+```
+
+Install PHP (Hypertext Preprocessor) and PHP module for MySQL, one of many modules available for PHP
 
 ```
 sudo apt-get install php php-mysql
@@ -1702,6 +1691,17 @@ except KeyboardInterrupt:
         pass
 ```
 
+The final version of ```BeaconScanner.py``` has worked fine apart from two or three rare occasions when we have gotten the following ```Traceback (most recent call last):``` error - it seems to indicate that ```ScanUtility.py```, a file we haven't edited at all, has some wrong syntax
+
+```
+Traceback (most recent call last):
+  File "BeaconScanner.py", line 20, in <module>
+    returnedList = ScanUtility.parse_events(sock, 10)
+  File "/home/projektimies/Lighthouse/ScanUtility.py", line 71, in parse_events
+    url = prefix + hexUrl.decode("hex")
+UnboundLocalError: local variable 'prefix' referenced before assignment
+```
+
 
 ## 4.3. Python script ```ScanUtility.py```
 
@@ -1832,10 +1832,39 @@ Go to address https://www.w3schools.com/php/php_mysql_insert.asp to view the sou
 
 All three Raspberry Pis will have PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```, but they are slightly different in all three Raspberry Pis, so there has to be a total of nine different PHP database insertion scripts
 
+This is the original ```DatabaseInsert.php``` file
+
+```
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+```
+
 
 ### 4.4.1. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 1
 
-This is the ```DatabaseInsert1.php``` file for Beacon 1 in Raspberry Pi 1 that inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 on Raspberry Pi 1 that inserts data into the database
 
 ```
 <?php
@@ -1863,7 +1892,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for Beacon 2 in Raspberry Pi 1 that inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 on Raspberry Pi 1 that inserts data into the database
 
 ```
 <?php
@@ -1891,7 +1920,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 1 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that on Raspberry Pi 1 inserts data into the database
 
 ```
 <?php
@@ -1921,7 +1950,7 @@ $conn->close();
 
 ### 4.4.2. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 2
 
-This is the ```DatabaseInsert1.php``` file for Beacon 1 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 that on Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -1949,7 +1978,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for Beacon 2 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 that on Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -1978,7 +2007,7 @@ $conn->close();
 
 ```
 
-This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 2 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that on Raspberry Pi 2 inserts data into the database
 
 ```
 <?php
@@ -2009,7 +2038,7 @@ $conn->close();
 
 ### 4.4.3. PHP scripts ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` on Raspberry Pi 3
 
-This is the ```DatabaseInsert1.php``` file for Beacon 1 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert1.php``` file for Beacon 1 that on Raspberry Pi 3 inserts data into the database
 
 ```
 <?php
@@ -2037,7 +2066,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert2.php``` file for Beacon 2 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert2.php``` file for Beacon 2 that on Raspberry Pi 3 inserts data into the database
 
 ```
 <?php
@@ -2065,7 +2094,7 @@ $conn->close();
 ?>
 ```
 
-This is the ```DatabaseInsert3.php``` file for Beacon 3 that in Raspberry Pi 3 inserts data into the database
+This is the ```DatabaseInsert3.php``` file for Beacon 3 that on Raspberry Pi 3 inserts data into the database
 
 ```
 <?php
@@ -2097,6 +2126,37 @@ $conn->close();
 ## 4.5. PHP website ```index.php```
 
 Go to address https://www.w3schools.com/php/php_mysql_select.asp to view the source of the ```index.php``` file
+
+This is the original ```index.php``` file
+
+```
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+```
 
 This is the first version of ```index.php``` file which is the PHP script enclosed with HTML elements - this will be the actual website that the server shows in the lab environment
 
@@ -2393,6 +2453,10 @@ $conn->close();
 </html>
 ```
 
+This how the final version of ```index.php``` file looks like in our website, in address http://172.28.175.41/~iotbeacon
+
+<img src=http://myy.haaga-helia.fi/~a1602651/kuvat/Nettisivu.JPG>
+
 
 # 5. Running and stopping scripts
 
@@ -2401,15 +2465,15 @@ We need to be able to run and stop all the scripts in all three Raspberry Pis ef
 
 ## 5.1. Restarting Python script ```BeaconScanner.py``` automatically after exception and running it infinitely with script ```forever```
 
-Go to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the ```forever``` file
+Go to address https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/ to view the source of the ```forever``` file in path ```/home/projektimies/Lighthouse```
 
-Create the ```forever``` file
+Create ```/home/projektimies/Lighthouse/forever``` file
 
 ```
-sudo nano forever
+sudo nano /home/projektimies/Lighthouse/forever
 ```
 
-Paste the following text inside the ```forever``` file
+Paste the following text inside the ```/home/projektimies/Lighthouse/forever``` file
 
 ```
 #!/usr/bin/python
@@ -2423,13 +2487,13 @@ while True:
     p.wait()
 ```
 
-Make the ```forever``` file executable
+Make the ```/home/projektimies/Lighthouse/forever``` file executable
 
 ```
-sudo chmod +x forever
+sudo chmod +x /home/projektimies/Lighthouse/forever
 ```
 
-Now we can run the previously created ```BeaconScanner.py``` infinitely using ```forever``` file as a failsafe 
+Now we can run the previously created ```BeaconScanner.py``` infinitely using ```forever``` file as a failsafe in path ```/home/projektimies/Lighthouse```
 
 ```
 sudo ./forever BeaconScanner.py
@@ -2552,7 +2616,7 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41' IDENTIFIED BY 'Mon
 ```
 
 
-## 6.3. Creating the tables in the database ```iotbeacon```
+## 6.3. Creating table ```beaconusers``` in the database ```iotbeacon```
 
 Using database ```iotbeacon```, create table ```beaconusers``` and add the following information inside the table
 
@@ -2614,7 +2678,17 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 
 # 7. Testing
 
-Description here
+We tested our system multiple times during the course of the project to find bugs, faulty code, or other disruptive factors
+
+Testing took place every time in Haaga-Helia University of Applied Sciences Pasila Campus, in floor five, in classes ```Servula```, ```5005```, and ```5004```, where the lab environment network was an internal network
+
+Xubuntu server, Raspberry Pis, and Bluetooth beacons were the same during all tests of the final system
+
+Raspberry Pis were placed as follows
+
+- ```Servula``` - Raspberry Pi 1
+- ```5005``` - Raspberry Pi 2
+- ```5004``` - Raspberry Pi 3
 
 
 # 8. In conclusion
@@ -2645,6 +2719,17 @@ List of all the ideas for further development of the project
 
 4. Automation of Raspberry Pi configuration for additional Bluetooth scanners, i.e. Raspberry Pi 4, Raspberry Pi 5, and so on
 
+5. The final version of ```BeaconScanner.py``` has worked fine apart from two or three rare occasions when we have gotten the following ```Traceback (most recent call last):``` error - it seems to indicate that ```ScanUtility.py```, a file that is in its original state, has some wrong syntax
+
+```
+Traceback (most recent call last):
+  File "BeaconScanner.py", line 20, in <module>
+    returnedList = ScanUtility.parse_events(sock, 10)
+  File "/home/projektimies/Lighthouse/ScanUtility.py", line 71, in parse_events
+    url = prefix + hexUrl.decode("hex")
+UnboundLocalError: local variable 'prefix' referenced before assignment
+```
+
 
 # Issues and tasks
 
@@ -2662,7 +2747,7 @@ Here is a list of current issues and tasks to be solved
 
 6. Clean up GitHub report so that it is updated to the latest information, logical, chronological, neat, and follows the established standardization in formatting, for example paragraphs ```2.``` and ```3.``` need some polishing along many other paragraphs - Pekka's responsibility
 
-7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Bluetooth beacons, Raspberry Pis, Scripts, Website, and Database could be divided to paragraphs in advance
+~~7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Bluetooth beacons, Raspberry Pis, Scripts, Website, and Database could be divided to paragraphs in advance~~
 
 8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home
 
@@ -2672,17 +2757,17 @@ Here is a list of current issues and tasks to be solved
 
 ~~11. Create or edit the database based on new instructions - the database must focus around people instead of rooms, and it must print ```Beacon name - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` information, like for example, ```Beacon1 - Joni Mattsson - Last seen in Servula - 2019-11-29 20:14:32``` - how can we deduce in which room a Bluetooth beacon is if two Raspberry Pis detect it simultaneously, or can we just print two rooms like ```Last seen in 5004 5005``` if two Raspberry Pis detect it at the same time, is there also any way to at least print RSSI value to the website, since in best case scenario the database would deduce the room based on the lowest RSSI value?~~
 
-12. Add the final versions of ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, ```DatabaseInsert3.php``` (total of nine files because of three Raspberry Pis), and ```index.php``` files to separate GitHub files
+~~12. Add the final versions of ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, ```DatabaseInsert3.php``` (total of nine files because of three Raspberry Pis), and ```index.php``` files to separate GitHub files~~
 
-13. Write Peer review, everyone in the project group writes their own!
+~~13. Write Peer review, everyone in the project group writes their own!~~
 
-14. Write Powerpoint presentation and live demo!
+~~14. Write Powerpoint presentation and live demo!~~
 
-15. Write Final report!
+~~15. Write Final report!~~
 
-16. Write Technical report!
+~~16. Write Technical report!~~
 
-17. Add weekly working hours to Moodle!
+~~17. Add weekly working hours to Moodle!~~
 
 18. Raspberry Pi 3 to a further classroom?
 
@@ -2690,4 +2775,4 @@ Here is a list of current issues and tasks to be solved
 
 20. Remove passwords from GitHub
 
-21. Make a text file with all the devices, usernames, and passwords used in the system
+~~21. Make a text file with all the devices, usernames, and passwords used in the system~~

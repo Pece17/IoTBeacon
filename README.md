@@ -2714,13 +2714,15 @@ List of all the ideas for further development of the project
 
 1. Android or iOS app, or improved web application instead of our PHP website ```index.php```
 
-2. Python files for database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` or would it need additional scripts?
+2. Python files for database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` file or would it need additional scripts?
 
 3. Accurate room deduction based on RSSI signal strength, i.e. the lowest RSSI value is the nearest room - RSSI values of Bluetooth beacons need to be insertable to the database
 
 4. Automation of Raspberry Pi configuration for additional Bluetooth scanners, i.e. Raspberry Pi 4, Raspberry Pi 5, and so on
 
-5. The final version of ```BeaconScanner.py``` has worked fine apart from two or three rare occasions when we have gotten the following ```Traceback (most recent call last):``` error - it seems to indicate that ```ScanUtility.py```, a file that is in its original state, has some wrong syntax
+5. There should be an easier way to add new Bluetooth beacons and users to the system with, for example, a single text file, because currently all the Bluetooth beacons and users have to be hard coded to Python and PHP files
+
+7. The final version of ```BeaconScanner.py``` has worked fine apart from two or three rare occasions when we have gotten the following ```Traceback (most recent call last):``` error, and it seems to indicate that ```ScanUtility.py```, a file that we did not modify from its original state, has some wrong syntax - we rebooted all the Raspberry Pis, after which ```BeaconScanner.py``` seemed to work fine again, but ```BeaconScanner.py``` and ```ScanUtility.py``` will require further examination and refining from a more experienced Python coder
 
 ```
 Traceback (most recent call last):

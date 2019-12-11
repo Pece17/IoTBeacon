@@ -2712,16 +2712,12 @@ The following mindmap should clarify the dependencies of the files and devices o
 
 List of all the ideas for further development of the project
 
-1. Android or iOS app, or improved web application instead of our PHP website ```index.php```
-
+1. Android or iOS application, or improved web application instead of our PHP website ```index.php```
 2. Python files for database insertion instead of PHP files - could the Python database insertion be inside ```BeaconScanner.py``` file or would it need additional scripts?
-
 3. Accurate room deduction based on RSSI signal strength, i.e. the lowest RSSI value is the nearest room - RSSI values of Bluetooth beacons need to be insertable to the database
-
 4. Automation of Raspberry Pi configuration for additional Bluetooth scanners, i.e. Raspberry Pi 4, Raspberry Pi 5, and so on
-
 5. There should be an easier way to add new Bluetooth beacons and users to the system with, for example, a single text file, because currently all the Bluetooth beacons and users have to be hard coded to Python and PHP files
-
+6. Alarm for the application when a Bluetooth beacon i.e. user enters a forbidder scanning area
 7. The final version of ```BeaconScanner.py``` has worked fine apart from two or three rare occasions when we have gotten the following ```Traceback (most recent call last):``` error, and it seems to indicate that ```ScanUtility.py```, a file that we did not modify from its original state, has some wrong syntax - we rebooted all the Raspberry Pis, after which ```BeaconScanner.py``` seemed to work fine again, but ```BeaconScanner.py``` and ```ScanUtility.py``` will require further examination and refining from a more experienced Python coder
 
 ```
@@ -2732,6 +2728,8 @@ Traceback (most recent call last):
     url = prefix + hexUrl.decode("hex")
 UnboundLocalError: local variable 'prefix' referenced before assignment
 ```
+
+8. Automatic timeout or restart for ```BeaconScanner.py``` script after a certain time, because running it infinitely is not ideal
 
 
 # Issues and tasks
@@ -2744,15 +2742,15 @@ Here is a list of current issues and tasks to be solved
 
 ~~3. Run ```BeaconScanner.py``` script simultaneously in all Salt Mininions, ```raspberrypi1```, ```raspberrypi2```, and ```raspberrypi3```, from the Salt Master ```Xubuntu server``` using Salt command or Salt states~~
 
-4. Automatic timeout or restart for ```BeaconScanner.py``` script, because running it infinitely is not ideal - will the timeout be for ```while loop``` or something else, and should we use ```forever``` file as a failsafe if the script stops?
+~~4. Automatic timeout or restart for ```BeaconScanner.py``` script, because running it infinitely is not ideal - will the timeout be for ```while loop``` or something else, and should we use ```forever``` file as a failsafe if the script stops?~~
 
 ~~5. Step-by-step instructions for creating the database and accessing database remotely from Raspberry Pis, especially the latter since we had problems getting it to work - start writing database instructions to GitHub from paragraph ```6.1.``` and divide to appropriate topics, like for example, ```6.1. Creating tables in the database```, ```6.2. Creating triggers in the database```, and so on - every single command from opening MariaDB database to creating tables should be listed chronologically inside ```code elements``` so that in theory, a random person could create a working database without prior knowledge using the instructions~~
 
-6. Clean up GitHub report so that it is updated to the latest information, logical, chronological, neat, and follows the established standardization in formatting, for example paragraphs ```2.``` and ```3.``` need some polishing along many other paragraphs - Pekka's responsibility
+6. Clean up GitHub report so that it is updated to the latest information, and so that it is logical, chronological, neat, and follows the established standardization in formatting of the text - for example, paragraphs ```2.``` and ```3.``` need some polishing along many other paragraphs
 
 ~~7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Bluetooth beacons, Raspberry Pis, Scripts, Website, and Database could be divided to paragraphs in advance~~
 
-8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home
+~~8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home~~
 
 ~~9. Make a mindmap of script and device dependencies in https://bubbl.us/ or other website~~
 
@@ -2772,7 +2770,7 @@ Here is a list of current issues and tasks to be solved
 
 ~~17. Add weekly working hours to Moodle!~~
 
-18. Raspberry Pi 3 to a further classroom?
+~~18. Raspberry Pi 3 to a further classroom?~~
 
 ~~19. Own chapter for ```Installing Salt Minion on Raspberry Pis```~~
 

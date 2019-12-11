@@ -2737,43 +2737,25 @@ UnboundLocalError: local variable 'prefix' referenced before assignment
 Here is a list of current issues and tasks to be solved
 
 ~~1. The website must show three people, ```Joni Mattsson```, ```Rasmus Ekman```, and ```Niko Kulmanen```, one for each Beacon, as permanent HTML elements and inform below each person ```Beacon number - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` or for example ```Beacon1 - Joni Mattsson - Last seen in 5004 - 2019-11-29 20:14:32``` - for instance, the website informs that person ```Joni Mattsson``` is found in the vicinity of room ```5004``` at the time of ```2019-11-29 20:14:32```, but is not found in the vicinity of 5005 or Servula currently - five newest rows of information about each person should update based on timestamp every 1-10 seconds~~
-
 ~~2. The website must work simultaneously with all three Beacons, ```Beacon1```, ```Beacon2```, and ```Beacon3```, meaning that ```Beacon2``` and ```Beacon3``` must be added to the database as well as all three Raspberry Pis which serve as rooms, ```5004```, ```5005```, and ```Servula``` - all three Beacons must have one PHP script each, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php```, meaning total of three PHP scripts for ALL THREE Beacons on ALL THREE Raspberry Pis, so a total of nine different PHP scripts - also, remember to add line ```import os``` and three ```os.system("php /home/projektimies/Lighthouse/DatabaseInsert1-3.php")``` lines inside all three ```if``` statements in ```BeaconScanner.py``` files on all three Raspberry Pis~~
-
 ~~3. Run ```BeaconScanner.py``` script simultaneously in all Salt Mininions, ```raspberrypi1```, ```raspberrypi2```, and ```raspberrypi3```, from the Salt Master ```Xubuntu server``` using Salt command or Salt states~~
-
 ~~4. Automatic timeout or restart for ```BeaconScanner.py``` script, because running it infinitely is not ideal - will the timeout be for ```while loop``` or something else, and should we use ```forever``` file as a failsafe if the script stops?~~
-
 ~~5. Step-by-step instructions for creating the database and accessing database remotely from Raspberry Pis, especially the latter since we had problems getting it to work - start writing database instructions to GitHub from paragraph ```6.1.``` and divide to appropriate topics, like for example, ```6.1. Creating tables in the database```, ```6.2. Creating triggers in the database```, and so on - every single command from opening MariaDB database to creating tables should be listed chronologically inside ```code elements``` so that in theory, a random person could create a working database without prior knowledge using the instructions~~
 
-6. Clean up GitHub report so that it is updated to the latest information, and so that it is logical, chronological, neat, and follows the established standardization in formatting of the text - for example, paragraphs ```2.``` and ```3.``` need some polishing along many other paragraphs
-
+6. Clean up GitHub report so that it is updated to the latest information, and so that it is concise i.e. lacks redundancy, logical, chronological, neat, and follows the established standardization in formatting of the text - for example, paragraphs ```2.``` and ```3.``` need some polishing, along many other paragraphs
 ~~7. Prepare the template for the Microsoft Word technical report that will be written in Finnish, and copy it to OneDrive so everyone can update it easily - at least technical topics like Xubuntu server, Bluetooth beacons, Raspberry Pis, Scripts, Website, and Database could be divided to paragraphs in advance~~
-
 ~~8. Remote Desktop Connection to Xubuntu server using the instructions from address http://c-nergy.be/blog/?p=9962 or other website - alternatively, using PuTTY seems to be working great via VDI, so accessing the server and editing the database and scripts should work fine remotely from home~~
-
 ~~9. Make a mindmap of script and device dependencies in https://bubbl.us/ or other website~~
-
 ~~10. Establish the final path ```/home/projektimies/Lighthouse/``` to ALL SCRIPTS in ALL THREE Raspberry Pis, so that it is the same path in ALL THREE Raspberry Pis, for example, ```BeaconScanner.py``` script is located in ```/home/projektimies/Lighthouse/BeaconScanner.py``` in ALL THREE Raspberry Pis - also, establish naming conventions to all relevant scripts and folders, ```Lighthouse``` is the folder where all the scripts like ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` are located in Raspberry Pis - in the server, ```ìndex.php``` website file is located inside ```public_html``` folder in path ```/home/iotbeacon/public_html/index.php```~~
 
 ~~11. Create or edit the database based on new instructions - the database must focus around people instead of rooms, and it must print ```Beacon name - Firstname Lastname - Last seen in Roomplaceholder - Timestamp``` information, like for example, ```Beacon1 - Joni Mattsson - Last seen in Servula - 2019-11-29 20:14:32``` - how can we deduce in which room a Bluetooth beacon is if two Raspberry Pis detect it simultaneously, or can we just print two rooms like ```Last seen in 5004 5005``` if two Raspberry Pis detect it at the same time, is there also any way to at least print RSSI value to the website, since in best case scenario the database would deduce the room based on the lowest RSSI value?~~
-
 ~~12. Add the final versions of ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, ```DatabaseInsert3.php``` (total of nine files because of three Raspberry Pis), and ```index.php``` files to separate GitHub files~~
-
 ~~13. Write Peer review, everyone in the project group writes their own!~~
-
 ~~14. Write Powerpoint presentation and live demo!~~
-
 ~~15. Write Final report!~~
-
 ~~16. Write Technical report!~~
-
 ~~17. Add weekly working hours to Moodle!~~
-
 ~~18. Raspberry Pi 3 to a further classroom?~~
-
 ~~19. Own chapter for ```Installing Salt Minion on Raspberry Pis```~~
-
 20. Remove passwords from GitHub
-
 ~~21. Make a text file with all the devices, usernames, and passwords used in the system~~

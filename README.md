@@ -2679,17 +2679,21 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'raspbian_3'@'172.28.175.45';
 
 # 7. Testing
 
-We tested our system multiple times during the course of the project to find bugs, faulty code, or other disruptive factors
+We tested our system on multiple occasions during the course of the project to find bugs, faulty code, or other disruptive factors
 
-Testing took place every time in Haaga-Helia University of Applied Sciences Pasila Campus, in floor five, in classes ```Servula```, ```5005```, and ```5004```, where the lab environment network was an internal network
+Testing took place every time at the Haaga-Helia University of Applied Sciences Pasila Campus, in floor five, in classes ```Servula```, ```5005```, and ```5004```, which had an internal lab environment network
 
 Xubuntu server, Raspberry Pis, and Bluetooth beacons were the same during all tests of the final system
 
-Raspberry Pis were placed as follows
+Raspberry Pis i.e. Bluetooth scanners were placed as follows
 
 - ```Servula``` - Raspberry Pi 1
 - ```5005``` - Raspberry Pi 2
 - ```5004``` - Raspberry Pi 3
+
+Testing was performed in a way where one or more users walked between all the scanning areas of Raspberry Pis in classes ```Servula```, ```5005```, and ```5004```
+
+At the same time, when a Bluetooth beacon user walked between all the scanning areas, another project worker read how the system reacted from a Linux terminal or our website
 
 
 # 8. In conclusion

@@ -23,6 +23,12 @@ IoT based project for Haaga-Helia University of Applied Sciences, ICT Infrastruc
 - [8. In conclusion](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#8-in-conclusion)
 - [9. Further development](https://github.com/Rasmusekmanhh/IoTBeacon/blob/master/README.md#9-further-development)
 
+##### Table of Contents  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
+## Headers
 
 # 1. Xubuntu server
 

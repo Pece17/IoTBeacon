@@ -2694,14 +2694,16 @@ Raspberry Pis were placed as follows
 
 # 8. In conclusion
 
-To recap, after following the instructions, you should have the following items
+To recap, after the project, we had the following items
 
-- One Xubuntu web server
-- Three Raspberry Pis
-- Three Blutooth beacons
-- ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` in folder ```Lighthouse``` in the same path on all three Raspberry Pis - notice that ```DatabaseInsert.php``` files actually have nine slightly different versions because the script changes based on which of the three Raspberry Pis it is located
+- One Xubuntu server
+- Web server on the Xubuntu server
 - Database on the Xubuntu server
-- ```index.php``` website on the Xubuntu server
+- Three Blutooth beacons
+- Three Raspberry Pis
+- ```BeaconScanner.py```, ```ScanUtility.py```, ```DatabaseInsert1.php```, ```DatabaseInsert2.php```, and ```DatabaseInsert3.php``` in directory ```Lighthouse```, in path ```home/projektimies/Lighthouse```, on all three Raspberry Pis - notice that ```DatabaseInsert.php``` files actually have nine slightly different versions because the file changes based on which of the three Raspberry Pis it is located
+- ```index.php``` in directory ```public_html```, in path ```home/iotbeacon/public_html```, on the Xubuntu server
+- All in all, we have twelve unique files
 
 The following mindmap should clarify the dependencies of the files and devices of the whole system
 

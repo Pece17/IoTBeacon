@@ -2625,7 +2625,7 @@ Use ```iotbeacon``` database
 USE iotbeacon;
 ```
 
-Create table ```beaconusers``` and add the following information inside the table
+Create ```beaconusers``` table and add the following information inside the table
 
 ```
 CREATE TABLE beaconusers (

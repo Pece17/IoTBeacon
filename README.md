@@ -2604,7 +2604,7 @@ Open MariaDB
 sudo mysql
 ```
 
-Create database ```iotbeacon```
+Create ```iotbeacon``` database
 
 ```
 CREATE DATABASE iotbeacon;
@@ -2619,7 +2619,13 @@ GRANT ALL PRIVILEGES ON iotbeacon.* TO 'niko'@'172.28.175.41' IDENTIFIED BY 'Mon
 
 ## 6.3. Creating table ```beaconusers``` in the database ```iotbeacon```
 
-Using database ```iotbeacon```, create table ```beaconusers``` and add the following information inside the table
+Use ```iotbeacon``` database
+
+```
+USE iotbeacon;
+```
+
+Create ```beaconusers``` table and add the following information inside the table
 
 ```
 CREATE TABLE beaconusers (
